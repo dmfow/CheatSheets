@@ -1,3 +1,4 @@
+## Start a repo (start using git in a directory structure)
 #### Make git in you current directory
 ```
 cd ./where_you_want_it
