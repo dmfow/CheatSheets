@@ -33,3 +33,11 @@ display(myDF)
 myDF.update(mySecondDF, raise_conflict=True)
 ```
 
+## Rename Dataframe
+```python
+# From test to TEST
+myDF.rename(columns = {'test':'TEST', 'adi':'ADI', 'w23':'W24'}, inplace = True)
+```
+                              
+                              
+
