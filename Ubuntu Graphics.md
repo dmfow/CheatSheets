@@ -44,10 +44,16 @@ sudo apt install [driver_name]
 sudo reboot
 ```
 
-#### Problem with the installation - purge (remove) existing packages
+#### Problem with the installation - purge (remove) existing packages (this might crash stuff!)
 ```
 sudo apt-get remove --purge '^nvidia-.*'
 sudo reboot
 # Redo the installation
+
+# OR
+sudo dpkg -P $(dpkg -l | grep nvidia-driver | awk '{print $2}')
+sudo apt autoremove
+# Redo the installation
 ```
+
 
