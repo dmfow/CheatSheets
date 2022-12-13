@@ -28,5 +28,8 @@ pd.set_option('display.colheader_justify', 'center')
 pd.set_option('display.precision', 3)
 display(myDF)
 ```
-
+## Merge Dataframes
+```python
+myDF.update(mySecondDF, raise_conflict=True)
+```
 
