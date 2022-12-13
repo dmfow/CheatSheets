@@ -6,6 +6,16 @@ df -h /
 # Check within a directory. Eg the home library
 du -sh ~
 ```
+#### Find a file
+
+```
+find LOCATION -name FILE_NAME
+find ~ -name resolution-for-year-2022.txt
+# OR
+# OR
+# OR
+
+```
 
 #### unzipp
 ```
