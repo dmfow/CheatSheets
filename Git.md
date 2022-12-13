@@ -22,6 +22,7 @@ git clone username@host:/path/to/repository
 git clone /path/to/repository
 ```
 
+## Use git
 
 git status
 
