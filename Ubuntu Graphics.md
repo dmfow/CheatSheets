@@ -2,6 +2,11 @@
 #### Currently used graphics driver
 ```
 sudo lshw -c video
+
+# If Nvidia
+nvidia-smi
+# OR
+grep "X Driver" /var/log/Xorg.0.log
 ```
 
 #### Graphic cards in the system
