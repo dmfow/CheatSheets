@@ -9,7 +9,6 @@ nvidia-smi
 grep "X Driver" /var/log/Xorg.0.log
 
 # More Nvidia
-modinfo /usr/lib/modules/$(uname -r)/kernel/drivers/video/nvidia.ko | grep ^version
 find /usr/lib/modules -name nvidia.ko
 find /usr/lib/modules -name nvidia.ko -exec modinfo {} \;
 
