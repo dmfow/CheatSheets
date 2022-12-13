@@ -1,11 +1,11 @@
-## Check diskspace
+#### Check diskspace
 ```
 df -h
 # Check with with a mount point. Ie root
 df -h /
 ```
 
-## unzipp
+#### unzipp
 ```
 # .zip
 unzip thefile.zip
