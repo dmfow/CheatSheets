@@ -10,8 +10,6 @@ lspci -nn | grep -E 'VGA|Display'
 # OR
 lspci | grep VGA
 # OR
-sudo lshw -c video
-# OR
 lspci -vnn | grep VGA
 ```
 #### See installed nvidia packages
