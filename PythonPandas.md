@@ -14,6 +14,9 @@ myDF.pop('columnName')
 myDF = myDF.drop(['columnName'], axis=1)
 
 myDF = myDF.drop(['columnName', 'anotherName'], axis=1)
+
+# By index
+df.drop(df.columns[0], axis=1, inplace=True)
 ```
 
 ## Display the Dataframe
