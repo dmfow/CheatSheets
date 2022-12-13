@@ -34,6 +34,7 @@ sudo reboot
 sudo add-apt-repository ppa:graphics-drivers/ppa
 ubuntu-drivers devices
 sudo apt install [driver_name]
+# Example: sudo apt install nvidia-driver-470
 sudo reboot
 ```
 
