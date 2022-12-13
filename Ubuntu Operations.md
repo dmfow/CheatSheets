@@ -27,4 +27,26 @@ cat mail.log | grep status=deferred | grep "<[A-Za-z0-9.@ ]*>"
 cat mail.log | grep status=bounced | grep "<[A-Za-z0-9.@ ]*>"
 ```
 
+#### Firewall
+
+## UFW firewall
+```
+sudo ufw status
+```
+
+## IP tables firewall
+
+## Backup
+Try "Timeshift"
+
+## Disk usage (GUI)
+Try "Disc usage Analyzer"
+
+
+
+
+
+
+
+
 
