@@ -25,13 +25,17 @@ dpkg -l | grep -i nvidia
 apt search nvidia-driver
 sudo apt update
 sudo apt upgrade
+ubuntu-drivers devices
 sudo apt install [driver_name]
+# Example: sudo apt install nvidia-driver-495
 sudo reboot
 ```
 
 #### More recent driver
 ```
 sudo add-apt-repository ppa:graphics-drivers/ppa
+sudo apt update
+sudo apt upgrade
 ubuntu-drivers devices
 sudo apt install [driver_name]
 # Example: sudo apt install nvidia-driver-470
