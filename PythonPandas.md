@@ -28,15 +28,19 @@ pd.set_option('display.colheader_justify', 'center')
 pd.set_option('display.precision', 3)
 display(myDF)
 ```
-## Merge Dataframes
+## Merge identical column Dataframes
 ```python
-myDF.update(mySecondDF, raise_conflict=True)
+import pandas as pd
+myNewDF = pd.concat[(myDF, mySecondDF], axis=0)
+
+# Horisontal merge
+myNewDF = pd.concat[(myDF, mySecondDF], axis=1)
 ```
 
 ## Rename Dataframe
 ```python
 # From test to TEST
-myDF.rename(columns = {'test':'TEST', 'adi':'ADI', 'w23':'W24'}, inplace = True)
+myNewDF = myDF.rename(columns = {'test':'TEST', 'adi':'ADI', 'w23':'W24'}, inplace = True)
 ```
                               
                               
