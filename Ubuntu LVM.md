@@ -67,9 +67,9 @@ https://www.howtogeek.com/howto/40702/how-to-manage-and-use-lvm-logical-volume-m
 https://www.howtogeek.com/howto/40702/how-to-manage-and-use-lvm-logical-volume-management-in-ubuntu/
 
 #### Delete a logical volume
-# first make sure the volume is unmounted,
 ```
-umount /mnt/lvstuff
+# first make sure the volume is unmounted,
+mount /mnt/lvstuff
 lvremove /dev/vgpool/lvstuff
 vgremove vgpool
 pvremove /dev/sdb1 /dev/sdc1
