@@ -50,3 +50,32 @@ mkdir /mnt/stuff
 mount -t ext3 /dev/vgpool/lvstuff /mnt/stuff
     
 ```
+
+#### Extend a volume
+https://www.howtogeek.com/howto/40702/how-to-manage-and-use-lvm-logical-volume-management-in-ubuntu/
+```
+vgextend vgpool /dev/sdc1
+lvextend -L8G /dev/vgpool/lvstuff
+lvextend -L+3G /dev/vgpool/lvstuff
+resize2fs /dev/vgpool/lvstuff
+```
+
+#### Shrink a volume
+https://www.howtogeek.com/howto/40702/how-to-manage-and-use-lvm-logical-volume-management-in-ubuntu/
+
+#### Make a snapshot
+https://www.howtogeek.com/howto/40702/how-to-manage-and-use-lvm-logical-volume-management-in-ubuntu/
+
+#### Delete a logical volume
+# first make sure the volume is unmounted,
+```
+umount /mnt/lvstuff
+lvremove /dev/vgpool/lvstuff
+vgremove vgpool
+pvremove /dev/sdb1 /dev/sdc1
+```
+
+
+
+
+
