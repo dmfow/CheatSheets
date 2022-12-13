@@ -41,10 +41,14 @@ git commit –m “Message for the commit here”
 # OR
 git commit -am “Message for the commit here” command
 
-# Upload to your git/gitlab/github server
+# Upload to your git/gitlab/github server (<master> is the name of the master)
 git push command
 # OR
 git push origin <master>
+
+# Merge everything on the remote repo to your local repo
+git pull
+
 ```
 
 
@@ -55,3 +59,38 @@ git config --local user.email youremail@example.com
 git config --global user.email youremail@example.com
 ```
 
+#### Make a new branch
+```
+command git checkout -b <branch-name>
+```
+
+#### Switch from one branch to another
+```
+git checkout <branch-name>
+```
+#### List branches
+```
+git branch
+# Delete branch
+git branch –d <branch-name>
+```
+
+#### Merge a branch into the active one
+```
+git merge <branch-name>
+```
+  
+  
+## Connect local repos to remote repos
+```
+it remote add origin <host-or-remoteURL>
+```
+
+## Delete a connection between local repo and a remote repo
+```
+git remote rm <name-of-the-repository>
+```
+
+
+
+  
