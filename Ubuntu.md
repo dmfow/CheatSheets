@@ -10,8 +10,17 @@ du -sh ~
 
 ```
 find LOCATION -name FILE_NAME
-find ~ -name resolution-for-year-2022.txt
-# OR
+  # Examples
+  find ~ -name resolution-for-year-2022.txt
+  find . -name "*.png"
+  find ~ -type f -empty
+# OR to find a file with a specific text
+grep -irl "text" <dir>
+    # i - for case insensitive search
+    # r - for recursive search inside subdirectories
+    # l - to show only the file names, not the matching lines 
+    # Exempel
+    grep -irl "for" .
 # OR
 # OR
 
