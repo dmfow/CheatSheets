@@ -55,5 +55,8 @@ sudo dpkg -P $(dpkg -l | grep nvidia-driver | awk '{print $2}')
 sudo apt autoremove
 # Redo the installation
 ```
+#### Nvidia driver download
+https://www.nvidia.com/Download/index.aspx?lang=en-us
+
 
 
