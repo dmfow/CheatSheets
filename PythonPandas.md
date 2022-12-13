@@ -9,10 +9,12 @@ print(myDF.iloc[0])
 
 #### Delete a column
 ```python
+# 3 Different alternatives
 del myDF['columnName']
 myDF.pop('columnName')
 myDF = myDF.drop(['columnName'], axis=1)
 
+# Multi delete
 myDF = myDF.drop(['columnName', 'anotherName'], axis=1)
 
 # By index
