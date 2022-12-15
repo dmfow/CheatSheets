@@ -4,7 +4,7 @@
 3. [See installed nvidia packages](https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#see-installed-nvidia-packages)
 4. [See if cc is installed (if not install the toolkit)](https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#see-if-cc-is-installed-if-not-install-the-toolkit)
 
-#### [GPU utilization]()
+#### [GPU utilization](https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#gpu-utilization-1)
 5. [Current (momentan) utilization of an Nvidia GPU](https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#current-momentan-utilization-of-an-nvidia-gpu)
 
 #### [GPU actions](https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#gpu-actions-1)
