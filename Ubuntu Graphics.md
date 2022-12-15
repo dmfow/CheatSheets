@@ -1,4 +1,4 @@
-#### Check driver
+[Check driver](https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#check-driver-1)
 ###### Currently used graphics driver
 ###### Graphic cards in the system
 See installed nvidia packages
