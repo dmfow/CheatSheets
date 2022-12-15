@@ -4,12 +4,12 @@
 3. [See installed nvidia packages](https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#see-installed-nvidia-packages)
 
 #### [Reset and do stuff](https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#reset-and-do-stuff-1)
-1. [Reset the memory](https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#reset-the-memory)
+4. [Reset the memory](https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#reset-the-memory)
 
 #### [Installation](https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#installation-1)
-1. [Driver](https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#driver)
-2. [More recent driver]()
-3. [Problem with the installation - purge (remove) existing packages (this might crash stuff!)]()
+5. [Driver](https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#driver)
+6. [More recent driver]()
+7. [Problem with the installation - purge (remove) existing packages (this might crash stuff!)]()
 
 
 ## Check driver
