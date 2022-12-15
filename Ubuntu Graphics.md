@@ -1,6 +1,6 @@
 #### Check driver
-Currently used graphics driver
-Graphic cards in the system
+###### Currently used graphics driver
+###### Graphic cards in the system
 See installed nvidia packages
 
 #### Reset and do stuff
