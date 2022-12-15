@@ -1,17 +1,17 @@
 #### [Check the gpu/video driver](https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#check-gpuvideo-driver)
-A1. [Current (momentan) utilization of an Nvidia GPU]()
-A2. [Currently used graphics driver](https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#currently-used-graphics-driver)
-A3. [Graphic cards in the system](https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#graphic-cards-in-the-system)
-A4. [See installed nvidia packages](https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#see-installed-nvidia-packages)
-A5. [See if cc is installed (if not install the toolkit)](https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#see-if-cc-is-installed-if-not-install-the-toolkit)
+1. [Current (momentan) utilization of an Nvidia GPU]()
+2. [Currently used graphics driver](https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#currently-used-graphics-driver)
+3. [Graphic cards in the system](https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#graphic-cards-in-the-system)
+4. [See installed nvidia packages](https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#see-installed-nvidia-packages)
+5. [See if cc is installed (if not install the toolkit)](https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#see-if-cc-is-installed-if-not-install-the-toolkit)
 
 #### [GPU actions](https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#gpu-actions-1)
-B1. [Reset the memory](https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#reset-the-memory)
+6. [Reset the memory](https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#reset-the-memory)
 
 #### [Installation](https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#installation-1)
-C1. [Driver](https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#driver)
-C2. [More recent driver](https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#more-recent-driver)
-C3. [Problem with the installation - purge (remove) existing packages (this might crash stuff!)](https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#problem-with-the-installation---purge-remove-existing-packages-this-might-crash-stuff)
+7. [Driver](https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#driver)
+8. [More recent driver](https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#more-recent-driver)
+9. [Problem with the installation - purge (remove) existing packages (this might crash stuff!)](https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#problem-with-the-installation---purge-remove-existing-packages-this-might-crash-stuff)
 
 
 ## Check gpu/video driver
