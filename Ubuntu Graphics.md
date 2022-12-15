@@ -1,6 +1,20 @@
+#### Check driver
+###### Currently used graphics driver
+###### Graphic cards in the system
+###### See installed nvidia packages
 
+#### Reset and do stuff
+###### Reset the memory
+
+#### Installation
+###### Driver
+###### More recent driver
+###### Problem with the installation - purge (remove) existing packages (this might crash stuff!)
+
+
+## Check driver
 #### Currently used graphics driver
-```
+``
 sudo lshw -c video
 
 # If Nvidia
@@ -22,16 +36,26 @@ lspci | grep VGA
 # OR
 lspci -vnn | grep VGA
 ```
-#### See installed nvidia packages
+### See installed nvidia packages
 ```
 dpkg -l | grep -i nvidia
+```
+
+## Reset and do stuff
+#### Reset the memory
+```
+nvidia-smi
+nvidia-smi --gpu-reset -i "gpu ID"
+# OR
+fuser -v /dev/nvidia*
+kill -9 "PID"
 ```
 
 
 ## Installation
 
 #### Driver
-```
+``
 apt search nvidia-driver
 sudo apt update
 sudo apt upgrade
@@ -42,7 +66,7 @@ sudo reboot
 ```
 
 #### More recent driver
-```
+``
 sudo add-apt-repository ppa:graphics-drivers/ppa
 sudo apt update
 sudo apt upgrade
@@ -53,7 +77,7 @@ sudo reboot
 ```
 
 #### Problem with the installation - purge (remove) existing packages (this might crash stuff!)
-```
+``
 sudo apt-get remove --purge '^nvidia-.*'
 sudo reboot
 # Redo the installation
@@ -65,6 +89,4 @@ sudo apt autoremove
 ```
 #### Nvidia driver download
 https://www.nvidia.com/Download/index.aspx?lang=en-us
-
-
 
