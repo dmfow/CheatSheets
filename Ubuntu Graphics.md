@@ -1,20 +1,20 @@
 #### Check driver
-###### Currently used graphics driver
-###### Graphic cards in the system
-###### See installed nvidia packages
+Currently used graphics driver
+Graphic cards in the system
+See installed nvidia packages
 
 #### Reset and do stuff
-###### Reset the memory
+Reset the memory
 
 #### Installation
-###### Driver
-###### More recent driver
-###### Problem with the installation - purge (remove) existing packages (this might crash stuff!)
+Driver
+More recent driver
+Problem with the installation - purge (remove) existing packages (this might crash stuff!)
 
 
 ## Check driver
 #### Currently used graphics driver
-``
+```
 sudo lshw -c video
 
 # If Nvidia
