@@ -1,7 +1,7 @@
 #### [Check driver](https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#check-driver-1)
 1. [Currently used graphics driver](https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#currently-used-graphics-driver-1)
-2. [Graphic cards in the system(https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#graphic-cards-in-the-system-1)
-3. [See installed nvidia packages(https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#see-installed-nvidia-packages)
+2. [Graphic cards in the system](https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#graphic-cards-in-the-system-1)
+3. [See installed nvidia packages](https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#see-installed-nvidia-packages)
 <br>
 #### [Reset and do stuff](https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#reset-and-do-stuff-1)
 1. [Reset the memory](https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#reset-the-memory)
