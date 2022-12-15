@@ -2,7 +2,7 @@
 1. [Currently used graphics driver](https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#currently-used-graphics-driver)
 2. [Graphic cards in the system](https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#graphic-cards-in-the-system)
 3. [See installed nvidia packages](https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#see-installed-nvidia-packages)
-4. [See if cc is installed (if not install the toolkit)]()
+4. [See if cc is installed (if not install the toolkit)](https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#see-if-cc-is-installed-if-not-install-the-toolkit)
 
 #### [GPU actions](https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#gpu-actions-1)
 5. [Reset the memory](https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#reset-the-memory)
