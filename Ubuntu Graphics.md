@@ -1,9 +1,11 @@
 #### [Check the gpu/video driver](https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#check-gpuvideo-driver)
-1. [Current (momentan) utilization of an Nvidia GPU]()
-2. [Currently used graphics driver](https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#currently-used-graphics-driver)
-3. [Graphic cards in the system](https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#graphic-cards-in-the-system)
-4. [See installed nvidia packages](https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#see-installed-nvidia-packages)
-5. [See if cc is installed (if not install the toolkit)](https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#see-if-cc-is-installed-if-not-install-the-toolkit)
+1. [Currently used graphics driver](https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#currently-used-graphics-driver)
+2. [Graphic cards in the system](https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#graphic-cards-in-the-system)
+3. [See installed nvidia packages](https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#see-installed-nvidia-packages)
+4. [See if cc is installed (if not install the toolkit)](https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#see-if-cc-is-installed-if-not-install-the-toolkit)
+
+#### [GPU utilization]()
+5. [Current (momentan) utilization of an Nvidia GPU](https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#current-momentan-utilization-of-an-nvidia-gpu)
 
 #### [GPU actions](https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#gpu-actions-1)
 6. [Reset the memory](https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#reset-the-memory)
@@ -15,12 +17,7 @@
 
 
 ## Check gpu/video driver
-#### Current (momentan) utilization of an Nvidia GPU
-```
-nvidia-smi
-```
-
-#### Currently used graphics driver
+### Currently used graphics driver
 ```
 sudo lshw -c video
 
@@ -50,6 +47,12 @@ dpkg -l | grep -i nvidia
 #### See if cc is installed (if not install the toolkit)
 ```
 nvcc --version
+```
+
+## GPU utilization
+#### Current (momentan) utilization of an Nvidia GPU
+```
+nvidia-smi
 ```
 
 ## GPU actions
