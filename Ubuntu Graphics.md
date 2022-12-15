@@ -1,6 +1,6 @@
 #### [Check driver](https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#check-driver-1)
-1. [Currently used graphics driver](https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#currently-used-graphics-driver-1)
-2. [Graphic cards in the system](https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#graphic-cards-in-the-system-1)
+1. [Currently used graphics driver](https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#currently-used-graphics-driver)
+2. [Graphic cards in the system](https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#graphic-cards-in-the-system)
 3. [See installed nvidia packages](https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#see-installed-nvidia-packages)
 
 #### [Reset and do stuff](https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#reset-and-do-stuff-1)
@@ -8,8 +8,8 @@
 
 #### [Installation](https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#installation-1)
 5. [Driver](https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#driver)
-6. [More recent driver]()
-7. [Problem with the installation - purge (remove) existing packages (this might crash stuff!)]()
+6. [More recent driver](https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#more-recent-driver)
+7. [Problem with the installation - purge (remove) existing packages (this might crash stuff!)](https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#problem-with-the-installation---purge-remove-existing-packages-this-might-crash-stuff)
 
 
 ## Check driver
