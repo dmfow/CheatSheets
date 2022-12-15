@@ -1,5 +1,5 @@
 [Check driver](https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#check-driver-1)
-###### Currently used graphics driver
+[Currently used graphics driver](https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#reset-and-do-stuff-1)
 ###### Graphic cards in the system
 See installed nvidia packages
 
