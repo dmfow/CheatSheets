@@ -1,15 +1,15 @@
-####[Check driver](https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#check-driver-1)
-<br>[Currently used graphics driver](https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#reset-and-do-stuff-1)
-<br>[Graphic cards in the system
-<br>[See installed nvidia packages
+#### [Check driver](https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#check-driver-1)
+<br>[Currently used graphics driver](https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#currently-used-graphics-driver-1)
+<br>[Graphic cards in the system(https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#graphic-cards-in-the-system-1)
+<br>[See installed nvidia packages(https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#see-installed-nvidia-packages)
 <br>
-####[Reset and do stuff]
-<br>[Reset the memory]
+#### [Reset and do stuff](https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#reset-and-do-stuff-1)
+<br>[Reset the memory](https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#reset-the-memory)
 <br>
-####[Installation]
-<br>[Driver]
-<br>[More recent driver]
-<br>[Problem with the installation - purge (remove) existing packages (this might crash stuff!)]
+#### [Installation](https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#installation-1)
+<br>[Driver](https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#driver)
+<br>[More recent driver]()
+<br>[Problem with the installation - purge (remove) existing packages (this might crash stuff!)]()
 
 
 ## Check driver
@@ -36,7 +36,7 @@ lspci | grep VGA
 # OR
 lspci -vnn | grep VGA
 ```
-### See installed nvidia packages
+#### See installed nvidia packages
 ```
 dpkg -l | grep -i nvidia
 ```
@@ -55,7 +55,7 @@ kill -9 "PID"
 ## Installation
 
 #### Driver
-``
+```
 apt search nvidia-driver
 sudo apt update
 sudo apt upgrade
@@ -66,7 +66,7 @@ sudo reboot
 ```
 
 #### More recent driver
-``
+```
 sudo add-apt-repository ppa:graphics-drivers/ppa
 sudo apt update
 sudo apt upgrade
@@ -77,7 +77,7 @@ sudo reboot
 ```
 
 #### Problem with the installation - purge (remove) existing packages (this might crash stuff!)
-``
+```
 sudo apt-get remove --purge '^nvidia-.*'
 sudo reboot
 # Redo the installation
