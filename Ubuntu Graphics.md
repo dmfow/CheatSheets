@@ -1,4 +1,4 @@
-#### [Check the gpu/video driver](https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#check-driver-1)
+#### [Check the gpu/video driver](https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#check-gpuvideo-driver)
 1. [Currently used graphics driver](https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#currently-used-graphics-driver)
 2. [Graphic cards in the system](https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#graphic-cards-in-the-system)
 3. [See installed nvidia packages](https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#see-installed-nvidia-packages)
