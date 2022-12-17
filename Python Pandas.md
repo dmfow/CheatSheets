@@ -3,9 +3,28 @@
 #### Print the first row
 ```python
 print(myDF.iloc[0])
+
+# Show nr of rows
+print(len(df.index))
+# OR (inde 0 of the shape that gives a row,col tuple)
+print(df.shape[0])
+# OR (slowest)
+print(df.count())
+
+# Show nr of rows containing a specific value
+print(sum(df['myFruitColumn'] == 'apple'))
+print(sum(df['myCountsColumn'] >= 11))
+
+# Count apples, oranges and bananas with groupby
+print(df.groupby(['myFruitColumn']).size())
 ```
 
 ## Columns
+#### Show
+```python
+print(df.shape[1])
+```
+
 
 #### Delete a column
 ```python
