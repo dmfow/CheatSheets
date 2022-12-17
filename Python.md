@@ -17,3 +17,24 @@ print(isExist)
 import os
 os.mkdir(theDirPath)
 ```
+
+#### File handling (read, write and append)
+```python
+# Write
+file1 = open("myfile.txt", "w")
+s = ["This is row 1 \n", "This is row 2 \n", "This is row 3"]
+file1.writelines(s)
+file1.close()
+ 
+# Append
+file1 = open("myfile.txt", "a")  # append mode
+file1.write("A row \n")
+file1.close()
+ 
+# Read
+file1 = open("myfile.txt", "r")
+print(file1.read())
+print()
+file1.close()
+```
+
