@@ -1,6 +1,9 @@
 https://assets.ubuntu.com/v1/66fcd858-ubuntu-core-security-whitepaper.pdf
-# OR
+<br>
+or
+<br>
 https://assets.ubuntu.com/v1/66fcd858-canonical-ubuntu-core-security-2018-11-13.pdf
+<br>
 
 https://wiki.ubuntu.com/Security/Features
 
