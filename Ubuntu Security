@@ -3,3 +3,15 @@ https://assets.ubuntu.com/v1/66fcd858-ubuntu-core-security-whitepaper.pdf
 https://assets.ubuntu.com/v1/66fcd858-canonical-ubuntu-core-security-2018-11-13.pdf
 
 https://wiki.ubuntu.com/Security/Features
+
+
+#### automatic installation of security upgrades
+```
+sudo apt-get install unattended-upgrades
+sudo dpkg-reconfigure  unattended-upgrades
+
+# https://askubuntu.com/questions/578761/how-to-only-install-security-updates
+
+# Run Once (-d = with debug)
+sudo unattended-upgrades -d
+```
