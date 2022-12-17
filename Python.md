@@ -9,5 +9,5 @@ print(isExist)
 #### Create a direcotry
 ```python
 import os
-os.mkdir(theDIRandPath)
+os.mkdir(theDirPath)
 ```
