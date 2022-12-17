@@ -1,4 +1,9 @@
 ## Rows
+#### Info about the dataframe
+```python
+print(df.info())
+print(df.shape)
+```
 
 #### Print the first row
 ```python
@@ -8,6 +13,8 @@ print(myDF.iloc[0])
 print(len(df.index))
 # OR (inde 0 of the shape that gives a row,col tuple)
 print(df.shape[0])
+# OR
+rows = len(df.axes[0])
 # OR (slowest)
 print(df.count())
 
@@ -22,7 +29,11 @@ print(df.groupby(['myFruitColumn']).size())
 ## Columns
 #### Show
 ```python
+print(len(df.columns))
+# OR
 print(df.shape[1])
+# OR
+cols = len(df.axes[1])
 ```
 
 
