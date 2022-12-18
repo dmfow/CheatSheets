@@ -74,6 +74,17 @@ myNewDF = pd.concat[(myDF, mySecondDF], axis=1)
 # From test to TEST
 myNewDF = myDF.rename(columns = {'test':'TEST', 'adi':'ADI', 'w23':'W24'}, inplace = True)
 ```
-                              
+
+## Files
+#### csv
+```python
+# Save
+myDf.to_csv(filename, sep=";")
+
+# Load
+myDf = pd.read_csv(filename, sep=";")
+
+
+```
                               
 
