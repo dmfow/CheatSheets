@@ -38,3 +38,14 @@ print()
 file1.close()
 ```
 
+#### Time
+```python
+import datetime
+now = datetime.datetime.now()
+
+print(now.strftime('%H:%M:%S'))
+print(now.strftime('%Y-%m-%d %H:%M:%S'))
+print(now.strftime('%H:%M:%S on %A, %B the %dth, %Y'))
+```
+
+
