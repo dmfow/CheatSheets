@@ -82,7 +82,7 @@ myNewDF = myDF.rename(columns = {'test':'TEST', 'adi':'ADI', 'w23':'W24'}, inpla
 myDf.to_csv(filename, sep=";")
 
 # Load
-myDf = pd.read_csv(filename, sep=";")
+myDf = pd.read_csv(filename, sep=";", axis=0)
 
 
 ```
