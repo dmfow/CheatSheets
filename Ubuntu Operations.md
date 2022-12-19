@@ -22,6 +22,16 @@ sudo apt update && sudo apt dist-upgrade
 sudo do-release-upgrade
 ```
 
+#### Clear diskpace for Journal
+```
+  journalctl --disk-usage
+  sudo journalctl --rotate
+  sudo journalctl --vacuum-time=1w
+  sudo journalctl --vacuum-time=1h
+  # Clear all (down to 1 second)
+  sudo journalctl --vacuum-time=1s
+```
+  
 #### Check mail logs
 ```
 cd /var/log
