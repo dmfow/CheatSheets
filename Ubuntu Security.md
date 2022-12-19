@@ -20,6 +20,11 @@ sudo unattended-upgrades -d
 ```
 
 
+#### remove unused packages
+```
+apt-get autoremove
+```
+
 
 #### Nmap
 ```
