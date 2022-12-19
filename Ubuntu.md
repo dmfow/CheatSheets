@@ -21,9 +21,21 @@ grep -irl "text" <dir>
     # l - to show only the file names, not the matching lines 
     # Exempel
     grep -irl "for" .
-# OR
-# OR
 
+# Find large files
+sudo find ~ -type f -printf '%s\t%p\n' | sort -n | tail -2
+find $HOME -type f -printf '%s %p\n' | sort -nr | head -10
+find / -size +100M -ls
+find $DIRECTORY -type f -exec ls -s {} \; | sort -n | tail -n 5
+
+sudo du -a /home | sort -n -r | head -n 10
+sudo du -a | sort -n -r | head -n 10
+du -hs * | sort -rh | head -n 10
+du -Sh | sort -rh | head -n 10
+sudo du -hsx * | sort -rh | head -10
+
+ls -lSh /bin | head -5
+ls -lah --sort=size
 ```
 
 #### unzipp
