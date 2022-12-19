@@ -45,10 +45,6 @@ cat mail.log | grep status=bounced | grep "<[A-Za-z0-9.@ ]*>"
 
 ## Firewall
 
-## UFW firewall
-```
-sudo ufw status
-```
 
 ## IP tables firewall
 
@@ -58,6 +54,16 @@ Try "Timeshift"
 ## Disk usage (GUI)
 Try "Disc usage Analyzer"
 
+## List rules
+```
+sudo iptables -v -x -n -L
+sudo iptables -t nat -v -x -n -L
+```
+
+## UFW firewall
+```
+sudo ufw status
+```
 
 
 
