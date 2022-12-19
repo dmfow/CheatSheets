@@ -21,7 +21,7 @@ sudo unattended-upgrades -d
 
 
 
-#### automatic installation of security upgrades
+#### Nmap
 ```
 # Check port openings, install nmap
 sudo apt install nmap
@@ -29,5 +29,15 @@ sudo apt install nmap
 nmap localhost
 
 ```
+
+#### Netstat in Net-tools
+```
+# Check port openings, install netstat
+sudo apt install net-tools
+# Use it
+sudo netstat -tunlp
+
+```
+
 
 
