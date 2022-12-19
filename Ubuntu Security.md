@@ -26,7 +26,8 @@ sudo unattended-upgrades -d
 # Check port openings, install nmap
 sudo apt install nmap
 # Use it
-Nmap
+nmap localhost
+
 ```
 
 
