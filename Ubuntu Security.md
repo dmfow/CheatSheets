@@ -18,3 +18,15 @@ sudo dpkg-reconfigure  unattended-upgrades
 # Run Once (-d = with debug)
 sudo unattended-upgrades -d
 ```
+
+
+
+#### automatic installation of security upgrades
+```
+# Check port openings, install nmap
+sudo apt install nmap
+# Use it
+Nmap
+```
+
+
