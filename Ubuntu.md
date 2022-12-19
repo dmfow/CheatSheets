@@ -69,6 +69,8 @@ rm file
 # Delete multiple files
 rm file file.bak
 rm *.bak
+# Delete a directory and all directories and files within
+rm -rf lampp
 
 ```
 
