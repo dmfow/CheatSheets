@@ -50,6 +50,8 @@ gunzip < thefile.txt.gzip > newfile.txt
 tar -xvf thefile.tzr.gz
 
 # untar
+tar -xvf thefile.tar -C ./
+sudo tar -xvf thefile.tar -C ./
 untar thefile.tar
 ```
 
