@@ -3,7 +3,10 @@
 
 #### Unauthorized app
 ```
-System Preferences -> Security & Privacy -> click “Open ABC## nyway”
+System Preferences -> Security & Privacy -> click “Open ABC## anyway”
+
+Maybe - Click the lock
+ + Enter your Administrators Username and Password
 ```
 
 
