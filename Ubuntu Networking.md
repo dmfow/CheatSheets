@@ -12,6 +12,8 @@ ip addr
 dig +short myip.opendns.com @resolver1.opendns.com
 dig -6 TXT +short o-o.myaddr.l.google.com @ns1.google.com
 
+# Link to cheetsheet for ip addr (old redhat, but should be approx the same): 
+# https://access.redhat.com/articles/ip-command-cheat-sheet
 ```
 
 #### DNS lookups
