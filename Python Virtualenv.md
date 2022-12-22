@@ -8,8 +8,18 @@
 
 #### Start working in the enviroment - Always do this when using it
 ```python
+# LINUX
+source thenewenvironment/bin/activate
+(virtualenv_name)$
+
+# WINDOWS
 cd ~/code/py_vm
 Scripts\activate
+```
+
+#### Stop using the environment
+```python
+deactivate
 ```
 
 
