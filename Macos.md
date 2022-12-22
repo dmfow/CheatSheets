@@ -5,7 +5,7 @@
 ```
 System Preferences -> Security & Privacy -> click “Open A## nyway”
 ```
-#### 
+
 
 #### Unauthorized app - Catalina
 ```
