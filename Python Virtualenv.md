@@ -3,6 +3,8 @@
 1. [Install with pip](https://github.com/dmfow/CheatSheets/blob/main/Python%20Virtualenv.md#install-with-pip)
 2. [Check the version](https://github.com/dmfow/CheatSheets/blob/main/Python%20Virtualenv.md#check-the-version)
 
+If you want to you can think of an environment as a VM (but it isn't)
+
 
 ## Working in it
 
@@ -22,9 +24,9 @@ Scripts\activate
 deactivate
 ```
 
+## Create a new
 
-
-#### Start a new environment
+#### Create a new environment
 A directory will be created where you are in the library. cd here when using it.
 <br>
 This is where Python packages will be installed
