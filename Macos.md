@@ -3,7 +3,7 @@
 
 #### Unauthorized app
 ```
-System Preferences -> Security & Privacy -> click “Open A## nyway”
+System Preferences -> Security & Privacy -> click “Open ABC## nyway”
 ```
 
 
