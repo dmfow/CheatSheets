@@ -12,6 +12,8 @@ ip link
 
 # Check the public IP
 curl http://info.cern.ch/
+# OR (info.cern.ch)
+curl 188.184.21.108
 # OR
 dig +short myip.opendns.com @resolver1.opendns.com
 # OR
