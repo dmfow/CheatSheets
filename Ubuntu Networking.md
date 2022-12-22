@@ -41,6 +41,21 @@ nameserver 1.0.1.3
 $ dig ubuntu.com | grep SERVER
 ;; SERVER: 1.1.1.2#53(1.1.1.2) (UDP)
 
+# Permanent
+# 1. Check your network interface name with
+ip addr
+# 2. 
+nano /etc/netplan/
+# 3. Change config (nameservers/addresses)
+network:
+  ethernets:
+    enp1s0:
+      dhcp4: true
+      nameservers:
+        addresses: [1.1.1.2, 1.0.0.2]
+  version: 2
+# 4. Save and apply
+sudo netplan apply
 ```
 
 
