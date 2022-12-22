@@ -97,4 +97,40 @@ OpenDNS
 ```
 
 
+#### Download with Curl
+```
+curl http://info.cern.ch/
+# Resume downloading
+curl -C 1024 http://seeni.linuxhandbook.org/files/largeFile.mpv -O
+# Default filename
+curl -O http://www.google.com/robots.txt
+# Custom filename
+curl -O http://www.google.com/robots.txt googleRobots.txt
+# Multiple files
+curl url1 url2 url3
+curl url1 url2 url3 -O -O -O 
+# A range of files
+curl http://www.google.com/logo/logo[1-9].png
+# Modified after a specific date and time
+curl url -z "DD MMM YY MM:HH:SS"
+# Upload
+curl -T uploadFile.txt http://upload.linuxhandbook.org/files
+# Avaid redirects
+curl -L  http://www.google.com
+# Authentication
+curl -u username:password http://seeni.linuxhandbook.org/files/tasks.txt
+# Limit transfer rate
+curl --limit-rate 10K http://seeni.linuxhandbook.org/files/logoDetails.tgz
+# Ignore ssl cert
+curl -k https://notSoSecure.org/files/logoDetails.tgz
+# Also get header info
+curl -i http://www.google.com/robots.txt
+# Only get header info
+curl -I http://www.google.com/robots.txt
+# Send some data in the request
+curl -d "token=34343abvfgh&name='seeni'" http://api.restful.org/getcontent
+```
+
+
+
 
