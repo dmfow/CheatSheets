@@ -10,14 +10,12 @@ ip a
 # OR
 ip link
 
-# Check the public IP
+# Check the public IP behind a NAT/PAT
 curl http://info.cern.ch/
 # OR (info.cern.ch)
 curl 188.184.21.108
-# OR
+# OR (they will keep your data)
 dig +short myip.opendns.com @resolver1.opendns.com
-# OR
-dig -6 TXT +short o-o.myaddr.l.google.com @ns1.google.com
 
 # Link to cheetsheet for ip addr (old redhat, but should be approx the same): 
 # https://access.redhat.com/articles/ip-command-cheat-sheet
@@ -101,34 +99,34 @@ OpenDNS
 ```
 curl http://info.cern.ch/
 # Resume downloading
-curl -C 1024 http://seeni.linuxhandbook.org/files/largeFile.mpv -O
+curl -C 1024 http://whatever.org/files/largeFile.mpv -O
 # Default filename
-curl -O http://www.google.com/robots.txt
+curl -O http://www.ubuntu.com/robots.txt
 # Custom filename
-curl -O http://www.google.com/robots.txt googleRobots.txt
+curl -O http://www.ubuntu.com/robots.txt googleRobots.txt
 # Multiple files
 curl url1 url2 url3
 curl url1 url2 url3 -O -O -O 
 # A range of files
-curl http://www.google.com/logo/logo[1-9].png
+curl http://www.ubuntu.com/logo/logo[1-9].png
 # Modified after a specific date and time
 curl url -z "DD MMM YY MM:HH:SS"
 # Upload
-curl -T uploadFile.txt http://upload.linuxhandbook.org/files
+curl -T uploadFile.txt http://whatever.org/files
 # Avaid redirects
-curl -L  http://www.google.com
+curl -L  http://www.ubuntu.com
 # Authentication
-curl -u username:password http://seeni.linuxhandbook.org/files/tasks.txt
+curl -u username:password http://whatever.org/files/tasks.txt
 # Limit transfer rate
-curl --limit-rate 10K http://seeni.linuxhandbook.org/files/logoDetails.tgz
+curl --limit-rate 2K http://whatever.org/files/logoDetails.tgz
 # Ignore ssl cert
-curl -k https://notSoSecure.org/files/logoDetails.tgz
+curl -k https://whatever.org
 # Also get header info
-curl -i http://www.google.com/robots.txt
+curl -i http://www.ubuntu.com/robots.txt
 # Only get header info
-curl -I http://www.google.com/robots.txt
+curl -I http://www.ubuntu.com/robots.txt
 # Send some data in the request
-curl -d "token=34343abvfgh&name='seeni'" http://api.restful.org/getcontent
+curl -d "token=1234abcdef&name='john john'" http://api.restful.org/getcontent
 ```
 
 
