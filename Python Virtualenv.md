@@ -1,6 +1,8 @@
 
-#### [Install](https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#check-gpuvideo-driver)
-1. [Install with pip](https://github.com/dmfow/CheatSheets/blob/main/Ubuntu%20Graphics.md#currently-used-graphics-driver)
+#### [Install](https://github.com/dmfow/CheatSheets/blob/main/Python%20Virtualenv.md#install-1)
+1. [Install with pip](https://github.com/dmfow/CheatSheets/blob/main/Python%20Virtualenv.md#install-with-pip)
+2. [Check the version](https://github.com/dmfow/CheatSheets/blob/main/Python%20Virtualenv.md#check-the-version)
+
 
 
 
