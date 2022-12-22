@@ -5,11 +5,16 @@
 hostname -I
 # OR
 hostname --all-ip-address
+# OR (ip addr)
+ip a
 # OR
-ip addr
+ip link
 
 # Check the public IP
+curl http://info.cern.ch/
+# OR
 dig +short myip.opendns.com @resolver1.opendns.com
+# OR
 dig -6 TXT +short o-o.myaddr.l.google.com @ns1.google.com
 
 # Link to cheetsheet for ip addr (old redhat, but should be approx the same): 
