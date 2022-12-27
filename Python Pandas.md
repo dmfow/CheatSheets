@@ -69,6 +69,12 @@ myNewDF = pd.concat[(myDF, mySecondDF], axis=0)
 myNewDF = pd.concat[(myDF, mySecondDF], axis=1)
 ```
 
+## Copy dataframe columns columns
+```python
+myDF['mycol'] = otherDF[['colname']].copy()
+```
+
+
 ## Rename Dataframe
 ```python
 # From test to TEST
@@ -84,6 +90,20 @@ myDf.to_csv(filename, sep=";")
 # Load
 myDf = pd.read_csv(filename, sep=";", axis=0)
 
+# Load with spearator regex (at least 2 blandspaces)
+myDf = pd.read_csv(filename, sep="\s{2,}", axis=0)
+
+```
+#### plain text
+```python
+data = []
+with open('filename', "r") as f_in:
+  for line in map(str.strip, f_in):
+    if now line
+      continue
+    data.append({"colname": line})
+    
+myDF = pd.DataFrame(data)
 
 ```
                               
