@@ -53,6 +53,17 @@ tar -xvf thefile.tzr.gz
 tar -xvf thefile.tar -C ./
 sudo tar -xvf thefile.tar -C ./
 untar thefile.tar
+
+# bz2 (sudo apt install bzip2)
+bzip2 -d thefile.bz2
+
+
+# bz2 compress
+bzip2 thenewbz2file
+# OR
+bzip2 -z thenewbz2file
+
+
 ```
 
 #### File handling
