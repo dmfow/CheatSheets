@@ -94,7 +94,7 @@ myDf = pd.read_csv(filename, sep=";", axis=0)
 myDf = pd.read_csv(filename, sep="\s{2,}", axis=0)
 
 ```
-#### plain text
+#### plain text (everything to 1 column)
 ```python
 data = []
 with open('filename', "r") as f_in:
