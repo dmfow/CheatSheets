@@ -6,14 +6,15 @@ Not tested yet
 #### Tensorflow (Mirrored Strategy)
 ```python
 mirrored_strategy = tf.distribute.MirroredStrategy()
+# OR define the GPUs
+mirrored_strategy = tf.distribute.MirroredStrategy(devices=["/gpu:0", "/gpu:1"])
+
 with mirrored_strategy.scope():
     model = Model()
     model.compile(loss = …, optimizer = …, …)
     model.fit(x_train, y_train, batch_size, epochs, …)
     
-# OR define the GPUs
-mirrored_strategy = tf.distribute.MirroredStrategy(devices=["/gpu:0", "/gpu:1"])
-```
+``
 
 #### PyTorch (Data parallel)
 ```python
