@@ -36,7 +36,8 @@ clean
 create part primary size=4000
 active
 format FS=fat32 quick
-
+assign
+exit
 
 
 ###### PART 3 - copy your files from the ISO to the USB #############
