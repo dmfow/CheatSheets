@@ -1,10 +1,13 @@
 ## Bootable USB
 
 #### Bootable USB with ISO
-pen CMD (command window) as administrator (rightclick - run as administrator)
+```
+###### PART 1 - open the command window #############
+open CMD (command window) as administrator (rightclick - run as administrator)
 click allow if the question comes up
 Run command in the command window:
-```
+
+###### PART 2 - make the USB a bootable disk and format it #############
 diskpart
 list disk
 
@@ -23,8 +26,10 @@ assign
 exit
 
 
-# Copy the ISO files to the disk - using WinCDEmu
+###### PART 3 - copy your files from the ISO to the USB #############
+# On windows 7 using WinCDEmu (skip is windows 10 or 11)
 Install WinCDEmu if not installed (https://wincdemu.sysprogs.org/)
+
 Rightclick on the iso file
 choose "select drive letter & mount"
 choose eg R:
