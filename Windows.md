@@ -12,7 +12,7 @@ diskpart
 list disk
 
 # !!!!!!!!!!!!!!! Do this command with care, or you can crash end erase you computer !!!!!!!!!!!!!!!!!!!!!!
-select disk X (exchange X to your disk number)
+select disk X (exchange X to your disk number in the "list disk")
 
 clean
 create partition primary
