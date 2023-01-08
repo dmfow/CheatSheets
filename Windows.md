@@ -1,6 +1,6 @@
 ## Bootable USB
 
-#### Bootable USB with ISO
+#### Bootable USB with ISO (this procedure does not work with all boot systems)
 ```
 ###### PART 1 - open the command window #############
 open CMD (command window) as administrator (rightclick - run as administrator)
@@ -35,7 +35,7 @@ exit
 clean
 create part primary size=4000
 active
-format FS=fat32 quick
+format FS=fat quick
 assign
 exit
 
