@@ -6,6 +6,8 @@ sudo lsblk -f
 
 # !!!!!!! NOTE- chose the right sdX - OR YOU MIGHT DESTROY YOUR COMPUTER !!!!!!!!!!!!!!!!!
 
+# Guidance - Don't choose any disk with a mountpoint (you can see them to the right)
+
 dd status-progress if=/home/USER/downloads/theisofile.iso of=/dev/sdd
 
 
