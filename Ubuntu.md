@@ -93,6 +93,22 @@ sudo lightdm
 ```
 
 
+#### Set the time
+```
+timedatectl set-time 21:45:53
+timedatectl set-time 2019-04-10
+
+# Timezones
+timedatectl list-timezones
+timedatectl list-timezones | grep keyword
+timedatectl set-timezone Region/Location
+
+# NTP time sync
+timedatectl set-ntp yes
+timedatectl set-ntp no
+```
+
+
 
 
 
