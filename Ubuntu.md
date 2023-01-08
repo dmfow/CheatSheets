@@ -108,6 +108,12 @@ timedatectl set-ntp yes
 timedatectl set-ntp no
 ```
 
+#### Stop lightDM
+```
+alt+ctl+F1 (or other F button)
+Try different Fx till you find the terminal where you started lightDM
+ctrl+C
+```
 
 
 
