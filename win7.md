@@ -23,4 +23,10 @@ assign
 exit
 
 
+# Copy the ISO files to the disk - using WinCDEmu
+Install WinCDEmu if not installed (https://wincdemu.sysprogs.org/)
+Rightclick on the iso file
+choose "select drive letter & mount"
+choose eg R:
+copy all files from R: to the USB drive (maybe got F:, E: or D: when running the command assign above - look in your file system)
 ```
