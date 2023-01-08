@@ -8,7 +8,10 @@ sudo lsblk -f
 
 # Guidance - Don't choose any disk with a mountpoint (you can see them to the right)
 
-dd status-progress if=/home/USER/downloads/theisofile.iso of=/dev/sdd
+sudo dd status-progress if=/home/USER/downloads/theisofile.iso of=/dev/sdd
 
+sudo eject sdd
+
+sudo lsblk -f
 
 ```
