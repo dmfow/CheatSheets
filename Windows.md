@@ -23,12 +23,20 @@ clean
 create partition primary
 select partition 1
 active
-format FS=fat32 quick
-# OR
 format FS=ntfs quick
+# OR (UEFI support for fat32)
+format FS=fat32 quick
 
 assign
 exit
+
+
+# OR (fat/fat16)
+clean
+create part primary size=4000
+active
+format FS=fat32 quick
+
 
 
 ###### PART 3 - copy your files from the ISO to the USB #############
