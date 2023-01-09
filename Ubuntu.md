@@ -4,7 +4,7 @@ lsb_release -a
 # OR
 lsb_release -d
 # OR
-cat etc/os-release
+cat /etc/os-release
 # OR
 cat /etc/issue
 # OR
