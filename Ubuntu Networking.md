@@ -44,6 +44,14 @@ sudo service network-manager restart
 sudo systemctl restart NetworkManager.service
 ```
 
+#### Check if ssh is running
+```
+systemctl list-units | grep -i ssh
+# OR
+systemctl status ssh
+```
+
+
 #### Ethernet systemd naming convention
 ```
 # eno1 — is the first on board NIC
