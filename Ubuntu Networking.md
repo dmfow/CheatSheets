@@ -29,8 +29,10 @@ strl+o
 ctrl+x
 
 # Restart the network on the server (through network manager)
+sudo netplan apply
+# OR (through network manager if installed)
 sudo service network-manager restart
-# OR (through systemd)
+# OR (through systemd, at least on older systems)
 sudo systemctl restart NetworkManager.service
 ```
 
