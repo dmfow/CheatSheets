@@ -21,6 +21,20 @@ dig +short myip.opendns.com @resolver1.opendns.com
 # https://access.redhat.com/articles/ip-command-cheat-sheet
 ```
 
+#### Systemd naming convention
+```
+# eno1 — is the first on board NIC
+# enp3s0f1 — is the NIC on pcibus 3 slot 0 and use the NIC function 1.
+
+# Third character =>
+  # o<index>[n<phys_port_name>|d<dev_port>] — devices on board
+  # s<slot>[f<function>][n<phys_port_name>|d<dev_port>] — device by hotplug id
+  # [P<domain>]p<bus>s<slot>[f<function>][n<phys_port_name>|d<dev_port>] — devices by bus id
+  # x<MAC> — device by MAC address
+```
+
+
+
 #### DNS lookups
 ```
 dig ubuntu.com MX
