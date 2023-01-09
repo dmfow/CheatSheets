@@ -21,6 +21,19 @@ dig +short myip.opendns.com @resolver1.opendns.com
 # https://access.redhat.com/articles/ip-command-cheat-sheet
 ```
 
+#### Change IP/DG and restart the network
+```
+# Find the right file in /etc/netplan/
+sudo nano thefile
+strl+o
+ctrl+x
+
+# Restart the network on the server (through network manager)
+sudo service network-manager restart
+# OR (through systemd)
+sudo systemctl restart NetworkManager.service
+```
+
 #### Ethernet systemd naming convention
 ```
 # eno1 — is the first on board NIC
