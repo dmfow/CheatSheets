@@ -31,6 +31,7 @@ dig +short myip.opendns.com @resolver1.opendns.com
   # s<slot>[f<function>][n<phys_port_name>|d<dev_port>] — device by hotplug id
   # [P<domain>]p<bus>s<slot>[f<function>][n<phys_port_name>|d<dev_port>] — devices by bus id
   # x<MAC> — device by MAC address
+# Why this? https://www.freedesktop.org/wiki/Software/systemd/PredictableNetworkInterfaceNames/
 ```
 
 
