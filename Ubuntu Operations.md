@@ -1,3 +1,17 @@
+#### remove cloud init
+```
+# Disable
+sudo touch /etc/cloud/cloud-init.disabled
+reboot
+
+# Remove
+sudo apt purge cloud-init -y
+sudo rm -rf /etc/cloud && sudo rm -rf /var/lib/cloud/
+reboot
+
+```
+
+
 #### automatic installation of security upgrades
 ```
 sudo apt-get install unattended-upgrades
