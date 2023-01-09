@@ -1,4 +1,4 @@
-## Build a bootable USB - Linux
+## Copy files with putty/pscp over ssh
 
 ```
 # From windows, copy from a linux ssh connection
