@@ -21,7 +21,7 @@ dig +short myip.opendns.com @resolver1.opendns.com
 # https://access.redhat.com/articles/ip-command-cheat-sheet
 ```
 
-#### Systemd naming convention
+#### Ethernet systemd naming convention
 ```
 # eno1 — is the first on board NIC
 # enp3s0f1 — is the NIC on pcibus 3 slot 0 and use the NIC function 1.
