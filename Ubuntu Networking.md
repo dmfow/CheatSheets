@@ -90,7 +90,7 @@ $ dig ubuntu.com | grep SERVER
 # 1. Check your network interface name with
 ip addr
 # 2. 
-nano /etc/netplan/
+nano /etc/netplan/yournetworkfile
 # 3. Change config (nameservers/addresses)
 network:
   ethernets:
