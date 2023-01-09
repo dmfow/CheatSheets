@@ -21,12 +21,20 @@ dig +short myip.opendns.com @resolver1.opendns.com
 # https://access.redhat.com/articles/ip-command-cheat-sheet
 ```
 
-#### Change IP/DG and restart the network
+#### Change IP / Default Gateway - and restart the network
 ```
 # Find the right file in /etc/netplan/
 sudo nano thefile
 strl+o
 ctrl+x
+
+# This is depreciated
+gateway4: 192.168.1.1
+# Instead use "routes" (replace with the same indentation)
+routes:
+- to: default
+  via: 192.168.1.1
+
 
 # Restart the network on the server (through network manager)
 sudo netplan apply
