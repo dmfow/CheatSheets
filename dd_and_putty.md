@@ -1,6 +1,14 @@
 ## Build a bootable USB - Linux
 
 ```
+# From windows, copy from a linux ssh connection
+pscp -r username@serverip:/home/library/*.* ./
+```
+
+
+## Build a bootable USB - Linux
+
+```
 # Check which Disk name the USB have
   # !!!!!!! NOTE - read the right sdX - OR YOU MIGHT DESTROY YOUR COMPUTER !!!!!!!!!!!!!!!!!
  # Guidance - Don't choose any disk with a mountpoint (you can see them to the right)
