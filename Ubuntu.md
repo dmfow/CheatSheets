@@ -1,3 +1,16 @@
+#### Check version
+```
+lsb_release -a
+# OR
+lsb_release -d
+# OR
+cat etc/os-release
+# OR
+cat /etc/issue
+# OR
+hostnamectl
+```
+
 #### Check diskspace
 ```
 df -h
@@ -6,6 +19,12 @@ df -h /
 # Check within a directory. Eg the home library
 du -sh ~
 ```
+
+#### Check the disk names and volumns
+```
+sudo lsblk -f
+```
+
 #### Find a file
 
 ```
