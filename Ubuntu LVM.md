@@ -75,6 +75,8 @@ sudo lvdisplay
 # Extend Logical Volume
 lvextend -L8G /dev/vgname/lvname
 lvextend -L+3G /dev/vgname/lvname
+# OR
+sudo lvextend -l +100%FREE /dev/vgname/lvname
 
 # And last Extend File System (always /dev/mapper ??)
 sudo resize2fs /dev/mapper/ubuntu--vg-ubuntu--lv
