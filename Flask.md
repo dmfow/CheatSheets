@@ -4,7 +4,7 @@ pip install Flask
 pip install waitress
 ```
 
-#### Basic webservice
+#### Basic webservice (eg call this start.py)
 ```python
 from flask import Flask
 app = Flask(__name__)
@@ -20,7 +20,10 @@ if __name__ == '__main__':
 
 
 # The run from the Prompt    
-$ export FLASK_APP=hello.py
+$ python3 start.py
+# OR
+# The run from the Prompt    
+$ export FLASK_APP=start.py
 $ flask run    
 ```
 
