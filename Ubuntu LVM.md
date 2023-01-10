@@ -54,11 +54,32 @@ mount -t ext3 /dev/vgpool/lvstuff /mnt/stuff
 #### Extend a volume
 https://www.howtogeek.com/howto/40702/how-to-manage-and-use-lvm-logical-volume-management-in-ubuntu/
 ```
-vgextend vgpool /dev/sdc1
-lvextend -L8G /dev/vgpool/lvstuff
-lvextend -L+3G /dev/vgpool/lvstuff
-resize2fs /dev/vgpool/lvstuff
+sudo fdisk -l
+# Look for /dev/sda
+sudo cfdisk /dev/sda
+# Look for Free Space on Device
+# Choose New  -> Primary -> Specify Bytes
+# It got a new sdaX number for X
+# Create a new volume (replace X with your number)
+pvcreate /dev/sdaX
+
+# Check yoyr vg name of the "old" physical volume
+sudo pvdisplay
+
+# Add New Hard Drive to Volume Group (replace X with your number)
+vgextend vgname /dev/sdaX
+
+# Check the name of the logical volume
+sudo lvdisplay
+
+# Extend Logical Volume
+lvextend -L8G /dev/vgname/lvname
+lvextend -L+3G /dev/vgname/lvname
+
+# Extend File System
+resize2fs /dev/vgname/lvname
 ```
+
 
 #### Shrink a volume
 https://www.howtogeek.com/howto/40702/how-to-manage-and-use-lvm-logical-volume-management-in-ubuntu/
