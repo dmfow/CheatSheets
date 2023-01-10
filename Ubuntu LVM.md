@@ -76,8 +76,9 @@ sudo lvdisplay
 lvextend -L8G /dev/vgname/lvname
 lvextend -L+3G /dev/vgname/lvname
 
-# Extend File System
-resize2fs /dev/vgname/lvname
+# And last Extend File System (always /dev/mapper ??)
+sudo resize2fs /dev/mapper/ubuntu--vg-ubuntu--lv
+# resize2fs /dev/vgname/lvname
 ```
 
 
