@@ -2,6 +2,8 @@
 ```python
 pip install Flask
 pip install waitress
+
+# Don't run it as root (which prohibits it to use port 1-1024). Instead use a loadbalancer or reverse proxy infront.
 ```
 
 #### Basic webservice
