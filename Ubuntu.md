@@ -135,5 +135,11 @@ ctrl+C
 ```
 
 
+#### SCP copy files between 2 linux boxes with scp (Secure copy over ssh)
+```
+scp -r *.* user@host:/directory
+```
+
+
 
 
