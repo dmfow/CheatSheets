@@ -79,6 +79,9 @@ lvextend -L+3G /dev/vgname/lvname
 # And last Extend File System (always /dev/mapper ??)
 sudo resize2fs /dev/mapper/ubuntu--vg-ubuntu--lv
 # resize2fs /dev/vgname/lvname
+
+# Check the diskspace
+df -h
 ```
 
 
