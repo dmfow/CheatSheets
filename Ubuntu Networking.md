@@ -21,6 +21,19 @@ dig +short myip.opendns.com @resolver1.opendns.com
 # https://access.redhat.com/articles/ip-command-cheat-sheet
 ```
 
+#### Static IP
+```
+network:
+  ethernets:
+    eno1:
+      addresses: [192.168.0.2/24]
+      routes:
+      - to: default
+        via: 192.168.0.1
+      nameservers:
+        addresses: [1.1.1.1, 2.2.2.2]
+```
+
 #### Change IP / Default Gateway - and restart the network
 ```
 # Find the right file in /etc/netplan/
