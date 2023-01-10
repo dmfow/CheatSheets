@@ -1,6 +1,7 @@
 #### Install Flask
 ```python
 pip install Flask
+pip install waitress
 ```
 
 #### Basic webservice
@@ -13,7 +14,9 @@ def whatever():
     return 'Hello World!'
     
 if __name__ == '__main__':
-    app.run()
+    from waitress import serve
+    serve(app, host="0.0.0.0", port=8080)
+    #app.run()
 
 
 # The run from the Prompt    
