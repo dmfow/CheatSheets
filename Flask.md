@@ -70,6 +70,11 @@ sudo systemctl enable THESNAME.service
 sudo systemctl daemon-reload
 sudo systemctl restart THESNAME.service
 
+# Check it
+sudo systemctl status THESNAME.service
+
+# Check the logs of systemd
+journalctl -u THESNAME.service -S today
 
 ```
 
