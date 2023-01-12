@@ -37,22 +37,20 @@ $ flask run
 # => Replace THEUSER with your username
 # => Replace THESNAME with the name of your new service
 
-# A)
-# Create a user and it's library
+# A) Create a user and it's library
 sudo adduser THEUSER
 
-# B)
-# ut your pythonscript with Flask in /home/THEUSER/flasklib
-# Eg the above file. Call it eg thepython.py 
+# B) Do your python script with Flask (Eg the above file)
+# Eg Place it in: /home/THEUSER/flask_app/thepython.py
 
-# C)
-# Maybe you have to do (if it's not already there)
+# C) Maybe you have to do this (if it's not already there)
 chown THEUSER thepython.py 
 chmod +x thepython.py
 
-# D)
-# Create the service in systemd
-# sudo nano /etc/systemd/system/THESNAME
+# D) Create the service in systemd
+
+# sudo nano /etc/systemd/system/THESNAME.service
+
 [Unit]
 Description=Flask application
 After=multi-user.target
@@ -60,14 +58,14 @@ After=multi-user.target
 [Service]
 Type=simple
 User=THEUSER
-WorkingDirectory=/home/theuser/flasklib
-ExecStart=python3 /home/theuser/flasklib/thepython.py
+WorkingDirectory=/home/THEUSER/flask_app
+ExecStart=python3 /home/THEUSER/flask_app/thepython.py
 
 [Install]
 WantedBy=multi-user.target
 
 
-# E)
+# E) Enable the service and reload stuff
 sudo systemctl enable THESNAME.service
 sudo systemctl daemon-reload
 sudo systemctl restart THESNAME.service
