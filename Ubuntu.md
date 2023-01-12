@@ -95,6 +95,8 @@ mv file folder/file
 
 # Copy
 cp file file.bak
+# Copy library recursively
+cp -R lib/* lib2/
 
 # Delete
 rm file
