@@ -79,6 +79,11 @@ journalctl -u THESNAME.service -S today
 
 # Not necessary
 sudo -H -u THEUSER pip3 install THELIB
+
+# systemd: where to place the service file of you own systemd services
+* Modifications done by system administrator (user) go into /etc/systemd/system/
+    (files that ships in packages downloaded from distribution repository go into /usr/lib/systemd/)
+
 ```
 
 
