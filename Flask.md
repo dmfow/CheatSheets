@@ -64,7 +64,7 @@ ExecStart=python3 /home/THEUSER/flask_app/thepython.py
 [Install]
 WantedBy=multi-user.target
 
-# (for forking and oneshot apps use a different type in the config file above)
+# (for forking and oneshot apps use a different Type in the config file above)
 
 
 # E) Enable the service and reload stuff
