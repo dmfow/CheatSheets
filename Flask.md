@@ -76,6 +76,9 @@ sudo systemctl status THESNAME.service
 # Check the logs of systemd
 journalctl -u THESNAME.service -S today
 
+
+# Not necessary
+sudo -H -u THEUSER pip3 install THELIB
 ```
 
 
