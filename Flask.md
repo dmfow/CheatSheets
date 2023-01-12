@@ -77,7 +77,8 @@ sudo systemctl status THESNAME.service
 
 # Check the logs of systemd
 journalctl -u THESNAME.service -S today
-
+# OR, only see the log messages for the last/current boot:
+journalctl -u THESNAME.service -b
 
 # Not necessary
 sudo -H -u THEUSER pip3 install THELIB
