@@ -23,7 +23,16 @@ du -sh ~
 #### Check the disk names and volumns
 ```
 sudo lsblk -f
+
+# Check disk model
+
 ```
+#### Check motherboard hardware
+```
+lspci
+lspci - vnn
+```
+
 
 #### Find a file
 
