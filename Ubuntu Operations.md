@@ -72,6 +72,7 @@ smartctl -a /dev/sda | grep "Power_On_Hours" | grep -o '[^ ]\+$' | awk '{ SUM = 
 smartctl -aA /dev/sda
 smartctl -l /dev/sda
 smartctl -A /dev/sda | grep -i 'media_wearout_indicator' | tr -s ' ' | cut -d' ' -f4-5
+
 # Check which disks are present
 sudo lsblk -f
 
