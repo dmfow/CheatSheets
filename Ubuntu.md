@@ -26,7 +26,9 @@ sudo lsblk -f
 
 # Check disk model
 lshw -class disk
+# OR
 hwinfo --disk
+# OR
 smartctl -i /dev/sda
 ```
 #### Check  hardware
