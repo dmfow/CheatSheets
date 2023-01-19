@@ -21,12 +21,14 @@ sudo dpkg-reconfigure  unattended-upgrades
 
 # Run Once (-d = with debug)
 sudo unattended-upgrades -d
+
 ```
 
 #### Upgrade within release
 ```
 sudo apt update
 sudo apt upgrade
+
 ```
 
 #### Upgrade Release (eg 20.04 LTS to 22.04 TLS)
@@ -34,6 +36,7 @@ sudo apt upgrade
 sudo apt install update-manager-core
 sudo apt update && sudo apt dist-upgrade
 sudo do-release-upgrade
+
 ```
 
 #### Clear diskpace for Journal
@@ -44,6 +47,7 @@ sudo do-release-upgrade
   sudo journalctl --vacuum-time=1h
   # Clear all (down to 1 second)
   sudo journalctl --vacuum-time=1s
+  
 ```
 
 #### Check SSD health/wear
@@ -70,6 +74,7 @@ smartctl -l /dev/sda
 smartctl -A /dev/sda | grep -i 'media_wearout_indicator' | tr -s ' ' | cut -d' ' -f4-5
 # Check which disks are present
 sudo lsblk -f
+
 ```
 
 
@@ -79,6 +84,7 @@ cd /var/log
 cat mail.log | grep status=sent | grep "<[A-Za-z0-9.@ ]*>"
 cat mail.log | grep status=deferred | grep "<[A-Za-z0-9.@ ]*>"
 cat mail.log | grep status=bounced | grep "<[A-Za-z0-9.@ ]*>"
+
 ```
 
 
@@ -99,11 +105,13 @@ Try "Disc usage Analyzer"
 ```
 sudo iptables -v -x -n -L
 sudo iptables -t nat -v -x -n -L
+
 ```
 
 ## UFW firewall
 ```
 sudo ufw status
+
 ```
 
 
