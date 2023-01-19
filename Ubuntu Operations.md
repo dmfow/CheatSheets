@@ -56,14 +56,15 @@ smartctl -a /dev/sda
 # Calculate TB written
 martctl /dev/sda --all |grep "Sector Size"
   $ Sector Size:      512 bytes logical/physical
-# 512 Byte/LBA, 8 bits/Byte, convert to TB
+# 512 Byte/LBA (Sector size)
 smartctl -a /dev/sda | grep "Total_LBAs_Written" | grep -o '[^ ]\+$' | awk '{ SUM = ($1 * 512) / 1000000000000 } END {print SUM " TB written"}'
 
-# 48 bit/LBA for SATA3/6, 8 bits/Byte, convert to TB
-smartctl -a /dev/sda | grep "Total_LBAs_Written" | grep -o '[^ ]\+$' | awk '{ SUM = ($1 * 48 / 8) / 1000000000000 } END {print SUM " TB written"}'
+# Drive health
+smartctl -a /dev/sda | grep "Wear_Leveling_Count" | grep -o '[^ ]\+$' | awk 'END {print $1 "%"}'
+# Drive on time
+smartctl -a /dev/sda | grep "Power_On_Hours" | grep -o '[^ ]\+$' | awk '{ SUM = $1 / 24 / 365 } END {print SUM " years"}'
 
-
-
+# Other outputs
 smartctl -aA /dev/sda
 smartctl -l /dev/sda
 smartctl -A /dev/sda | grep -i 'media_wearout_indicator' | tr -s ' ' | cut -d' ' -f4-5
