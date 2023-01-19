@@ -45,7 +45,19 @@ sudo do-release-upgrade
   # Clear all (down to 1 second)
   sudo journalctl --vacuum-time=1s
 ```
-  
+
+#### Check SSD health/wear
+```
+# Explanation of items
+# https://en.wikipedia.org/wiki/Self-Monitoring,_Analysis,_and_Reporting_Technology
+
+smartctl -a /dev/sda
+smartctl -aA /dev/sda
+smartctl -l /dev/sda
+smartctl -A /dev/sda | grep -i 'media_wearout_indicator' | tr -s ' ' | cut -d' ' -f4-5
+```
+
+
 #### Check mail logs
 ```
 cd /var/log
