@@ -27,10 +27,24 @@ sudo lsblk -f
 # Check disk model
 
 ```
-#### Check motherboard hardware
+#### Check  hardware
 ```
+# motherboard hardware
 lspci
 lspci - vnn
+# Audio
+lspci -v | grep -A7 -i "audio"
+# Network
+lspci -nnk | grep net -A2
+# CPU
+lscpu
+# Hardware
+lshw
+lshw -short
+# Hardware
+hwinfo
+# usb
+lsusb
 ```
 
 
