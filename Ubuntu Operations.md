@@ -52,6 +52,8 @@ sudo do-release-upgrade
 # https://en.wikipedia.org/wiki/Self-Monitoring,_Analysis,_and_Reporting_Technology
 
 smartctl -a /dev/sda
+smartctl -a /dev/sda | grep "Total_LBAs_Written" | grep -o '[^ ]\+$' | awk '{ SUM = ($1 * 48 / 8) / 1000000000000 } END {print SUM " TB written"}'
+
 smartctl -aA /dev/sda
 smartctl -l /dev/sda
 smartctl -A /dev/sda | grep -i 'media_wearout_indicator' | tr -s ' ' | cut -d' ' -f4-5
