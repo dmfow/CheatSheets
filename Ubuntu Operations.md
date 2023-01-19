@@ -59,9 +59,9 @@ martctl /dev/sda --all |grep "Sector Size"
 # 512 Byte/LBA (Sector size)
 smartctl -a /dev/sda | grep "Total_LBAs_Written" | grep -o '[^ ]\+$' | awk '{ SUM = ($1 * 512) / 1000000000000 } END {print SUM " TB written"}'
 
-# Drive health
+# Drive health ??
 smartctl -a /dev/sda | grep "Wear_Leveling_Count" | grep -o '[^ ]\+$' | awk 'END {print $1 "%"}'
-# Drive on time
+# Drive power-on time
 smartctl -a /dev/sda | grep "Power_On_Hours" | grep -o '[^ ]\+$' | awk '{ SUM = $1 / 24 / 365 } END {print SUM " years"}'
 
 # Other outputs
