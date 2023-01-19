@@ -54,7 +54,7 @@ sudo do-release-upgrade
 smartctl -a /dev/sda
 
 # Calculate TB written
-martctl /dev/sda --all |grep "Sector Size"
+smartctl /dev/sda --all |grep "Sector Size"
   $ Sector Size:      512 bytes logical/physical
 # 512 Byte/LBA (Sector size)
 smartctl -a /dev/sda | grep "Total_LBAs_Written" | grep -o '[^ ]\+$' | awk '{ SUM = ($1 * 512) / 1000000000000 } END {print SUM " TB written"}'
@@ -68,6 +68,8 @@ smartctl -a /dev/sda | grep "Power_On_Hours" | grep -o '[^ ]\+$' | awk '{ SUM = 
 smartctl -aA /dev/sda
 smartctl -l /dev/sda
 smartctl -A /dev/sda | grep -i 'media_wearout_indicator' | tr -s ' ' | cut -d' ' -f4-5
+# Check which disks are present
+sudo lsblk -f
 ```
 
 
