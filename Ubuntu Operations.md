@@ -52,6 +52,7 @@ sudo do-release-upgrade
 # https://en.wikipedia.org/wiki/Self-Monitoring,_Analysis,_and_Reporting_Technology
 
 smartctl -a /dev/sda
+# 48 bit/LBA for SATA3/6, 8 bits/Byte, convert to TB
 smartctl -a /dev/sda | grep "Total_LBAs_Written" | grep -o '[^ ]\+$' | awk '{ SUM = ($1 * 48 / 8) / 1000000000000 } END {print SUM " TB written"}'
 
 smartctl -aA /dev/sda
