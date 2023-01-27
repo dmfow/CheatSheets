@@ -1,3 +1,29 @@
+## Mixed
+
+#### NSlookup
+```
+nslookup www.bbc.co.uk
+
+nslookup
+>
+> type=mx
+> www.bbc.co.uk
+> quit
+
+
+
+nslookup
+>
+> debug
+> www.bbc.co.uk
+> quit
+
+```
+
+
+
+
+
 ## Bootable USB
 
 #### Bootable USB with ISO (this procedure does not work with all boot systems)
