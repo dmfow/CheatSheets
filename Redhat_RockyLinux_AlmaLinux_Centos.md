@@ -42,5 +42,24 @@ ip route del 192.168.1.0/24
 
 # configure routes
 ip route add 192.168.4.0/24 dev ens3
-``
+```
+
+#### Troubleshooting (might have to be installed)
+```
+# Install
+sudo dnf install -y bind-utils
+sudo dnf -y install mtr
+sudo dnf install net-tools 
+
+netstat
+ss -l
+sudo ss -tnlp
+tracepath -n sat65server
+mtr
+nslookup redhat.com
+dig
+
+```
+
+
 
