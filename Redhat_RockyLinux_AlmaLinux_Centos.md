@@ -16,6 +16,7 @@ nmcli connection show
 nmcli connection show --active
 
 # Checking routes
+ip route show
 ip route get 10.13.1.4
 
 # Up and down
@@ -25,13 +26,19 @@ nmcli dev connect ens3
 ip link set ifname down
 ip link set ifname up
 
-# Configure
+# Configure 
+vi /etc/sysconfig/network-scripts/route-ens3
+        192.168.1.3/24 via 192.168.0.1 dev ens3
+        
+# Configure NON-persistant (won't survive a reboot)
 ip a add 192.168.1.3/24 dev ens3
 ip a del 192.168.1.3/24 dev ens3
 
 ip route add 192.168.1.0/24 via 192.168.1.1
 #OR
 ip route add default via 192.168.1.1 dev ens3
+
+ip route del 192.168.1.0/24
 
 # configure routes
 ip route add 192.168.4.0/24 dev ens3
