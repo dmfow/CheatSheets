@@ -51,6 +51,7 @@ sudo dnf install -y bind-utils
 sudo dnf -y install mtr
 sudo dnf install net-tools 
 
+# Commands
 netstat
 ss -l
 sudo ss -tnlp
