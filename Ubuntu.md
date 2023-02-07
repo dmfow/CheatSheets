@@ -73,6 +73,12 @@ apt install xsensors
 # Scan for sensors
 sensors-detect
 
+# Fix hddtemp "WARNING: Drive /dev/sda doesn't seem to have a temperature sensor."
+  # insert into /usr/share/misc/hddtemp.db this line (or wherever the hddtemp.db is):
+  # "Samsung SSD 850 EVO 120G B"                            190  C  "Samsung SSD 850 EVO 120GB"
+  # To get a reading directly from "hddtemp /dev/sda"
+
+
 # SSD Disks: For reliability, between 30ºC and 50ºC (86ºF to 122ºF) for SSDs under load in a standard desktop computer
 # even if they are rated up to 70*C
 # https://harddrivegeek.com/ssd-temperature/
