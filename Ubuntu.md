@@ -60,7 +60,7 @@ hddtemp --debug /dev/sdb | grep 190
   $ field(190)       = 27
   
 
-# Other temperature - ACPI: Probably CPU socket temp,  ISA: Probably the CPUs cores temp
+# Other temperature - acpitz (ACPI thermal zone): Probably CPU socket temp,  ISA: Probably the CPUs cores temp
 sensors
 
 # Install hddtemp
