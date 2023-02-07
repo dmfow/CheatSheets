@@ -83,7 +83,7 @@ sensors-detect
 # even if they are rated up to 70*C
 # https://harddrivegeek.com/ssd-temperature/
 
-``
+```
 
 
 #### Find a file
