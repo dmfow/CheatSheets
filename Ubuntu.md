@@ -54,11 +54,14 @@ lsusb
 hddtemp /dev/sda
 # OR if it doesn't work
 smartctl -a /dev/sdb | grep 190
-  $ 190 Airflow_Temperature_Cel 0x0032   073   062   000    Old_age   Always       -       27
+ $ 190 Airflow_Temperature_Cel 0x0032   073   062   000    Old_age   Always       -       27
+# OR look for 194
+smartctl -a /dev/sdb
 # OR if it doesn't work
 hddtemp --debug /dev/sdb | grep 190
   $ field(190)       = 27
-  
+# OR look for 194
+hddtemp --debug /dev/sdb
 
 # Other temperature - acpitz (ACPI thermal zone): Probably CPU socket temp,  ISA: Probably the CPUs cores temp
 sensors
