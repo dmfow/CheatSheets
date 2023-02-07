@@ -59,13 +59,14 @@ smartctl -a /dev/sdb | grep 190
 hddtemp --debug /dev/sdb | grep 190
   $ field(190)       = 27
   
-  # Install hddtemp
-    # apt install hddtemp
+
 # Other temperature
   # ACPI: Probably 
   # ISA: Probably the CPUs cores
 sensors
 
+# Install hddtemp
+apt install hddtemp
 # Install xsensors
 apt install xsensors
 # Scan for sensors
