@@ -49,7 +49,10 @@ lshw -short
 hwinfo
 # usb
 lsusb
+```
 
+#### Check disk temperature
+```
 # Disk temp
 hddtemp /dev/sda
 # OR if it doesn't work
