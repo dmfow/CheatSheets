@@ -51,15 +51,27 @@ hwinfo
 lsusb
 
 # Disk temp
+hddtemp /dev/sda
+# OR if it doesn't work
 smartctl -a /dev/sdb | grep 190
   $ 190 Airflow_Temperature_Cel 0x0032   073   062   000    Old_age   Always       -       27
-# hddtemp --debug /dev/sdb | grep 190
+# OR if it doesn't work
+hddtemp --debug /dev/sdb | grep 190
   $ field(190)       = 27
   
   # Install hddtemp
     # apt install hddtemp
+# Other temperature
+  # ACPI: Probably 
+  # ISA: Probably the CPUs cores
+sensors
 
-```
+# Install xsensors
+apt install xsensors
+# Scan for sensors
+sensors-detect
+
+``
 
 
 #### Find a file
