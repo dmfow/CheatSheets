@@ -77,7 +77,7 @@ apt install xsensors
 sensors-detect
 
 # Fix hddtemp "WARNING: Drive /dev/sda doesn't seem to have a temperature sensor."
-  # insert into /usr/share/misc/hddtemp.db this line (or wherever the hddtemp.db is):
+  # insert into /etc/hddtemp.db this line (or wherever the hddtemp.db is):
   # "Samsung SSD 850 EVO 120G B"                            190  C  "Samsung SSD 850 EVO 120GB"
   # To get a reading directly from "hddtemp /dev/sda". 190 is the number you choose from "hddtemp --debug /dev/sdb" output
 
