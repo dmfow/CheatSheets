@@ -70,7 +70,7 @@ apt install xsensors
 # Scan for sensors
 sensors-detect
 
-# SSD Disks: For reliability, most of the time you should see a temp range between 30ºC and 50ºC (86ºF to 122ºF) for SSDs under load in a standard desktop computer
+# SSD Disks: For reliability, between 30ºC and 50ºC (86ºF to 122ºF) for SSDs under load in a standard desktop computer
 # even if they are rated up to 70*C
 # https://harddrivegeek.com/ssd-temperature/
 
