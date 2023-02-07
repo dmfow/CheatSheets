@@ -49,6 +49,16 @@ lshw -short
 hwinfo
 # usb
 lsusb
+
+# Disk temp
+smartctl -a /dev/sdb | grep 190
+  $ 190 Airflow_Temperature_Cel 0x0032   073   062   000    Old_age   Always       -       27
+# hddtemp --debug /dev/sdb | grep 190
+  $ field(190)       = 27
+  
+  # Install hddtemp
+    # apt install hddtemp
+
 ```
 
 
