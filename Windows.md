@@ -24,7 +24,21 @@ nslookup
 
 
 
-## Bootable USB
+## USB
+
+#### Can't access a USB
+```
+# In the commmand (maybe as admin)
+> Diskpart
+DISKPART> select disk 2
+DISKPART> clean
+"DiskPart has encountered an error: Access is denied."
+DISKPART> attribute disk clear readonly
+DISKPART> clean
+DISKPART> format fs=ntfs quick
+DISKPART> exit
+```
+
 
 #### Bootable USB with ISO (this procedure does not work with all boot systems)
 ```
