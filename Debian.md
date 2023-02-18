@@ -33,3 +33,16 @@ $ ifreload -a
 net.ipv4.ip_forward=1
 net.ipv4.conf.all.accept_redirects = 0
 ```
+
+#### Chrony
+```
+# /etc/chrony/chrony.conf
+pool ntp.server.com
+
+# set and restart
+timedatectl set-ntp yes
+systemctl restart chronyd
+timedatectl
+
+```
+
