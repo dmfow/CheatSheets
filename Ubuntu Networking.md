@@ -33,6 +33,12 @@ network:
       nameservers:
         addresses: [1.1.1.1, 2.2.2.2]
 ```
+#### Restart the network service
+```
+sudo systemctl restart NetworkManager
+# OR
+sudo service network-manager restart
+```
 
 #### Change IP / Default Gateway - and restart the network
 ```
