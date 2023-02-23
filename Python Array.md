@@ -19,6 +19,11 @@ last_item = next(reversed(a_list))
 last_item = a_list.pop()
 ```
 
+#### Strip text from all words in an array
+```python
+thelist = [i.strip('.') for i in thelist]
+```
+
 #### Extract words from a text and put in a list
 ```python
 thelist = text.split()
@@ -44,6 +49,8 @@ thelist2=[x for x in thelist if len(x)>=5]
 import pandas as pd
 thelist2 = pd.Series(thelist).unique().tolist()
 print ("The list of words is : " +  str(thelist2))
+
+# Other ways https://datagy.io/python-remove-duplicates-from-list/
 ```
 
 
