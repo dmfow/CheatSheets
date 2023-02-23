@@ -1,3 +1,5 @@
+## Print
+
 #### print the 10 first
 ```python
 for item in myList[:10]:
@@ -9,7 +11,9 @@ for item in myList[-10:]:
     print (item)
 ```
 
-#### Get the last item (do not remove it)
+## Get
+
+### Get the last item (do not remove it)
 ```python
 last_item = next(reversed(a_list))
 ```
@@ -19,24 +23,19 @@ last_item = next(reversed(a_list))
 last_item = a_list.pop()
 ```
 
-#### Strip text from all words in an array
-```python
-thelist = [i.strip('.') for i in thelist]
-```
+## To and from Array
 
 #### Extract words from a text and put in a list
 ```python
 thelist = text.split()
 ```
 
-#### Sort the list
-```python
-# Sort alphabetically
-thelist.sort()
-# Sort on the word lenght
-thelist.sort(key=lambda s: len(s))
-```
+## Transform
 
+#### Strip text from all words in an array
+```python
+thelist = [i.strip('.') for i in thelist]
+```
 
 #### Remove words shorter or longer than len
 ```python
@@ -52,6 +51,18 @@ print ("The list of words is : " +  str(thelist2))
 
 # Other ways https://datagy.io/python-remove-duplicates-from-list/
 ```
+
+
+## Sort
+
+#### Sort the list
+```python
+# Sort alphabetically
+thelist.sort()
+# Sort on the word lenght
+thelist.sort(key=lambda s: len(s))
+```
+
 
 
 
