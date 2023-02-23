@@ -54,6 +54,10 @@ print ("The list of words is : " +  str(thelist2))
 
 
 ## Sort
+#### Sort the list
+```python
+c = len(myarray)
+```
 
 #### Sort the list
 ```python
