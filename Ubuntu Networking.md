@@ -35,8 +35,10 @@ network:
 ```
 #### Restart the network service
 ```
+sudo netplan apply
+# OR (depending on the version)
 sudo systemctl restart NetworkManager
-# OR
+# OR (depending on the version)
 sudo service network-manager restart
 ```
 
