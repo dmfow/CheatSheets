@@ -16,6 +16,23 @@
    mysql -u [username] -p[password] < [filename].sql 
 ```
 
+#### Login for mariadb
+```
+mariadb -u [username] -p
+```
+
+
+#### Install
+```
+# First intsall
+sudo apt update
+sudo apt upgrade
+sudo apt install mariadb-server
+# Then secure some basic stuff
+sudo mysql_secure_installation
+```
+
+
 
 
 
