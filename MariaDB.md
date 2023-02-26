@@ -62,6 +62,13 @@ sudo apt install mariadb-server
 sudo mysql_secure_installation
 ```
 
+#### Install for Pyhton
+```
+sudo apt install libmariadb3 libmariadb-dev
+pip3 install mariadb
+```
+
+
 ## Error messages
 
 ```
