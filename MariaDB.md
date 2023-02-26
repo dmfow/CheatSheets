@@ -1,5 +1,17 @@
 Mariadb is an inplacement fork/clone of mysql, therefor a lot of mysql stuff is seen
 
+#### Login for mariadb
+```
+mariadb -u [username] -p
+```
+
+#### Check users
+```
+SELECT User, Host FROM mysql.user WHERE Host <> 'localhost';
+```
+
+## Config
+
 #### Info about the DB
 ```
 # Mariadb Datadirectory
@@ -11,19 +23,16 @@ Mariadb is an inplacement fork/clone of mysql, therefor a lot of mysql stuff is 
   /etc/my.cnf
 
 ```
-  
+
+## Backup & restore
   
 #### Handle the database
 ```
 # restore database
-   mysql -u [username] -p[password] < [filename].sql 
+   mysql database -u [username] -p[password] < [filename].sql 
 ```
 
-#### Login for mariadb
-```
-mariadb -u [username] -p
-```
-
+## Installation
 
 #### Install
 ```
