@@ -65,6 +65,14 @@ sudo service network-manager restart
 sudo systemctl restart NetworkManager.service
 ```
 
+#### Check open ports
+```
+ss -patn | grep 443
+ss -ltn | grep 443
+```
+
+
+
 #### Check if ssh is running
 ```
 systemctl list-units | grep -i ssh
