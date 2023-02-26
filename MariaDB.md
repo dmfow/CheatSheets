@@ -21,8 +21,22 @@ SELECT User, Host FROM mysql.user WHERE Host <> 'localhost';
   /etc/mysql/mariadb.cnf
 # MySQL conf as this points to mariadb.cnf in two symlinks
   /etc/my.cnf
-
 ```
+
+
+#### Network issus
+```
+# Look into all these files (for bind-address)
+# The MariaDB/MySQL tools read configuration files in the following order:
+# 0. "/etc/mysql/my.cnf" symlinks to this file, reason why all the rest is read.
+# 1. "/etc/mysql/mariadb.cnf" (this file) to set global defaults,
+# 2. "/etc/mysql/conf.d/*.cnf" to set global options.
+# 3. "/etc/mysql/mariadb.conf.d/*.cnf" to set MariaDB-only options.
+# 4. "~/.my.cnf" to set user-specific options.
+```
+
+
+
 
 ## Backup & restore
   
