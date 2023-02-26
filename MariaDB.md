@@ -35,6 +35,17 @@ sudo apt install mariadb-server
 sudo mysql_secure_installation
 ```
 
+## Error messages
+
+```
+# mysql_secure_installation
+/usr/bin/mysql_secure_installation: 218: cannot create .mysql.1024: Permission denied
+/usr/bin/mysql_secure_installation: 220: cannot open .mysql.1024: No such file
+Password update failed!
+Cleaning up...
+# Solution, run as sudo, see above
+```
+
 
 
 
