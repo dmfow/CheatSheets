@@ -5,8 +5,11 @@
 # MySQL Datadirectory
   /var/lib/mysql
 
+# Mariadb conf
+  /etc/mysql/mariadb.cnf
 # MySQL conf
   /etc/my.cnf
+
 ```
   
   
