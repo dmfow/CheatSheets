@@ -33,6 +33,10 @@ SELECT User, Host FROM mysql.user WHERE Host <> 'localhost';
 # 2. "/etc/mysql/conf.d/*.cnf" to set global options.
 # 3. "/etc/mysql/mariadb.conf.d/*.cnf" to set MariaDB-only options.
 # 4. "~/.my.cnf" to set user-specific options.
+
+# Change config, and then
+systemctl restart mariadb.service
+ss -patn | grep 3306
 ```
 
 
