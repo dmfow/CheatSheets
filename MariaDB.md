@@ -1,13 +1,13 @@
-
+Mariadb is a inplacement fork/clone of mysql, therefor a lot of mysql stuff is seen
 
 #### Info about the DB
 ```
-# MySQL Datadirectory
+# Mariadb Datadirectory
   /var/lib/mysql
 
 # Mariadb conf
   /etc/mysql/mariadb.cnf
-# MySQL conf
+# MySQL conf as this points to mariadb.cnf in two symlinks
   /etc/my.cnf
 
 ```
