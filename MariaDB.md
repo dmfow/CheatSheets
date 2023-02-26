@@ -1,4 +1,4 @@
-Mariadb is a inplacement fork/clone of mysql, therefor a lot of mysql stuff is seen
+Mariadb is an inplacement fork/clone of mysql, therefor a lot of mysql stuff is seen
 
 #### Info about the DB
 ```
