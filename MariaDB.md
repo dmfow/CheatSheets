@@ -54,7 +54,7 @@ ss -patn | grep 3306
 
 #### Install
 ```
-# First intsall
+# First install
 sudo apt update
 sudo apt upgrade
 sudo apt install mariadb-server
