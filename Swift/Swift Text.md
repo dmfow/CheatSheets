@@ -105,7 +105,7 @@ var num = Int(myString) ?? 678
 
 ```
 
-## Remove stuff (parentheses stuff)
+## String content - Remove stuff (parentheses stuff)
 ```
 let myString = "This () is it (with some more stuff)"
 let newString = myString.replacingOccurrences(of: "\\s?\\([\\w\\s]*\\)", with: "", options: .regularExpression)
