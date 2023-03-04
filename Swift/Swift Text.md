@@ -204,7 +204,7 @@ struct MyBestText: View {
 ```
 
 ## Stackars and spacers
-
+```
         HStack(alignment: .top, spacing: 15) {
             VStack {
                 CalendarView()
@@ -216,6 +216,68 @@ struct MyBestText: View {
             }
             Spacer()
         }.padding()
+```
         
         
+## Mix of others
+```
+# Check if multiple
+var age = 8
+print(age.usMultiple(of: 5))
+
+# Number of characters in a string
+age.count
+
+
+# Operators
+# +, -, *, / (division), % (remainder)
+
+# Compound operators
+# +=
+# -=
+# *=
+# /=
+# %=
+
+# Comparison operators
+#   You can use those operators to get a boolean value (true or false)
+# ==
+# !=
+# >
+# <
+# >=
+# <=
+
+# Range operators
+0...5 //6 times
+0..<2 //2 times
+
+0...count //"count" times
+0..<count //"count-1" times
+
+# Example
+let count = 5
+for i in 0...count {
+  // Stuff
+}
+
+# Logical operators
+# NOT: !
+# AND: &&
+# OR: ||
+
+#Example
+if this && that {
+  // Stuff
+}
+
+# If
+if checkme == true {
+    // Stuff
+}
+
+```
+
+
+
         
