@@ -1,4 +1,88 @@
 
+## Strings
+```
+# remove the second character
+var myString = "whatever"
+var i = myString.index(string.startIndex, offsetBy: 1)
+var newString = myString.remove(at: i)
+# myString = watever
+# newString = h
+
+# Remove subrange
+var versionIndex = myString.indx(myString.startIndex, offsetBy: 5)
+myString.removeSubrange(myString.startIndex..<versionIndex)
+# myString = ver
+
+# Insert last
+let lastIndex = myString.index(myString.endIndex, offsetBy: 0)
+myString.insert"5", at: lastIndex)
+
+# Reverse
+revString = String(myString.reversed())
+
+# Concat
+let s1 = "1234"
+let s2 = "5678"
+var s3 = s1 + s2
+# s3 = 12345678
+
+# Concat 2
+var myString = "This is"
+myString += " it"
+# myString = This is it
+
+# Append
+var myString = "This is"
+myString.append(" it")
+
+```
+
+## Conversion to string
+```
+var num = 123
+var myString = "\(num)"
+
+var myString = String(num)
+
+
+# Array
+let myArray = ["This", "is", "it"]
+let myString = myArray.joined(separator: " ")
+# This is it
+
+```
+
+## Conversion from string
+```
+var myString = "123"
+var num = Int(myString) ?? 678
+# num = 123
+
+var myString = "123ab"
+var num = Int(myString) ?? 678
+# num = 678
+
+```
+
+
+## Formatting
+```
+let num: Int = 12
+let str1 = String(format: "%03d", num)
+# 012
+
+let str1 = String(format: "%.2f", num)
+# 12.00
+
+let str1 = String(format: "%2X", num)
+# C (Hex)
+
+let str1 = String(format: "%2x", num)
+# c (Hex)
+
+
+```
+
 ## Text
 ```
 Text("The text to display")
