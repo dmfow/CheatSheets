@@ -479,7 +479,10 @@ list = []
 Arrays are equal when they contain the same elements, of the same type:
 [1, 2, 3] == [1, 2, 3]
 
-# SETs
+```
+
+## SETs
+```
 # While an array can contain many times the same item, you only have unique items in a set.
 # Unlike arrays, there is no order or position in a set. Items are retrieved and inserted randomly.
 # Sets, like arrays, are passed by value. This means that if you pass it to a function, or return it from a function, the set is copied.
@@ -510,8 +513,10 @@ isStrictSubset(of:)
 isStrictSuperset(of:)
 isDisjoint(with:)
 
+```
 
-# Dictionaries
+## Dictionaries
+```
 # A dictionary must be declared as var to be modified. If it's declared with let, you cannot modify it by adding or removing elements
 var dict = ["South": 8, "North": 7]
 var dict: [String: Int] = ["South": 8, "North": 7]
@@ -527,6 +532,20 @@ print(dict["South"])    // gives 8
 dict["South"] = 9
 # New pair
 dict["West"] = 3
+# Remove a keypair
+dict["West"] = nil
+# OR
+dict.removeValue(forKey: "West")
+
+dict.count
+dict.isEmpty
+
+```
+
+
+## Tuples
+```
+
 
 
 ```
