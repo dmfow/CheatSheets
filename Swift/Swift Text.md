@@ -64,6 +64,26 @@ var num = Int(myString) ?? 678
 
 ```
 
+## Remove stuff (parentheses stuff)
+```
+let myString = "This () is it (with some more stuff)"
+let newString = myString.replacingOccurrences(of: "\\s?\\([\\w\\s]*\\)", with: "", options: .regularExpression)
+
+Searches for:
+- An optional whitespace character \\s?.
+- An opening parenthesis \\(.
+- Zero or more word or whitespace characters [\\w\\s]*.
+- A closing parenthesis \\).
+
+Alternative pattern is "\\s?\\([^)]*\\)" which represents:
+- An optional whitespace character \\s?.
+- An opening parenthesis \\(.
+- Zero or more characters anything but a closing parenthesis [^)]*.
+- A closing parenthesis \\).
+
+
+```
+
 
 ## Formatting
 ```
