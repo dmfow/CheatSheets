@@ -12,6 +12,7 @@ Text("The text to display")
       .multilineTextAlignment(.center)
       .border(.yellow)
       .padding([.bottom, .trailing], 20)
+      .fontWeight(.bold)
 ```
 
 ## Image
