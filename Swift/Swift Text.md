@@ -84,6 +84,44 @@ Alternative pattern is "\\s?\\([^)]*\\)" which represents:
 
 ```
 
+## Finding
+```
+let myString = "It's red green"
+if myString.contains("red") {
+    print("Found")
+}
+
+# OR
+
+let strgArray = ["manage", "values"]
+if stringArray.contains("values") {
+    print("yes")
+}
+
+# OR
+
+let myString = "this is the best car"
+if myString.range(of: "the best") != nil {
+    print("Substring found")
+}
+
+# OR
+
+
+let myString = "this is the best car"
+let subStr = "best"
+let pattern = "\\b\(subStr)\\b"
+let regex = try! NSRegularExpression(pattern: pattern, options: .caseInsensitive)
+let range = NSRange(location: 0, length: myString.utf16.count)
+if regex.firstMatch(in: myString, options: [], range: range) != nil {
+    print("Found")
+}
+
+
+```
+
+
+
 
 ## Formatting
 ```
