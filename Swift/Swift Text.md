@@ -34,11 +34,14 @@ Text("The text to display")
       .overlay(LinearGradient(gradient: Gradient(colors: [Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.2345666)), Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0))]), startPoint: .bottom, endPoint: .top))
                 .frame(width: 50, height: 50)
       .overlay(
-        Text(text)
-          .foregroundColor(Color.white)
-          .font(.title)
-          .padding(),
-        alignment: .bottomLeading
+            Text(text)
+            .foregroundColor(Color.white)
+            .font(.title)
+            .padding(),
+            
+            alignment: .bottomLeading
+        )
+       .addVerifiedBadge(eventIsVerified)
 ```
       
 ## Use a Template
