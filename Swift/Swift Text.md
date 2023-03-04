@@ -185,17 +185,19 @@ let str1 = String(format: "%2x", num)
 ## Text
 ```
 Text("The text to display")
-      .frame(alignment: .leading)
+      .background(Color.white)
+      .border(.yellow)
+      .foregroundColor(Color.white)
       .foregroundColor(Color(#colorLiteral(red: 0.234564, green: 0.45632, blue: 0.63344, alpha: 1)))
-                .foregroundColor(Color.white)
       .font(.title)
+      .fontWeight(.bold)
+      .frame(alignment: .leading)
+      .lineLimit(1)
+      .minimumScaleFactor(0.5)
+      .multilineTextAlignment(.center)
       .padding()
       .padding(.bottom, 16)
-      .background(Color.white)
-      .multilineTextAlignment(.center)
-      .border(.yellow)
       .padding([.bottom, .trailing], 20)
-      .fontWeight(.bold)
 ```
 
 ## Image
