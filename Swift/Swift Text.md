@@ -289,6 +289,79 @@ let count = Int(3.14)
 ```
 
 
+## SETs
+```
+# While an array can contain many times the same item, you only have unique items in a set.
+# Unlike arrays, there is no order or position in a set. Items are retrieved and inserted randomly.
+# Sets, like arrays, are passed by value. This means that if you pass it to a function, or return it from a function, the set is copied.
+
+let set: Set<Int> = [1, 2, 3]
+# OR
+let set = Set([1, 2, 3])
+set.insert(17)
+set.contains(2)
+set.count
+set.isEmpty
+# Remove a specific value (not on the index)
+set.remove(1)
+
+set.removeAll()
+# If you want to print it in order. Convert it to an array
+let orderedList = set.sorted()
+
+
+# Sets can perform set math operations like intersection, union, subtracting, and more
+intersection(_:)
+symmetricDifference(_:)
+union(_:)
+subtracting(_:)
+isSubset(of:)
+isSuperset(of:)
+isStrictSubset(of:)
+isStrictSuperset(of:)
+isDisjoint(with:)
+
+```
+
+## Dictionaries
+```
+# A dictionary must be declared as var to be modified. If it's declared with let, you cannot modify it by adding or removing elements
+var dict = ["South": 8, "North": 7]
+var dict: [String: Int] = ["South": 8, "North": 7]
+
+var dict = [String: Int]()
+# OR
+var dict: [String: Int] = [:]
+
+
+print(dict["South"])    // gives 8
+
+# Change
+dict["South"] = 9
+# New pair
+dict["West"] = 3
+# Remove a keypair
+dict["West"] = nil
+# OR
+dict.removeValue(forKey: "West")
+
+dict.count
+dict.isEmpty
+
+```
+
+
+## Tuples
+```
+
+
+
+```
+
+
+
+
+
         
 ## Mix of others
 ```
@@ -480,77 +553,6 @@ Arrays are equal when they contain the same elements, of the same type:
 [1, 2, 3] == [1, 2, 3]
 
 ```
-
-## SETs
-```
-# While an array can contain many times the same item, you only have unique items in a set.
-# Unlike arrays, there is no order or position in a set. Items are retrieved and inserted randomly.
-# Sets, like arrays, are passed by value. This means that if you pass it to a function, or return it from a function, the set is copied.
-
-let set: Set<Int> = [1, 2, 3]
-# OR
-let set = Set([1, 2, 3])
-set.insert(17)
-set.contains(2)
-set.count
-set.isEmpty
-# Remove a specific value (not on the index)
-set.remove(1)
-
-set.removeAll()
-# If you want to print it in order. Convert it to an array
-let orderedList = set.sorted()
-
-
-# Sets can perform set math operations like intersection, union, subtracting, and more
-intersection(_:)
-symmetricDifference(_:)
-union(_:)
-subtracting(_:)
-isSubset(of:)
-isSuperset(of:)
-isStrictSubset(of:)
-isStrictSuperset(of:)
-isDisjoint(with:)
-
-```
-
-## Dictionaries
-```
-# A dictionary must be declared as var to be modified. If it's declared with let, you cannot modify it by adding or removing elements
-var dict = ["South": 8, "North": 7]
-var dict: [String: Int] = ["South": 8, "North": 7]
-
-var dict = [String: Int]()
-# OR
-var dict: [String: Int] = [:]
-
-
-print(dict["South"])    // gives 8
-
-# Change
-dict["South"] = 9
-# New pair
-dict["West"] = 3
-# Remove a keypair
-dict["West"] = nil
-# OR
-dict.removeValue(forKey: "West")
-
-dict.count
-dict.isEmpty
-
-```
-
-
-## Tuples
-```
-
-
-
-```
-
-
 
 
 
