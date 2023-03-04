@@ -217,7 +217,28 @@ struct MyBestText: View {
             Spacer()
         }.padding()
 ```
-        
+
+## Comments
+```
+//this is a comment
+
+let a = 1 //this is a comment
+
+/* this
+ is
+    a multi-line
+ comment
+*/
+
+/* this
+ is
+    a /* nested */ multi-line
+ comment
+*/
+```
+
+
+
         
 ## Mix of others
 ```
@@ -275,6 +296,92 @@ if this && that {
 if checkme == true {
     // Stuff
 }
+
+# If - ternary conditional operator
+let num1 = 1
+let num2 = 2
+let smallerNumber = num1 < num2 ? num1 : num2 
+
+# Switch
+var myString = "Blue"
+
+switch myString {
+case "Blue":
+    print("Blue color is best")
+default: 
+    print("What is \(myString)")
+}
+
+# Switch with range
+var age = 20
+switch age {
+case 0..<18:
+    print("You can't drive!!")
+default: 
+    print("You can drive")
+}
+
+
+# Enum
+enum Animal {
+    case dog
+    case cat
+}
+var animal: Animal = .dog
+switch animal {
+case .dog:
+    print("Hello, dog!")
+case .cat:
+    print("Hello, cat!")
+}
+
+# For loop
+for index in 0...3 {
+  // 4 times, index is: 0, 1, 2, 3
+}
+
+let list = ["a", "b", "c"]
+for item in list {
+  // Stuff
+}
+
+
+let list = ["a": 1, "b": 2, "c": 2]
+for (key, value) in list {
+  // Stuff
+}
+
+# While
+var item = 0
+while item <= 3 { 
+    // Stuff
+    // repeats 3 times
+    item += 1
+}
+
+# Repeat
+var item = 0
+repeat { 
+    // Stuff, repeats 3 times
+    item += 1
+} while item < 3
+
+# 2 statements that you can use to control the flow inside a loop: continue and break
+# continue to stop the current iteration, and run the next iteration of the loop
+# break ends the loop, not executing any further operations or iterations
+
+let list = ["a", "b", "c"]
+for item in list {
+  if (item == "b") {
+    break
+  }
+  //do something
+}
+
+var a = 2; let b = 3
+
+
+
 
 ```
 
