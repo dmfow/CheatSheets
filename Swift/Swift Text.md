@@ -1,3 +1,41 @@
+## Random
+```
+let i = Int.random(in: 1..<100)
+let rndInt = Int.random(in: 0..<4)
+let rndDouble = Double.random(in: 2.345...3.1234)
+let rndBool = Bool.random()
+let randomCGFloat = CGFloat.random(in: 1...100)
+
+# Array
+let num = [1, 2, 3]
+let shuffledNumbers = (num as NSArray).shuffled() as! [Int]
+# OR
+var albums = ["Red", "1989", "Reputation"]
+albums.shuffle() 			// shuffle in place
+let shuffled = albums.shuffled()	// get a shuffled array back
+# OR
+let albums = [“Ford”, “Zaphod”, “Trillian”, “Arthur”, “Marvin”]
+let randomName = names.randomElement()
+if let random = albums.randomElement() {
+    print("The random album is \(random).")
+}
+
+# Dict
+let userInfo: [String: Any] = ["name": "Amit Samant",
+                               "age": 28,
+                               "city": "Bangalore",
+                               "designation": "iOS Engineer"]
+                               
+if let randomInfo = userInfo.randomElement() {
+    print(randomInfo)
+} else {
+	//handle the nil case here
+}
+// random output: (key: "designation", value: "iOS Engineer")
+
+
+```
+
 
 ## Strings
 ```
