@@ -66,6 +66,11 @@ sudo mysql_secure_installation
 ```
 sudo apt install libmariadb3 libmariadb-dev
 pip3 install mariadb
+
+# SQLAlchemy
+pip3 install mariadb SQLAlchemy
+
+# Info about use in Python. See "Python MariaDB" file
 ```
 
 
