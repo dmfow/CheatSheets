@@ -8,6 +8,12 @@ sudo apt install python3-pip
 python3 -m pip install --upgrade pip
 ```
 
+#### List installed
+```python
+pip list
+```
+
+
 #### Collecting torch -> Killed. Try
 ```python
 pip install package --no-cache-dir
