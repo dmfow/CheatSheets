@@ -48,6 +48,25 @@ ss -patn | grep 3306
 ```
 # restore database
    mysql database -u [username] -p[password] < [filename].sql 
+   
+# restore multiple databases (Existing databases on the target machine will be intact.)
+mysql -u root -p < multi-databases.sql
+
+# restore all databases (The SQL statements in the all-databases.sql file will recreate 
+# all your databases in MariaDB. Existing databases on the target machine will be intact)
+mysql -u root -p < all-databases.sql
+
+# backup
+mysqldump --all-databases --single-transaction > all_databases$(date +%F).sql  -u root -p
+mysqldump -u root -p mysql user > user_table_dump$(date +%F).sql
+
+
+# Cron (NOT TESTED)
+sudo crontab -e
+@daily mysqldump -u root database_name | gzip > database_name_`date +"\%Y-\%B-\%d_\%R"`.sql.gz
+# delete old backups (delete all backups made in January on the first day of March)
+0 0 1 3 * rm /[dir to backups]t/*January*.sql.gz
+
 ```
 
 ## Installation
