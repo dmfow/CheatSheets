@@ -104,6 +104,19 @@ Cleaning up...
 # Solution, run as sudo, see above
 ```
 
+## Binary log
+```
+# Enable the binary log
+# /etc/myswl/mariadb/50-serve.cnf
+# OR Maybe
+# /etc/mysql/my.cnf
+# in the [mysqld] section un-remark
+  # log_bin     = /var/log/mysql/mysql-bin.log
+sudo systemctl restart mysql
+```
+
+
+
 
 
 
