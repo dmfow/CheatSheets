@@ -97,6 +97,9 @@ find LOCATION -name FILE_NAME
   find ~ -name resolution-for-year-2022.txt
   find . -name "*.png"
   find ~ -type f -empty
+  
+  find ./ -name myfile 2>&1 | grep -v "Permission denied" 2>&1 | grep -v "not permitted" 2>&1 | grep -v "No such file"
+  
 # OR to find a file with a specific text
 grep -irl "text" <dir>
     # i - for case insensitive search
