@@ -2,7 +2,7 @@
 https://mariadb.com/resources/blog/using-sqlalchemy-with-mariadb-connector-python-part-1/<br>
 https://mariadb.com/resources/blog/using-sqlalchemy-with-mariadb-connector-python-part-2/
 
-#### Get autocommit
+#### Autocommit
 ```
 import mysql.connector as mariadb
 connection = mariadb.connect(user='testdb', password='testdb', database='testdb', host='127.0.0.1')
