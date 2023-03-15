@@ -6,7 +6,7 @@ theword = theword.strip('.')
 
 #### Substring
 ```python
-s[2:8]
+myString[2:8]
 ```
 
 #### Find in text
