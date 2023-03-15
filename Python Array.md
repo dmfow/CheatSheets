@@ -10,6 +10,20 @@ for item in myList[:10]:
 for item in myList[-10:]:
     print (item)
 ```
+## Add
+
+### add
+```python
+# String or numbers
+myList.append(strOrNumber)
+myList.extensd(strOrNumber)
+myList.insert(index, strOrNumber)
+
+# Arrays
+myList = list1 + list2
+myList.extend(list1)
+
+```
 
 ## Get
 
