@@ -20,8 +20,8 @@ db.auth("admin")
 
 #### Commands
 ```
-db.createCollection(‘myFirstCollection’);
-db.myFirstCollection.insertOne({ firstName : 'John' , surname: 'Doe' , department: ‘HR’ });
+db.createCollection("myFirstCollection");
+db.myFirstCollection.insertOne({ firstName : 'John' , surname: 'Doe' , department: 'HR' });
 db.user.insert({name: "Some person", age: 205})
 db.inventory.find( { qty: { $gt: 20 } } )
 db.inventory.find( { qty: { $in: [ 5, 15 ] } } )
