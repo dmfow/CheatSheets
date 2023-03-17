@@ -142,6 +142,27 @@ db.updateUser(
 
 
 ## User Roles
+#### Build in roles
+https://www.mongodb.com/docs/manual/reference/built-in-roles/
+```
+read
+readWrite
+dbAdmin
+dbOwner
+userAdmin
+clusterAdmin
+clusterManager
+clusterMonitor
+hostManager
+backup
+restore
+readAnyDatabase
+readWriteAnyDatabase
+userAdminAnyDatabase
+dbAdminAnyDatabase
+root
+__system
+```
 
 #### Grant roles to a user
 ```
