@@ -1,3 +1,8 @@
+#### New empty dataframe
+```python
+df = pd.DataFrame()
+```
+
 ## Rows
 #### Info about the dataframe
 ```python
