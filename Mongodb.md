@@ -3,6 +3,12 @@
 mongosh
 ```
 
+#### Authenticate yourself before running commands
+```
+db.auth("admin")
+```
+
+
 #### Show databases
 ```
 db.adminCommand( { listDatabases: 1 } )
