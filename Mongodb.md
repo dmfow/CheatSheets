@@ -11,10 +11,22 @@ db.auth("admin")
 
 #### Show databases
 ```
+show dbs
+# OR
 db.adminCommand( { listDatabases: 1 } )
 db.adminCommand( { listDatabases: 1, nameOnly: true} )
 db.adminCommand( { listDatabases: 1, filter: { "name": /^rep/ } } )
+# Show current database
+db
 ```
+
+#### Roles
+```
+# There is no “create” command in the MongoDB Shell. In order to create a database, you will first need to switch the context to a non-existing database using the use command:
+# Then insert any data (create a collection)
+```
+
+
 #### Roles
 ```
 db.createRole(
@@ -49,6 +61,7 @@ db.getUsers({ filter: { mechanisms: "SCRAM-SHA-256" } })
 ```
 db.createCollection(‘myFirstCollection’);
 db.myFirstCollection.insertOne({ firstName : 'John' , surname: 'Doe' , department: ‘HR’ });
+db.user.insert({name: "Some person", age: 205})
 db.inventory.find( { qty: { $gt: 20 } } )
 db.inventory.find( { qty: { $in: [ 5, 15 ] } } )
 db.inventory.find( { $and: [ { price: { $eq: 2.00 } }, { price: { $exists: true } } ] } )
