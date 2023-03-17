@@ -169,6 +169,13 @@ db.updateUser(
 ```
 
 
+#### Security - at least
+```
+# https://www.digitalocean.com/community/tutorials/how-to-secure-mongodb-on-ubuntu-20-04
+# https://www.digitalocean.com/community/tutorial_series/mongodb-security-best-practices-to-keep-your-data-safe
+```
+
+
 #### Fix security - Authentication
 ```
 mongosh
