@@ -10,119 +10,6 @@ mongosh
 db.auth("admin")
 ```
 
-
-
-## Users
-
-#### Show users
-```
-db.getUsers() 
-db.getUsers({ filter: { mechanisms: "SCRAM-SHA-256" } })
-```
-
-#### Create users
-```
-# Admin user, see below
-
-use demo
-db.createUser(
-  {
-    user: "justAUser",
-    pwd:  passwordPrompt(),   // or cleartext password
-    roles: [ { role: "readWrite", db: "demo" },
-             { role: "read", db: "finances" } ]
-  }
-)
-
-
-# Create a user named accountAdmin01 on the products database:
-
-db.getSiblingDB("products").runCommand( {
-   createUser: "accountAdmin01",
-   pwd: passwordPrompt(),
-   customData: { employeeId: 12345 },
-   roles: [ { role: 'readWrite', db: 'products' } ]
-} )
-
-db.getSiblingDB("products").getUsers( { showCustomData: false } )
-```
-
-#### Remove User
-```
-db.removeUser()
-
-```
-
-#### Update User
-```
-use products
-db.updateUser( "appClient01",
-{
-   customData : { employeeId : "0x3010"},
-   roles : [
-      { role : "read", db : "assets"  }
-   ]
-} )
-
-
-use Auth
-db.updateUser( "admin",
-{
-   user: "Admin",
-   pwd: "myNewPassword",
-} )
-
-
-use test
-db.updateUser(
-   "user123",
-   {
-      pwd: passwordPrompt(),  // or cleartext password
-      customData: { title: "Senior Manager" }
-   }
-)
-
-```
-
-
-
-## Users Roles
-
-#### Grant roles to a user
-```
-use products
-db.grantRolesToUser(
-   "accountUser01",
-   [ "readWrite" , { role: "read", db: "stock" } ],
-   { w: "majority" , wtimeout: 4000 }
-)
-```
-
-#### Create roles
-```
-db.createRole(
-   { role: "changeOwnPasswordCustomDataRole",
-     privileges: [
-        { 
-          resource: { db: "", collection: ""},
-          actions: [ "changeOwnPassword", "changeOwnCustomData" ]
-        }
-     ],
-     roles: []
-   }
-)
-db.createUser(
-   {
-     user:"user123",
-     pwd: passwordPrompt(),  // or cleartext password
-     roles:[ "readWrite", { role:"changeOwnPasswordCustomDataRole", db:"admin" } ] 
-   }
-)
-```
-
-
-
-
 ## Data
 
 #### Create database
@@ -180,18 +67,121 @@ db
 
 
 
+## Users
+
+#### Show users
+```
+db.getUsers() 
+db.getUsers({ filter: { mechanisms: "SCRAM-SHA-256" } })
+```
+
+#### Create users
+```
+# Admin user, see below
+
+use demo
+db.createUser(
+  {
+    user: "justAUser",
+    pwd:  passwordPrompt(),   // or cleartext password
+    roles: [ { role: "readWrite", db: "demo" },
+             { role: "read", db: "finances" } ]
+  }
+)
 
 
+# Create a user named accountAdmin01 on the products database:
+
+db.getSiblingDB("products").runCommand( {
+   createUser: "accountAdmin01",
+   pwd: passwordPrompt(),
+   customData: { employeeId: 12345 },
+   roles: [ { role: 'readWrite', db: 'products' } ]
+} )
+
+db.getSiblingDB("products").getUsers( { showCustomData: false } )
+```
+
+#### Remove User
+```
+db.removeUser()
+
+```
+
+#### Update user
+```
+use products
+db.updateUser( "appClient01",
+{
+   customData : { employeeId : "0x3010"},
+   roles : [
+      { role : "read", db : "assets"  }
+   ]
+} )
+
+
+use Auth
+db.updateUser( "admin",
+{
+   user: "Admin",
+   pwd: "myNewPassword",
+} )
+
+
+use test
+db.updateUser(
+   "user123",
+   {
+      pwd: passwordPrompt(),  // or cleartext password
+      customData: { title: "Senior Manager" }
+   }
+)
+
+```
+
+
+
+## User Roles
+
+#### Grant roles to a user
+```
+use products
+db.grantRolesToUser(
+   "accountUser01",
+   [ "readWrite" , { role: "read", db: "stock" } ],
+   { w: "majority" , wtimeout: 4000 }
+)
+```
+
+#### Create roles
+```
+db.createRole(
+   { role: "changeOwnPasswordCustomDataRole",
+     privileges: [
+        { 
+          resource: { db: "", collection: ""},
+          actions: [ "changeOwnPassword", "changeOwnCustomData" ]
+        }
+     ],
+     roles: []
+   }
+)
+db.createUser(
+   {
+     user:"user123",
+     pwd: passwordPrompt(),  // or cleartext password
+     roles:[ "readWrite", { role:"changeOwnPasswordCustomDataRole", db:"admin" } ] 
+   }
+)
+```
+
+## Secure your Mongodb
 
 #### Security - at least
 ```
 # https://www.digitalocean.com/community/tutorials/how-to-secure-mongodb-on-ubuntu-20-04
 # https://www.digitalocean.com/community/tutorial_series/mongodb-security-best-practices-to-keep-your-data-safe
-```
 
-
-#### Fix security - Authentication
-```
 mongosh
 
 use admin
