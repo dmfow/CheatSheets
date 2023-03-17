@@ -7,6 +7,7 @@ mongosh
 
 #### Authenticate yourself before running commands
 ```
+# Do this for every database you use (efter use [dbname])
 db.auth("admin")
 ```
 
