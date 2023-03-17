@@ -1,3 +1,5 @@
+## Shell / using
+
 #### Mongo Shell
 ```
 mongosh
@@ -9,25 +11,94 @@ db.auth("admin")
 ```
 
 
-#### Show databases
+
+## Users
+
+#### Show users
 ```
-show dbs
-# OR
-db.adminCommand( { listDatabases: 1 } )
-db.adminCommand( { listDatabases: 1, nameOnly: true} )
-db.adminCommand( { listDatabases: 1, filter: { "name": /^rep/ } } )
-# Show current database
-db
+db.getUsers() 
+db.getUsers({ filter: { mechanisms: "SCRAM-SHA-256" } })
 ```
 
-#### Roles
+#### Create users
 ```
-# There is no “create” command in the MongoDB Shell. In order to create a database, you will first need to switch the context to a non-existing database using the use command:
-# Then insert any data (create a collection)
+# Admin user, see below
+
+use demo
+db.createUser(
+  {
+    user: "justAUser",
+    pwd:  passwordPrompt(),   // or cleartext password
+    roles: [ { role: "readWrite", db: "demo" },
+             { role: "read", db: "finances" } ]
+  }
+)
+
+
+# Create a user named accountAdmin01 on the products database:
+
+db.getSiblingDB("products").runCommand( {
+   createUser: "accountAdmin01",
+   pwd: passwordPrompt(),
+   customData: { employeeId: 12345 },
+   roles: [ { role: 'readWrite', db: 'products' } ]
+} )
+
+db.getSiblingDB("products").getUsers( { showCustomData: false } )
+```
+
+#### Remove User
+```
+db.removeUser()
+
+```
+
+#### Update User
+```
+use products
+db.updateUser( "appClient01",
+{
+   customData : { employeeId : "0x3010"},
+   roles : [
+      { role : "read", db : "assets"  }
+   ]
+} )
+
+
+use Auth
+db.updateUser( "admin",
+{
+   user: "Admin",
+   pwd: "myNewPassword",
+} )
+
+
+use test
+db.updateUser(
+   "user123",
+   {
+      pwd: passwordPrompt(),  // or cleartext password
+      customData: { title: "Senior Manager" }
+   }
+)
+
 ```
 
 
-#### Roles
+
+## Users Roles
+
+#### Grant roles to a user
+```
+use products
+db.grantRolesToUser(
+   "accountUser01",
+   [ "readWrite" , { role: "read", db: "stock" } ],
+   { w: "majority" , wtimeout: 4000 }
+)
+```
+
+#### Create roles
 ```
 db.createRole(
    { role: "changeOwnPasswordCustomDataRole",
@@ -50,12 +121,15 @@ db.createUser(
 ```
 
 
-#### Users
-```
-db.getUsers() 
-db.getUsers({ filter: { mechanisms: "SCRAM-SHA-256" } })
-```
 
+
+## Data
+
+#### Create database
+```
+# There is no “create” command in the MongoDB Shell. In order to create a database, you will first need to switch the context to a non-existing database using the use command:
+# Then insert any data (create a collection)
+```
 
 #### Commands
 ```
@@ -88,85 +162,25 @@ tags: [ "apparel", "clothing" ],
 ratings: [ { by: "ijk", rating: 4 } ]
 }
 
+```
 
 
+## Show Structures
 
-
+#### Show databases
+```
+show dbs
+# OR
+db.adminCommand( { listDatabases: 1 } )
+db.adminCommand( { listDatabases: 1, nameOnly: true} )
+db.adminCommand( { listDatabases: 1, filter: { "name": /^rep/ } } )
+# Show current database
+db
 ```
 
 
 
-#### Create users
-```
-# Admin user, see below
 
-use demo
-db.createUser(
-  {
-    user: "justAUser",
-    pwd:  passwordPrompt(),   // or cleartext password
-    roles: [ { role: "readWrite", db: "demo" },
-             { role: "read", db: "finances" } ]
-  }
-)
-
-
-# Create a user named accountAdmin01 on the products database:
-
-db.getSiblingDB("products").runCommand( {
-   createUser: "accountAdmin01",
-   pwd: passwordPrompt(),
-   customData: { employeeId: 12345 },
-   roles: [ { role: 'readWrite', db: 'products' } ]
-} )
-
-db.getSiblingDB("products").getUsers( { showCustomData: false } )
-```
-
-#### Grant roles to a user
-```
-use products
-db.grantRolesToUser(
-   "accountUser01",
-   [ "readWrite" , { role: "read", db: "stock" } ],
-   { w: "majority" , wtimeout: 4000 }
-)
-```
-
-#### Other user stuff
-```
-db.removeUser()
-
-
-use products
-db.updateUser( "appClient01",
-{
-   customData : { employeeId : "0x3039" },
-   roles : [
-      { role : "read", db : "assets"  }
-   ]
-} )
-
-
-use Auth
-db.updateUser( "admin",
-{
-   user: "Admin",
-   pwd: "myNewPassword",
-} )
-
-
-use test
-db.updateUser(
-   "user123",
-   {
-      pwd: passwordPrompt(),  // or cleartext password
-      customData: { title: "Senior Manager" }
-   }
-)
-
-
-```
 
 
 #### Security - at least
