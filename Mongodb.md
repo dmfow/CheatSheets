@@ -3,6 +3,35 @@
 mongosh
 ```
 
+#### Show databases
+```
+db.adminCommand( { listDatabases: 1 } )
+db.adminCommand( { listDatabases: 1, nameOnly: true} )
+db.adminCommand( { listDatabases: 1, filter: { "name": /^rep/ } } )
+```
+#### Roles
+```
+db.createRole(
+   { role: "changeOwnPasswordCustomDataRole",
+     privileges: [
+        { 
+          resource: { db: "", collection: ""},
+          actions: [ "changeOwnPassword", "changeOwnCustomData" ]
+        }
+     ],
+     roles: []
+   }
+)
+db.createUser(
+   {
+     user:"user123",
+     pwd: passwordPrompt(),  // or cleartext password
+     roles:[ "readWrite", { role:"changeOwnPasswordCustomDataRole", db:"admin" } ] 
+   }
+)
+```
+
+
 #### Users
 ```
 db.getUsers() 
@@ -85,9 +114,39 @@ db.grantRolesToUser(
 )
 ```
 
-#### Other user
+#### Other user stuff
 ```
 db.removeUser()
+
+
+use products
+db.updateUser( "appClient01",
+{
+   customData : { employeeId : "0x3039" },
+   roles : [
+      { role : "read", db : "assets"  }
+   ]
+} )
+
+
+use Auth
+db.updateUser( "admin",
+{
+   user: "Admin",
+   pwd: "myNewPassword",
+} )
+
+
+use test
+db.updateUser(
+   "user123",
+   {
+      pwd: passwordPrompt(),  // or cleartext password
+      customData: { title: "Senior Manager" }
+   }
+)
+
+
 ```
 
 
