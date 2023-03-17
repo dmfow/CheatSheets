@@ -3,6 +3,12 @@
 mongosh
 ```
 
+#### Users
+```
+db.getUsers() 
+db.getUsers({ filter: { mechanisms: "SCRAM-SHA-256" } })
+```
+
 
 #### Commands
 ```
@@ -56,6 +62,32 @@ db.createUser(
   }
 )
 
+
+# Create a user named accountAdmin01 on the products database:
+
+db.getSiblingDB("products").runCommand( {
+   createUser: "accountAdmin01",
+   pwd: passwordPrompt(),
+   customData: { employeeId: 12345 },
+   roles: [ { role: 'readWrite', db: 'products' } ]
+} )
+
+db.getSiblingDB("products").getUsers( { showCustomData: false } )
+```
+
+#### Grant roles to a user
+```
+use products
+db.grantRolesToUser(
+   "accountUser01",
+   [ "readWrite" , { role: "read", db: "stock" } ],
+   { w: "majority" , wtimeout: 4000 }
+)
+```
+
+#### Other user
+```
+db.removeUser()
 ```
 
 
