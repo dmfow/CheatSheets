@@ -33,6 +33,38 @@ math.floor(x)
 math.ceil(x)
 ```
 
+#### Operators
+```python
+# Boolean operators
+x or y
+x and y
+not x
+
+# Comparison
+<
+<=
+>
+>=
+==
+!=
+is
+is not
+
+```
+
+#### Bitwise
+```python
+x | y
+x ^ y
+x & y
+x << n
+x >> n
+~x
+```
+
+
+More: https://docs.python.org/3/library/stdtypes.html
+
 #### Numeric operations
 ```
 ```
