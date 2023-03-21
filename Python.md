@@ -5,6 +5,15 @@ from pprint import pp
 pp("Whatever Array or Json or other")
 ```
 
+
+#### Import locally
+```python
+import filewithDef
+# OR
+from path import filewithDef
+```
+
+
 #### Check if a direcotry of file exist
 ```python
 isExist = os.path.exists(path)
