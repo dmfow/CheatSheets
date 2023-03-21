@@ -1,8 +1,3 @@
-#### Mongo Shell
-```
-i = round(myInt, 3)
-
-```
 
 #### Numeric operations
 ```
