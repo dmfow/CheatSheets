@@ -3,6 +3,10 @@
 ```
 cd ./where_you_want_it
 git init
+
+# Undo init
+cd ./where_you_want_it
+rm -rf .git
 ```
 
 #### Make git in you current empty directory
