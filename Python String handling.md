@@ -1,4 +1,4 @@
-#### To and from String
+#### To and From String
 ```python
 int(myString)
 str(myInt)
