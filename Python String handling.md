@@ -1,7 +1,18 @@
+#### To and from String
+```python
+int(myString)
+str(myInt)
+str(0b11010010)        # Gives 210
+int("10", base=3)      # Gives 3
+
+# Check type
+type(int("10"))
+```
+
+
 #### Strip
 ```python
 theword = theword.strip('.')
-
 ```
 
 #### Substring
