@@ -131,8 +131,30 @@ while True:
         
 ```
 
-#### ...
+#### Datatypes
 ```python
+str
+int, float, complex
+list, tuple, range          
+dict
+set, frozenset
+bool
+bytes, bytearray, memoryview
+NoneType
+
+
+List: ["apple", "banana", "cherry"]
+Tuple: ("apple", "banana", "cherry")
+Range: range(6)
+Dict: {"name" : "John", "age" : 36}
+Set: {"apple", "banana", "cherry"}
+Frozenset: frozenset({"apple", "banana", "cherry"})
+Bytes: b"Hello"
+Bytearray: bytearray(5)
+Memoryview: memoryview(bytes(5))
+
+x = "what"
+print(type(x))
 ```
 
 #### ...
