@@ -66,6 +66,12 @@ certbot -d domain.org --manual --preferred-challenges dns certonly
 certbot -d *.domain.org --manual --preferred-challenges dns certonly
 ```
 
+#### Check your TXT field
+```
+dig TXT _acme-challenge.yourdomain.org +short
+```
+
+
 #### Automatic
 ```
 sudo apt install certbot
