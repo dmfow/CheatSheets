@@ -104,3 +104,8 @@ Evaluate <br>
 https://geekflare.com/nginx-webserver-security-hardening-guide/
 ```
 ```
+
+#### Config pitfalls
+```
+https://www.nginx.com/resources/wiki/start/topics/tutorials/config_pitfalls/
+``
