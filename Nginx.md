@@ -62,6 +62,8 @@ sudo apt install nginx
 ```
 # You get a TXT record to paste into your DNS zone
 certbot -d domain.org --manual --preferred-challenges dns certonly
+# wildcard
+certbot -d *.domain.org --manual --preferred-challenges dns certonly
 ```
 
 #### Automatic
