@@ -91,7 +91,7 @@ server {
 
 ```
 
-#### Some SSL parameters (choose carefully, probably not below)
+#### Security
 Evaluate <br>
 https://geekflare.com/nginx-webserver-security-hardening-guide/
 ```
