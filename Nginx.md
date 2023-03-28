@@ -159,7 +159,8 @@ https://www.nginx.com/resources/wiki/start/topics/tutorials/config_pitfalls/
 <br>
 https://www.nginx.com/blog/avoiding-top-10-nginx-configuration-mistakes/
 ```
-``
+```
+
 #### Config info and such
 ```
 # Where is the config file
