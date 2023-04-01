@@ -47,37 +47,6 @@ nginx -s stop
 
 ```
 
-#### Allow larger uploads (eg POST), with php
-Config all 3:
-- Nginx
-- php
-- permission on the upload foled
-```
-# Nginx (/etc/nginx/sites-availible/XYZ.conf)
-# in http, server or location (0 unrestricted)
-client_max_body_size 48M;
-client_max_body_size 0;
-
-# php
-upload_max_filesize = 24M
-post_max_size = 48M
-memory_limit = 24M
-
-# php time restrictions
-max_input_time = 48
-max_execution_time = 48
-
-# permission to a folder for uploads
-# check which user is used for the nginx
-ps aux | grep -E '[a]pache|[h]ttpd|[_]www|[w]ww-data|[n]ginx' | grep -v root | head -1 | cut -d\  -f1
-# Set persmission
-chown -R www-data:www-data /yourfolder/
-chmod -R g+rw /yourolder/
-  # to the group (g), add (+) read and write (rw) permissions on folder your/folder/, recursively (-R)
-```
-
-
-
 
 ## Loadblancer
 
@@ -179,6 +148,36 @@ location ~ \.php$ {
 
 ```
 
+#### Allow larger uploads (eg POST), with php
+Config all 3:
+- Nginx
+- php
+- permission on the upload foled
+```
+# Nginx (/etc/nginx/sites-availible/XYZ.conf)
+# in http, server or location (0 unrestricted)
+client_max_body_size 48M;
+client_max_body_size 0;
+
+# php
+upload_max_filesize = 24M
+post_max_size = 48M
+memory_limit = 24M
+
+# php time restrictions
+max_input_time = 48
+max_execution_time = 48
+
+# permission to a folder for uploads
+# check which user is used for the nginx
+ps aux | grep -E '[a]pache|[h]ttpd|[_]www|[w]ww-data|[n]ginx' | grep -v root | head -1 | cut -d\  -f1
+# Set persmission
+chown -R www-data:www-data /yourfolder/
+chmod -R g+rw /yourolder/
+  # to the group (g), add (+) read and write (rw) permissions on folder your/folder/, recursively (-R)
+```
+
+
 ## Installation
 
 
@@ -190,6 +189,7 @@ sudo apt install nginx
 /var/www/html
 
 ```
+
 
 #### Installation PHP
 ```
