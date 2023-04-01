@@ -37,7 +37,7 @@ server {
 ln -s /etc/nginx/sites-available/yourdomain.org.conf /etc/nginx/sites-enabled/yourdomain.org.conf
 ```
 
-#### Reload (eg after confgi changes)
+#### Reload (eg after config changes)
 ```
 sudo nginx -s reload
 
