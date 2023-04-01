@@ -47,6 +47,36 @@ nginx -s stop
 
 ```
 
+#### Allow larger uploads (eg POST), with php
+Config all 3:
+- Nginx
+- php
+- permission on the upload foled
+```
+# Nginx (/etc/nginx/sites-availible/XYZ.conf)
+# in http, server or location (0 unrestricted)
+client_max_body_size 48M;
+client_max_body_size 0;
+
+# php
+upload_max_filesize = 24M
+post_max_size = 48M
+memory_limit = 24M
+
+# php time restrictions
+max_input_time = 48
+max_execution_time = 48
+
+# permission to a folder for uploads
+# check which user is used for the nginx
+ps aux | grep -E '[a]pache|[h]ttpd|[_]www|[w]ww-data|[n]ginx' | grep -v root | head -1 | cut -d\  -f1
+# Set persmission
+chown -R www-data:www-data /yourfolder/
+chmod -R g+rw /yourolder/
+  # to the group (g), add (+) read and write (rw) permissions on folder your/folder/, recursively (-R)
+```
+
+
 
 
 ## Loadblancer
@@ -132,6 +162,22 @@ server {
 ```
 
 
+## PHP
+
+```
+location ~ \.php$ {
+        include snippets/fastcgi-php.conf;
+        fastcgi_pass unix:/run/php/php-fpm.sock;
+}
+# OR maybe (not tested)
+location ~ \.php$ {
+  fastcgi_split_path_info ^(.+\.php)(/.+)$;
+  fastcgi_pass 127.0.0.1:9000;
+  fastcgi_index index.php;
+  include fastcgi_params;
+}
+
+```
 
 ## Installation
 
@@ -139,8 +185,33 @@ server {
 #### Installation
 ```
 sudo apt install nginx
+
+# Default web library
+/var/www/html
+
 ```
 
+#### Installation PHP
+```
+sudo apt install php-fpm
+# Maybe
+sudo apt install php-cli
+reboot
+# Check status
+systemctl status php*-fpm.service
+ls /run/php
+
+# conf files not needed to be update
+/etc/nginx/php_fastcgi.conf
+/etc/php/*/fpm/pool.d/www.conf
+ls /run/php/
+
+/etc/nginx/nginx.conf
+/etc/nginx/sites-available/
+/etc/nginx/sites-enabled/
+/etc/nginx/snippets
+
+```
 
 
 #### Security
