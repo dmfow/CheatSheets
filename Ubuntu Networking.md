@@ -65,6 +65,17 @@ sudo service network-manager restart
 sudo systemctl restart NetworkManager.service
 ```
 
+#### Temporarily take down/up an interface
+```
+sudo ip link set ens0 down
+sudo ip link set ens0 up 
+# OR
+sudo ifconfig ens0 down
+sudo ifconfig ens0 up
+
+```
+
+
 #### Check open ports
 ```
 ss -patn | grep 443
