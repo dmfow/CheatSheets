@@ -203,6 +203,68 @@ Try different Fx till you find the terminal where you started lightDM
 ctrl+C
 ```
 
+#### Journal
+```
+# Since time/date
+journalctl -S "2020-91-12 07:00:00"
+journalctl --since "2015-01-10" --until "2015-01-11 03:00"
+journalctl --since yesterday
+journalctl --since 09:00 --until "1 hour ago"
+
+# Since previous boot
+journalctl -b -1
+
+# Bya unit
+journalctl -u nginx.service
+journalctl -u nginx.service --since today
+journalctl -u nginx.service -u php-fpm.service --since today
+
+# Byt group/user
+journalctl _PID=8001
+
+# Check a UID and then use it
+id -u www-data
+journalctl _UID=33 --since today
+
+# See group IDs
+journalctl -F _GID
+
+# By component path
+journalctl /usr/bin/bash
+
+# Kernel
+journalctl -k
+journalctl -k -b -5
+
+# By priority
+journalctl -p err -b
+
+# Limit the number of rows
+journalctl -n 20
+
+# Output json
+journalctl -o json
+
+# Actively follow the logs
+journalctl -f
+
+```
+
+#### Journal management
+```
+# Disk usage of the journal system
+journalctl --disk-usage
+
+# Remove entries (in this case keep 1G of entries)
+sudo journalctl --vacuum-size=1G
+
+# Remove entries (in this case keep 1 year of entries)
+sudo journalctl --vacuum-time=1years
+
+```
+
+
+
 
 #### SCP copy files between 2 linux boxes with scp (Secure copy over ssh)
 ```
