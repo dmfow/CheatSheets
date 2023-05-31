@@ -153,20 +153,22 @@ Config all 3:
 - Nginx
 - php
 - permission on the upload foled
+Then 
+sudo nginx -s reload
 ```
 # Nginx (/etc/nginx/sites-availible/XYZ.conf)
 # in http, server or location (0 unrestricted)
 client_max_body_size 48M;
 client_max_body_size 0;
 
-# php
-upload_max_filesize = 24M
-post_max_size = 48M
-memory_limit = 24M
+# php (/etc/php/X.X/fpm/php.ini)
+upload_max_filesize = 1G
+post_max_size = 1G
+memory_limit = 128M
 
-# php time restrictions
-max_input_time = 48
-max_execution_time = 48
+# php time restrictions (same file /etc/php/X.X/fpm/php.ini)
+max_input_time = 1800
+max_execution_time = 30
 
 # permission to a folder for uploads
 # check which user is used for the nginx
