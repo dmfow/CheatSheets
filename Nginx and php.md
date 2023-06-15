@@ -90,10 +90,14 @@ proxy_set_header Host $nginx;
 ## Let's encrypt Certbot
 
 #### Manual
+You get a TXT record to paste into your DNS zone
 ```
-# You get a TXT record to paste into your DNS zone
+# both wildcard and root
+certbot -d domain.org -d *.domain.org --manual --preferred-challenges dns certonly
+
+# Only one domain (eg root)
 certbot -d domain.org --manual --preferred-challenges dns certonly
-# wildcard
+# only wildcard
 certbot -d *.domain.org --manual --preferred-challenges dns certonly
 ```
 
@@ -102,7 +106,7 @@ certbot -d *.domain.org --manual --preferred-challenges dns certonly
 # Check certs
 sudo certbot certificates
 # Go to your home library (or maybe anyware), and run the same command as when creating the cert
-certbot -d domain.org --manual --preferred-challenges dns certonly
+certbot -d domain.org -d *.domain.org  --manual --preferred-challenges dns certonly
 ```
 
 
