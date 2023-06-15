@@ -97,6 +97,15 @@ certbot -d domain.org --manual --preferred-challenges dns certonly
 certbot -d *.domain.org --manual --preferred-challenges dns certonly
 ```
 
+#### Manual renewal
+```
+# Check certs
+sudo certbot certificates
+# Go to your home library (or maybe anyware), and run the same command as when creating the cert
+certbot -d domain.org --manual --preferred-challenges dns certonly
+```
+
+
 #### Check your TXT field
 ```
 dig TXT _acme-challenge.yourdomain.org +short
