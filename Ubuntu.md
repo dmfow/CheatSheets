@@ -273,4 +273,23 @@ scp -r *.* user@host:/directory
 
 
 
+#### Sound Troubleshooting
+```
+inxi -SMA
+
+sudo alsa force-reload
+# sudo apt-get install --reinstall alsa-base pulseaudio
+pulseaudio --start
+```
+
+#### Install sound packets
+```
+sudo apt install inxi
+
+```
+
+
+
+
+
 
