@@ -51,44 +51,6 @@ hwinfo
 lsusb
 ```
 
-#### Check disk temperature
-```
-# Disk temp
-hddtemp /dev/sda
-# OR if it doesn't work
-smartctl -a /dev/sdb | grep 190
- $ 190 Airflow_Temperature_Cel 0x0032   073   062   000    Old_age   Always       -       27
-# OR look for 194
-smartctl -a /dev/sdb
-# OR if it doesn't work
-hddtemp --debug /dev/sdb | grep 190
-  $ field(190)       = 27
-# OR look for 194
-hddtemp --debug /dev/sdb
-
-# Other temperature - acpitz (ACPI thermal zone): Probably CPU socket temp,  ISA: Probably the CPUs cores temp
-sensors
-
-# Install hddtemp
-apt install hddtemp
-# Install xsensors
-apt install xsensors
-# Scan for sensors
-sensors-detect
-
-# Fix hddtemp "WARNING: Drive /dev/sda doesn't seem to have a temperature sensor."
-  # insert into /etc/hddtemp.db this line (or wherever the hddtemp.db is):
-  # "Samsung SSD 850 EVO 120G B"                            190  C  "Samsung SSD 850 EVO 120GB"
-  # To get a reading directly from "hddtemp /dev/sda". 190 is the number you choose from "hddtemp --debug /dev/sdb" output
-
-
-# SSD Disks: For reliability, between 30ºC and 50ºC (86ºF to 122ºF) for SSDs under load in a standard desktop computer
-# even if they are rated up to 70*C
-# https://harddrivegeek.com/ssd-temperature/
-
-```
-
-
 #### Find a file
 
 ```
