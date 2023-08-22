@@ -50,6 +50,31 @@ sudo do-release-upgrade
   
 ```
 
+#### Check temperatures
+```
+# See temperature
+sensors
+
+# Continuesly (eg checking every 8 seconds) (-f gives farenheit)
+watch -n 8 -d sensors
+
+# To detect sensors (run once)
+sudo sensors-detect
+
+# HDD
+sudo hddtemp /dev/sda
+
+
+# Installation
+sudo apt install hddtemp
+
+# Another one (not tested)
+sudo apt install lm-sensors
+sudo apt install lm-sensors hddtemp
+
+```
+
+
 #### Check SSD health/wear
 ```
 # Explanation of items
