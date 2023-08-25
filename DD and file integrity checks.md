@@ -30,10 +30,17 @@ sudo lsblk -f
   # The signature file (<filename>.<image>.bz2.sig)
   # The openssl public key (<filename>.pub)
 
-openssl sha256 OPNsense-<filename>.bz2
+1. Checksum match (so you got the whole file)
+openssl sha256 <filename>.bz2
+cat <filename>.sha256
 
-!Match the checksum command output with the checksum values in the file OPNsense-<version>-OpenSSL-checksums-amd64.sha256
-!If it doesn't match something is wrong
+2. If #1 is alright
+openssl base64 -d -in <filename>.sig -out ./image.sig
+openssl dgst -sha256 -verify <filename>.pub -signature ./image.sig <filename>.bz2
+
+! Be aware of the public key (.pub), it can have been altered on it's way
+! Match the checksum command output with the checksum values in the file OPNsense-<version>-OpenSSL-checksums-amd64.sha256
+! If it doesn't match something is wrong
 
 ```
 
