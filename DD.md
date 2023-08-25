@@ -19,3 +19,34 @@ sudo eject sdd
 sudo lsblk -f
 
 ```
+
+## Check integrity of a file (eg a downloaded file)
+#### With OpenSSL
+```
+
+```
+
+#### With SHA (sh256sum file + file, In the same library)
+```
+  # In the library:
+  # [program]-sha256sum.txt
+  # [program]-Debian-12-amd64.deb
+
+sha256sum -c veracrypt-1.25.9-sha256sum.txt 2>&1 | grep OK
+```
+
+#### With GPG (key + sig + file to verify)
+```
+gpg --import [Program]-key.asc 
+gpg --verify [Program]-Linux-console-x64.tar.gz.sig [Program]-Linux-console-x64.tar.gz
+```
+
+
+#### Others commands (not verification)
+```
+  # Check GPG version
+  gpg --version
+  # SHA
+  sha256sum --version
+```
+
