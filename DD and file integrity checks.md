@@ -50,7 +50,7 @@ openssl dgst -sha256 -verify <filename>.pub -signature ./image.sig <filename>.bz
   # [program]-sha256sum.txt
   # [program]-Debian-12-amd64.deb
 
-sha256sum -c veracrypt-1.25.9-sha256sum.txt 2>&1 | grep OK
+sha256sum -c [Program]-sha256sum.txt 2>&1 | grep OK
 
 ```
 
