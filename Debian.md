@@ -22,6 +22,15 @@ iface vmbr0 inet static
 $ ifreload -a
 
 ```
+
+#### DNS/DHCP
+```
+# DNS
+/etc/resolv.conf
+
+# DHCP
+/etc/dhcp/dhclient.conf 
+```
         
 
 
@@ -43,6 +52,7 @@ pool ntp.server.com
 timedatectl set-ntp yes
 systemctl restart chronyd
 timedatectl
+
 
 ```
 
