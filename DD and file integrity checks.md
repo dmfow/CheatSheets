@@ -47,17 +47,17 @@ openssl dgst -sha256 -verify <filename>.pub -signature ./image.sig <filename>.bz
 #### With SHA (sh256sum file + file, In the same library)
 ```
 # In the library:
-  # [program]-sha256sum.txt
-  # [program]-Debian-12-amd64.deb
+  # <filename>-sha256sum.txt
+  # <filename>-Debian-12-amd64.deb
 
-sha256sum -c [Program]-sha256sum.txt 2>&1 | grep OK
+sha256sum -c <filename>-sha256sum.txt 2>&1 | grep OK
 
 ```
 
 #### With GPG (key + sig + file to verify)
 ```
-gpg --import [Program]-key.asc 
-gpg --verify [Program]-Linux-console-x64.tar.gz.sig [Program]-Linux-console-x64.tar.gz
+gpg --import <filename>-key.asc 
+gpg --verify <filename>-Linux-console-x64.tar.gz.sig <filename>-Linux-console-x64.tar.gz
 ```
 
 
