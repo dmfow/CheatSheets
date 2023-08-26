@@ -25,7 +25,7 @@ du -sh ~
 # Largest files
 sudo find  / -type f -exec du -Sh {} + | sort -rh | head -n 20
 
-# Largest directories
+# Largest directories or files
 sudo du -h / | sort -rh | head -20
 # OR (slightly different)
 sudo du -a / | sort -n -r | head -n 20
