@@ -148,9 +148,7 @@ nano /usr/share/pve-manager/js/pvemanagerlib.js
 systemctl restart pveproxy
 
 # More info: https://www.reddit.com/r/homelab/comments/rhq56e/displaying_cpu_temperature_in_proxmox_summery_in/?rdt=57088
-
 ```
-
 
 
 #### AVX2 and other HW feature support
@@ -171,8 +169,6 @@ cpu-model: avx
     hidden 0
     hv-vendor-id proxmox
     reported-model kvm64
-
-
 ```
 
 
