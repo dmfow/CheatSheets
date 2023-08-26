@@ -27,6 +27,8 @@ sudo find  / -type f -exec du -Sh {} + | sort -rh | head -n 10
 
 # Largest directories
 sudo du -sh /* | sort -hr | head -n 10
+# AND (of the dir is called something with a dot in)
+sudo du -sh /* | sort -hr | head -n 10
 
 # Or check out ncdu (not tested)
 ```
