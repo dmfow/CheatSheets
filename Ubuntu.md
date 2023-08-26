@@ -23,12 +23,12 @@ du -sh ~
 #### Find the largest files or directories
 ```
 # Largest files
-sudo find  / -type f -exec du -Sh {} + | sort -rh | head -n 10
+sudo find  / -type f -exec du -Sh {} + | sort -rh | head -n 20
 
 # Largest directories
-sudo du -sh /* | sort -hr | head -n 10
-# AND (of the dir is called something with a dot in)
-sudo du -sh /* | sort -hr | head -n 10
+sudo du -h / | sort -rh | head -20
+# OR (slightly different)
+sudo du -a / | sort -n -r | head -n 20
 
 # Or check out ncdu (not tested)
 ```
