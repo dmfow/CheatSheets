@@ -64,8 +64,6 @@ apt-get dist-upgrade
 ```
 
 
-
-
 #### Temperature sensors
 ```
 apt-get install lm-sensors
@@ -151,8 +149,32 @@ systemctl restart pveproxy
 
 # More info: https://www.reddit.com/r/homelab/comments/rhq56e/displaying_cpu_temperature_in_proxmox_summery_in/?rdt=57088
 
+```
 
+
+
+#### AVX2 and other HW feature support
+```
+# Use Host instead of kvm64 for the VM's CPU type
+# Be aware, this might impact HA functionality, eg if the hosts have different CPUs
+
+# Check the hardware support in the Proxmox console
+grep -o 'avx[^ ]*' /proc/cpuinfo
+# Check for AVX
+grep -o 'avx[^ ]*' /proc/cpuinfo
+
+# Possibility (but not checked) to create your own CPU type
+# Edit the file /etc/pve/virtual-guest/cpu-models.conf
+cpu-model: avx
+    flags +avx;+avx2;+xsave
+    phys-bits host
+    hidden 0
+    hv-vendor-id proxmox
+    reported-model kvm64
 
 
 ```
+
+
+
 
