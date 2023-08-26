@@ -31,7 +31,7 @@ sudo du -h / | sort -rh | head -20
 # Largest directories or files
 sudo du -a / | sort -n -r | head -n 20
 
-# Or check out ncdu (not tested)
+# Or check out ncdu with ncurses interface (not tested)
 ```
 
 #### Check the disk names and volumns
