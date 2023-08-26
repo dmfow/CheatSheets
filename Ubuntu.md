@@ -20,6 +20,17 @@ df -h /
 du -sh ~
 ```
 
+#### Find the largest files or directories
+```
+# Largest files
+sudo find  / -type f -exec du -Sh {} + | sort -rh | head -n 10
+
+# Largest directories
+sudo du -sh /* | sort -hr | head -n 10
+
+# Or check out ncdu (not tested)
+```
+
 #### Check the disk names and volumns
 ```
 sudo lsblk -f
