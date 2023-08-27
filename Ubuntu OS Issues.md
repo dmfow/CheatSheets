@@ -26,7 +26,12 @@ ubuntu-drivers devices
 nvidia-smi
 ```
 
-#### Try A (Remove the last installed packages)
+## Fix graphical
+Check eg in apt/dkpg:
+<br>
+Error: Sub-process /usr/bin/dpkg returned an error code
+
+#### Try A - Remove the last installed packages
 ```
 # Check the logfile for the date and time
 cat /var/log/apt/history.log
@@ -45,14 +50,14 @@ sudo apt-get clean
 sudo apt-get autoremove
 ```
 
-#### Try B (broken apt installation)
+#### Try B - fix a broken apt installation
 ```
 sudo apt --fix-broken install
 sudo apt-get clean
 sudo apt-get autoremove
 ```
 
-#### Try C (install the latest NVidia driver)
+#### Try C - install the latest NVidia driver
 ```
 sudo apt-get install nvidia-driver-[version number] nvidia-settings
 ```
