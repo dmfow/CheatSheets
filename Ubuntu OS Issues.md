@@ -23,6 +23,7 @@ cat ~/.xsession-errors
 ```
 lsmod | grep nvidia
 ubuntu-drivers devices
+nvidia-smi
 ```
 
 #### Try A (Remove the last installed packages)
@@ -50,6 +51,14 @@ sudo apt-get autoremove
 sudo apt-get install nvidia-driver-[version number] nvidia-settings
 ```
 
+#### Other Nvidia
+```
+# remove a specific nvidia driver
+sudo apt-get remove --purge nvidia-driver-[version number]
+
+# Remove all nvidia drivers
+sudo apt-get remove --purge nvidia-*
+```
 
 #### Nvidia driver version
 ```
