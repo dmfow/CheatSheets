@@ -27,6 +27,9 @@ nvidia-smi
 ```
 
 ## Fix graphical
+Check eg in apt/dkpg:
+<br>
+Error: Sub-process /usr/bin/dpkg returned an error code
 
 #### Try A - Remove the last installed packages
 ```
