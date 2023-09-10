@@ -105,7 +105,7 @@ certbot -d *.domain.org --manual --preferred-challenges dns certonly
 ```
 # Check certs
 sudo certbot certificates
-# Go to your home library (or maybe anyware), and run the same command as when creating the cert
+# Go to your home library (or maybe anywhere), and run the same command as when creating the cert
 certbot -d domain.org -d *.domain.org  --manual --preferred-challenges dns certonly
 ```
 
