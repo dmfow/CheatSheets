@@ -12,7 +12,7 @@ df -hi
 
 ```
 
-#### Restart filesuystem
+#### Restart the filesystem
 ```
 /etc/rc.d/devfs restart
 # OR
