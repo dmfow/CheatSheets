@@ -1,7 +1,7 @@
 ## Free BSD stuff 
 
 
-#### See disks
+#### See release and disks
 ```
 # Version
 uname -a
@@ -11,8 +11,10 @@ freebsd-version -u
 # Disk
 df -hi
 
-# Package
+```
+
+# Package stuff
+```
 pkg bootstrap -f
 pkg upgrade -f
-
 ```
