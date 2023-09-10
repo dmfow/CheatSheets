@@ -1,6 +1,5 @@
 ## Free BSD stuff 
 
-
 #### See release and disks
 ```
 # Version
@@ -13,6 +12,14 @@ df -hi
 
 ```
 
+#### Restart filesuystem
+```
+/etc/rc.d/devfs restart
+# OR
+ service devfs restart
+```
+
+
 ## Various package commands
 ```
 pkg bootstrap -f
@@ -21,6 +28,7 @@ pkg upgrade -f
 pkg -d update -f
 pkg update -f
 
+pkg clean -ya
 ```
 
 
