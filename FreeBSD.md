@@ -13,8 +13,14 @@ df -hi
 
 ```
 
-# Package stuff
+## Various package commands
 ```
 pkg bootstrap -f
 pkg upgrade -f
+
+pkg -d update -f
+pkg update -f
+
 ```
+
+
