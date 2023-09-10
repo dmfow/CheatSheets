@@ -16,7 +16,7 @@ df -hi
 ```
 /etc/rc.d/devfs restart
 # OR
- service devfs restart
+service devfs restart
 ```
 
 
