@@ -153,6 +153,8 @@ rm file
 # Delete multiple files
 rm file file.bak
 rm *.bak
+# Delete without asking questions
+rm -f thefile.txt
 # Delete a directory and all directories and files within
 rm -rf lampp
 
