@@ -141,6 +141,13 @@ cp file file.bak
 # Copy library recursively
 cp -R lib/* lib2/
 
+# Preserve timestamp
+cp --preserve=timestamps *.* /wherever
+
+# Preserve ownership, mode, timestamp
+cp --preserve *.* /wherever
+
+
 # Delete
 rm file
 # Delete multiple files
