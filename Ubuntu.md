@@ -83,6 +83,8 @@ grep -irl "text" <dir>
     # l - to show only the file names, not the matching lines 
     # Exempel
     grep -irl "for" .
+grep  -irl --include "*.txt" "Find this"
+
 
 # Find large files
 sudo find ~ -type f -printf '%s\t%p\n' | sort -n | tail -2
