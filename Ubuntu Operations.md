@@ -66,6 +66,15 @@ sudo sensors-detect
 # Another one (not tested)
 sudo apt install lm-sensors
 
+# Description of output
+# Intel
+#  cpu: coretemp
+#  GPU core: gpu in the cpu
+# AMD
+#  cpu: k10temp
+#  GPU core: amdgpu
+
+
 ```
 
 #### Check disk temperature
