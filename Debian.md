@@ -23,6 +23,12 @@ $ ifreload -a
 
 ```
 
+#### Hardware info
+```
+# Motherboard
+dmidecode --type baseboard
+```
+
 #### DNS/DHCP
 ```
 # DNS
