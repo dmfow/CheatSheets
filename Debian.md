@@ -27,6 +27,17 @@ $ ifreload -a
 ```
 # Motherboard
 dmidecode --type baseboard
+
+# Memory
+dmidecode --type memory | less
+
+# Bios
+dmidecode --type 0
+# OR
+# dmidecode -t 13
+# OR
+# dmidecode 2.9
+
 ```
 
 #### DNS/DHCP
