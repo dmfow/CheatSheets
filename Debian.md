@@ -25,24 +25,13 @@ $ ifreload -a
 
 #### Info on the network
 ```
-# Layer 1
-ifconfig -a
-#OR
 ip link show
 
-ethtool eth0
-
-# Layer 2
-
-# Show the current neighbor table
+# Show the current neighbors
 ip neighbor show
-# Show the arp table
-arp
 
-# Layer 3
-
+# Other
 ip address show
-ifconfig -a
 ping www.akamai.com
 traceroute www.akamai.com
 ip route show
