@@ -23,6 +23,34 @@ $ ifreload -a
 
 ```
 
+#### Info on the network
+```
+# Layer 1
+ifconfig -a
+#OR
+ip link show
+
+ethtool eth0
+
+# Layer 2
+
+# Show the current neighbor table
+ip neighbor show
+# Show the arp table
+arp
+
+# Layer 3
+
+ip address show
+ifconfig -a
+ping www.akamai.com
+traceroute www.akamai.com
+ip route show
+nslookup www.akamai.com
+dig akamai.com
+
+```
+
 #### Hardware info
 ```
 # Motherboard
