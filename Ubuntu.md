@@ -9,6 +9,9 @@ cat /etc/os-release
 cat /etc/issue
 # OR
 hostnamectl
+
+# Change hostname
+sudo hostnamectl set-hostname myhostname.com
 ```
 
 #### Check diskspace
