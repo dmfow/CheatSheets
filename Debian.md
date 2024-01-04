@@ -22,6 +22,12 @@ iface vmbr0 inet static
 $ ifreload -a
 
 ```
+#### Restart the network
+```
+systemctl restart NetworkManager
+# OR
+systemctl restart networking
+```
 
 #### Info on the network
 ```
