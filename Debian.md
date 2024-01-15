@@ -32,6 +32,12 @@ systemctl restart networking
 #### Info on the network
 ```
 ip link show
+nmcli dev show | grep 'IP4.DNS'
+
+# DNS
+cat /etc/resolv.conf
+# OR
+nmcli dev show | grep 'IP4.DNS'
 
 # Show the current neighbors
 ip neighbor show
