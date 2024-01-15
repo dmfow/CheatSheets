@@ -48,6 +48,18 @@ dig akamai.com
 
 #### Hardware info
 ```
+# Debian version
+lsb_release -a
+# OR
+cat /etc/os-release
+# OR
+hostnamectl
+
+```
+
+
+#### Hardware info
+```
 # Motherboard
 dmidecode --type baseboard
 
