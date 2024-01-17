@@ -159,9 +159,62 @@ print(type(x))
 
 
 
-#### ...
+#### Match (Switch)
 ```python
+# Integer ranges
+    match temp:
+        case _ if temp < -2:
+            cold.append(temp)
+        case _ if temp < 2:
+            slippery.append(temp)
+        case _ if temp < 15:
+            comfortable.append(temp)
+        case _ if temp >= 15:
+            warm.append(temp)
+# Integers
+   match status:
+        case 400:
+            return "Bad request"
+        case 404:
+            return "Not found"
+        case 418:
+            return "I'm a teapot"
+        case _:
+            return "Something's wrong with the internet"
+
+# Tuples
+# point is an (x, y) tuple
+match point:
+    case (0, 0):
+        print("Origin")
+    case (0, y):
+        print(f"Y={y}")
+    case (x, 0):
+        print(f"X={x}")
+    case (x, y):
+        print(f"X={x}, Y={y}")
+    case _:
+        raise ValueError("Not a point")
+
+# With a class
+from enum import Enum
+class Color(Enum):
+    RED = 'red'
+    GREEN = 'green'
+    BLUE = 'blue'
+
+color = Color(input("Enter your choice of 'red', 'blue' or 'green': "))
+
+match color:
+    case Color.RED:
+        print("I see the red!")
+    case Color.GREEN:
+        print("The grass is green")
+    case Color.BLUE:
+        print("The ocean is blue")
 ```
+
+
 
 #### ...
 ```python
