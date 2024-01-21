@@ -1,4 +1,4 @@
-## copy/past in Linux if it doesn't work in Putty
+## Putty copy/paste in Linux if it doesn't work in Putty
 ```
 # Try this
 shift+crtl+C / V
