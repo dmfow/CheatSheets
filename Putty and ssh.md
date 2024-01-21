@@ -1,7 +1,7 @@
 ## Putty copy/paste in Linux if it doesn't work in Putty
 ```
 # Try this
-shift+crtl+C / V
+shift + crtl + C / V
 past: middle mouse press
 get a menu (where copy/past are): ctrl + right mouse
 ```
