@@ -1,5 +1,12 @@
-## Copy files with putty/pscp over ssh
+## copy/past in Linux if it doesn't work in Putty
+```
+# Try this
+shift+crtl+C / V
+past: middle mouse press
+get a menu (where copy/past are): ctrl + right mouse
+```
 
+## Copy files with putty/pscp over ssh
 ```
 # From windows, copy from a linux ssh connection
 pscp -r username@serverip:/home/library/*.* ./
