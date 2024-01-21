@@ -5,6 +5,15 @@
 pscp -r username@serverip:/home/library/*.* ./
 ```
 
+## rsa to ppk
+```
+puttygen private_key.rsa -O private -o private_key.ppk
+
+# To install puttygen
+sudo apt-get install putty-tools
+```
+
+
 ## OpenSSH change KEX
 https://man.openbsd.org/ssh_config#Ciphers
 <br>
