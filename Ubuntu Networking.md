@@ -65,6 +65,12 @@ sudo service network-manager restart
 sudo systemctl restart NetworkManager.service
 ```
 
+#### Netplan - Config file "Too open"
+```
+#  Should it be 600 or some other "mask"
+sudo chmod 600 /etc/netplan/<00>-installer-config.yaml 
+```
+
 #### Temporarily take down/up an interface
 ```
 sudo ip link set ens0 down
