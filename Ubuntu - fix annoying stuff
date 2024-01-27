@@ -1,0 +1,11 @@
+#### Remove colors in the terminal
+```
+# 1. Remark alias ls='ls --color=auto' in .bashrc
+nano ~/.bashrc
+#alias ls='ls --color=auto'
+# 2. Logout and Login
+
+# More color stuff: https://www.cyberciti.biz/faq/turn-off-color-in-linux-terminal-bash-session/
+```
+
+
