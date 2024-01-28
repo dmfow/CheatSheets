@@ -229,6 +229,28 @@ cpu-model: avx
     reported-model kvm64
 ```
 
+## Proxmox Backup (PBS)
+
+#### Extend ZFS disk
+```
+# Check disks
+zpool status
+# Example output
+#       NAME        STATE        ...
+#       disk1        ONLINE        ...
+#        sdb        ONLINE        ...
+
+zpool list -v
+# Example output,
+#   NAME     SIZE        ALLOC        FREE
+#   disk1       ...
+#   sdb        ...
+
+# Extend the ZFS disk
+zpool set autoexpand=on disk1
+zpool online -e disk1 sdb
+
+```
 
 
 
