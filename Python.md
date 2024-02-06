@@ -5,6 +5,13 @@ from pprint import pp
 pp("Whatever Array or Json or other")
 ```
 
+#### More prints
+```python
+print(f"The median: {myVar_median}")
+print(f"The standard deviation of maximum temperature is {round(temp_max_std, 1)}")
+
+```
+
 
 #### Import locally
 ```python
@@ -216,8 +223,19 @@ match color:
 
 
 
-#### ...
+#### Check if it is a function
 ```python
+inspect.isfunction(fahr_to_celsius)
+
+# Check that the function has one parameter
+t_params = list(inspect.signature(fahr_to_celsius).parameters.keys())
+assert len(t_params) == 1
+
+# Check if a variable exist
+if 'ones' in locals():
+   # And print the value of the variable
+   print(ones)
+
 ```
 
 #### ...
