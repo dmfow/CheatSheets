@@ -223,6 +223,7 @@ for idx, df_select in df_grp.groupby(level=[0, 1]):
     # Add the data to the array
     a.append([idx[0], s, round(df_select["Sweden_Daily"].mean(),0)])
 
+# More: https://pandas.pydata.org/docs/reference/groupby.html
 
 ```
 
