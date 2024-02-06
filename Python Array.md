@@ -1,22 +1,39 @@
 ## Print
 
-#### print the 10 first
+#### print the Nth first/last
 ```python
+# The first row
+print(myDF[0])
+
+# The last row
+print(myDF[-1])
+
+Print the 10 first
 for item in myList[:10]:
     print (item)
-```
-#### Print the 10 last
-```python
+
+Print the 10 last
 for item in myList[-10:]:
     print (item)
+
+# Get the length
+print(len(myarray))
+
 ```
+
 ## Add
 
 ### add
 ```python
+# Initialize multiple empty list
+l1 = []
+
+# Initialize an empty list
+l1, l2, l3, l4 = ([] for i in range(4))
+
 # String or numbers
 myList.append(strOrNumber)
-myList.extensd(strOrNumber)
+myList.extend(strOrNumber)
 myList.insert(index, strOrNumber)
 
 # Arrays
@@ -70,7 +87,6 @@ print ("The list of words is : " +  str(thelist2))
 ## Sort
 #### Sort the list
 ```python
-c = len(myarray)
 ```
 
 #### Sort the list
@@ -81,6 +97,27 @@ thelist.sort()
 thelist.sort(key=lambda s: len(s))
 ```
 
+#### String functions on the list
+```python
+.lower()
+.strip()
+
+```
+
+#### Other functions on a list
+```python
+# Count he occurance of a specific value (in this case the number 1)
+.count(1)
+
+```
+
+
+#### A point
+```python
+center = (59.5, 11.2)
+print(center[0])
+print(center[1])
+```
 
 
 
