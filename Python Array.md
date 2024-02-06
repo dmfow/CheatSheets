@@ -104,6 +104,12 @@ thelist.sort(key=lambda s: len(s))
 
 ```
 
+#### Math on a list
+```python
+.median()
+
+```
+
 #### Other functions on a list
 ```python
 # Count he occurance of a specific value (in this case the number 1)
