@@ -20,6 +20,34 @@ sudo lsblk -f
 
 ```
 
+## Format an USB - Linux
+```
+# Check which Disk name the USB have
+  # !!!!!!! NOTE - read the right sdX - OR YOU MIGHT DESTROY YOUR COMPUTER !!!!!!!!!!!!!!!!!
+ # Guidance - Don't choose any disk with a mountpoint (you can see them to the right)
+sudo lsblk -f
+
+# Put zeros on the disk (can take a wile with large USBs) (change X to your letter)
+sudo dd if=/dev/zero of=/dev/sdX bs=4k && sync
+
+# Make a partition
+sudo fdisk /dev/sdX
+
+# m  to see the menu, then make the partition
+o [+Enter]
+n [+Enter] (make a new partition)
+p [+Enter] (make it a raimary partition)
+w [+Enter]
+
+# Format it as vfat
+sudo mkfs.vfat /dev/sdX1
+
+# Eject it
+sudo eject /dev/sdb
+
+```
+
+
 ## Check integrity of a file (eg a downloaded file)
 #### With OpenSSL
 ```
