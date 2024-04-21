@@ -1,20 +1,34 @@
 ## Functionality
 
 #### Update / Paint
-<b>Refresh</b> is there so you can override, do your unique updates and then call the inherited
+<b>Repaint</b> 
+Repaint just simple does the whole control
+Repaint will handle all messages that have to do with painting invalidate, paint etc at the time it will be called. I used it to show progress updates on screen with out calling processmessages.
+
+<b>Refresh</b> 
+It is called by the end user to refresh the area of a control usually when there are property changes that do not refresh the control.
+It is there so you can override, do your unique updates and then call the inherited
 , which eg is calling repaint.
  
-<b>"Invalidate"</b> basically will call send a Paint message to the control after other messages in the queue have
+<b>Invalidate</b> 
+Basically will call send a Paint message to the control after other messages in the queue have
 been processed
 It also invalidates the whole control and forces a complete update.
 Windows will purge any pending invalidate after this gets processed so you don't get repeating painting 
 
-<b>"Update"</b> what it suppose to do is basically force a WM_PAINT to the control directly if there
+The invalidated areas accumulate in the update region until the region is processed when the next WM_PAINT message occurs or until the region is validated by using the ValidateRect or ValidateRgn function.
+source
+https://msdn.microsoft.com/en-us/library/windows/desktop/dd145002(v=vs.85).aspx
+In short it does not matter how ofter you call invalidaterect it will accumulate the rect in to single region which will be passed to the next paint method. Used to speed things up.
+
+
+
+<b>Update</b> 
+What it suppose to do is basically force a WM_PAINT to the control directly if there
 was a invalidate done but still sitting in the buffer, this is suppose to check for that check and force
 the repaint and then remove the pending invalidate.
 "Update" will also process all the other waiting messages and process any regions waiting.
 
-<b>Repaint</b> just simple does the whole control
 
 When you call Invalidate or InvalidateRect, Paint method will follow. 
 Even more, Paint may be called by widgetset of some reason. It may happen that you call InvalidateRect, then other Invalidate or requirement to repaint is called, and Paint of the full area will come (i.e. repaint of the single rectangle specified in InvalidateRect never happen).
