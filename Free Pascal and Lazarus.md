@@ -1,3 +1,22 @@
+## Commands
+
+#### String
+```
+# Get the 5th word in a string
+s := ExtractWord(5,Text,[' ']);
+
+# Substring (the first two characters)
+newstring := copy(myString,1,2);
+
+# Exist in string (i will be 6, start on 1)
+s:='news book';
+i:=pos('book',s);
+
+```
+
+#### Json
+https://www.getlazarus.org/json/
+
 ## Functionality
 
 #### Update / Paint
