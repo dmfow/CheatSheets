@@ -1,6 +1,7 @@
 ## Commands
 
 #### String
+First position often start at 1 instead of 0 as in several languages
 ```
 # Get the 5th word in a string
 s := ExtractWord(5,Text,[' ']);
