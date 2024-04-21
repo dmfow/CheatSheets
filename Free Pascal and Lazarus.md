@@ -1,15 +1,15 @@
 ## Commands
 
 #### String
-First position often start at 1 instead of 0 as in several languages
+First position often start at 1 instead of 0 as in several other languages
 ```
-# Get the 5th word in a string
+# Get the 5th word in a string (start with 1)
 s := ExtractWord(5,Text,[' ']);
 
-# Substring (the first two characters)
+# Substring (the first two characters) (start with 1)
 newstring := copy(myString,1,2);
 
-# Exist in string (i will be 6, start on 1)
+# Exist in string (i will be 6) (start with 1)
 s:='news book';
 i:=pos('book',s);
 
