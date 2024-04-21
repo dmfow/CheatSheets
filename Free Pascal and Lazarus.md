@@ -20,8 +20,7 @@ https://www.getlazarus.org/json/
 
 #### Stringgrid example code
 https://wiki.freepascal.org/TStringGrid
-
-Grids Reference Page
+<br>Grids Reference Page<br>
 https://wiki.freepascal.org/Grids_Reference_Page
 
 ## Functionality
