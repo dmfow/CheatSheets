@@ -18,7 +18,9 @@ var
   aa:array of string;    
 begin
   aa := a.split(['"','[',']']);
-
+# Split a string exclude empty entries
+a := '.a,b.c!'.Split(['.', ',', '!'], TStringSplitOptions.ExcludeEmpty);
+  
 ```
 
 #### Json
