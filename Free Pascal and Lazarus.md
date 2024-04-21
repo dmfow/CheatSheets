@@ -33,6 +33,11 @@ the repaint and then remove the pending invalidate.
 When you call Invalidate or InvalidateRect, Paint method will follow. 
 Even more, Paint may be called by widgetset of some reason. It may happen that you call InvalidateRect, then other Invalidate or requirement to repaint is called, and Paint of the full area will come (i.e. repaint of the single rectangle specified in InvalidateRect never happen).
 
+<b>Use</b>
+As an end user - repaint
+As a component writer - Invalidate
+
+
 ```
 ```
 
