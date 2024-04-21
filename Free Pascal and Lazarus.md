@@ -23,6 +23,9 @@ https://wiki.freepascal.org/TStringGrid
 <br>Grids Reference Page<br>
 https://wiki.freepascal.org/Grids_Reference_Page
 
+#### Sleep
+https://forum.lazarus.freepascal.org/index.php?topic=31526.0
+
 ## Functionality
 
 #### Update / Paint
