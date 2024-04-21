@@ -17,14 +17,21 @@ i:=pos('book',s);
 
 #### Json
 https://www.getlazarus.org/json/
+```
+```
 
-#### Stringgrid example code
+#### Stringgrid
+```
+# Example code
 https://wiki.freepascal.org/TStringGrid
-<br>Grids Reference Page<br>
+# Grids Reference Page
 https://wiki.freepascal.org/Grids_Reference_Page
+```
 
 #### Sleep
+```
 https://forum.lazarus.freepascal.org/index.php?topic=31526.0
+```
 
 ## Functionality
 
