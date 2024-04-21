@@ -13,6 +13,12 @@ newstring := copy(myString,1,2);
 s:='news book';
 i:=pos('book',s);
 
+# Split a string
+var
+  aa:array of string;    
+begin
+  aa := a.split(['"','[',']']);
+
 ```
 
 #### Json
@@ -26,6 +32,15 @@ https://www.getlazarus.org/json/
 https://wiki.freepascal.org/TStringGrid
 # Grids Reference Page
 https://wiki.freepascal.org/Grids_Reference_Page
+# Multilines
+https://wiki.lazarus.freepascal.org/Grids_Reference_Page#Multilines_in_Grids
+https://forum.lazarus.freepascal.org/index.php?topic=21205.0
+```
+
+#### Http messages
+```
+# Split a http message header
+https://forum.lazarus.freepascal.org/index.php?topic=47060.0
 ```
 
 ## Console App
