@@ -16,7 +16,7 @@ been processed
 It also invalidates the whole control and forces a complete update.
 Windows will purge any pending invalidate after this gets processed so you don't get repeating painting 
 
-The invalidated areas accumulate in the update region until the region is processed when the next WM_PAINT message occurs or until the region is validated by using the ValidateRect or ValidateRgn function.
+Example InvalidateRect, The invalidated areas accumulate in the update region until the region is processed when the next WM_PAINT message occurs or until the region is validated by using the ValidateRect or ValidateRgn function.
 source
 https://msdn.microsoft.com/en-us/library/windows/desktop/dd145002(v=vs.85).aspx
 In short it does not matter how ofter you call invalidaterect it will accumulate the rect in to single region which will be passed to the next paint method. Used to speed things up.
