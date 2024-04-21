@@ -28,9 +28,15 @@ https://wiki.freepascal.org/TStringGrid
 https://wiki.freepascal.org/Grids_Reference_Page
 ```
 
-#### Sleep
+#### Sleep in Console app
 ```
 https://forum.lazarus.freepascal.org/index.php?topic=31526.0
+https://forum.lazarus.freepascal.org/index.php?topic=51763.0
+```
+
+#### Process messages in Console app
+```
+https://forum.lazarus.freepascal.org/index.php?topic=13462.0
 ```
 
 ## Functionality
