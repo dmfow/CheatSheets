@@ -52,7 +52,7 @@ smartctl -i /dev/sda
 ```
 # motherboard hardware
 lspci
-lspci - vnn
+lspci -vnn
 # Audio
 lspci -v | grep -A7 -i "audio"
 # Network
