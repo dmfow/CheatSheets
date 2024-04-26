@@ -69,6 +69,7 @@ lshw
 lshw -short
 # Hardware
 hwinfo
+inxi -Fxz
 ```
 
 #### Check USB devices
