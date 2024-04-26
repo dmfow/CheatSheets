@@ -14,6 +14,11 @@ hostnamectl
 sudo hostnamectl set-hostname myhostname.com
 ```
 
+#### Check kernel version
+```
+uname -r
+```
+
 #### Check diskspace
 ```
 df -h
@@ -70,6 +75,7 @@ hwinfo
 ```
 # usb
 lsusb
+usb-devices
 ```
 
 #### Find a file
