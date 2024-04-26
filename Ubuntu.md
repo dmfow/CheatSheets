@@ -64,6 +64,10 @@ lshw
 lshw -short
 # Hardware
 hwinfo
+```
+
+#### Check USB devices
+```
 # usb
 lsusb
 ```
