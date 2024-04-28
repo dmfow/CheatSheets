@@ -13,6 +13,9 @@ newstring := copy(myString,1,2);
 s:='news book';
 i:=pos('book',s);
 
+# Replace characters (heystack, needle, replace with)
+s := StringReplace(myString, '"', '', [rfReplaceAll, rfIgnoreCase]);
+
 # Split a string
 var
   aa:array of string;    
