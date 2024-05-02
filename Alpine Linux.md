@@ -21,6 +21,8 @@ Login with user root, no pw (enter)
 # run
 setup-alpine
 
+# Post installation (after)
+Read: https://docs.alpinelinux.org/user-handbook/0.1a/Working/post-install.html
 ```
 
 
