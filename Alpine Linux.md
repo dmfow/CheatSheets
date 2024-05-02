@@ -10,7 +10,14 @@ Pre-install (if not done before, it is difficult to go back)
 * Decide on lvm and/or disk layout (sys mode, e.g. on a hard drive, can be combined with eg LVM)
 * Less important (swing it): keyboard layout, timezone
 
+Install with ISO
+Boot ISO
+Login with user root, no pw (enter)
+# run
+setup-alpine
+
 ```
+
 
 #### Update/Upgrade
 ```
