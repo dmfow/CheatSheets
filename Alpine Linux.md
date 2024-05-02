@@ -1,4 +1,4 @@
-## Alpine linx
+## Alpine Linux
 Server linux with small footprint: ~250 MB size<br>
 * Requirements: https://wiki.alpinelinux.org/wiki/Requirements
 * User handbook: https://docs.alpinelinux.org/user-handbook/0.1a/index.html
