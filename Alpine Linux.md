@@ -44,6 +44,59 @@ apk add --upgrade apk-tools
 
 ```
 
+
+#### Handling
+```
+# Shutdown now (-r, -H, -P, respectively)
+reboot
+halt
+poweroff
+
+# Start/Stop services
+/etc/init.d/httpd start
+/etc/init.d/httpd stop
+/etc/init.d/httpd restart
+# OR
+rc-service httpd start
+rc-service httpd stop
+rc-service httpd restart
+
+# Configure service to start automatically
+rc-update add <service_name> <runlevel>
+# Enable at boot time
+rc-update add httpd boot
+
+# Disable service
+rc-update del <service_name> <runlevel>
+rc-update del httpd boot
+
+# List of run levels
+rc-status --list
+
+# Change run level
+rc boot
+rc single
+
+# Other
+rc-update --help
+rc-status --help
+rc-service --help
+rc --help
+
+
+# run levels
+default: Used if not specified (this is the general, use this if you don't know)
+hotplugged: 
+manual: 
+# more run levels, special, only for advances use
+sysinit: sysinit always runs when the host first starts and should not be run again
+boot: in general, only use for services mounting of filesystems
+single: stops all services except for those in the sysinit runlevel
+reboot: changes to the shutdown runlevel and then reboots the host
+shutdown: halts the server
+
+```
+
 #### Package info
 ```
 # List all installed packages
