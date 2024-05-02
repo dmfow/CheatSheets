@@ -136,6 +136,8 @@ http://dl-cdn.alpinelinux.org/alpine/v3.19/community
 # Community repo
 apk add py3-pip
 
+# Community repo - If you didn't do "doas" in the installation, you might want sudo
+apk add sudo
 
 # Delete (pruge removes config files also)
 apk del nano
