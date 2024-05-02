@@ -7,7 +7,7 @@ Pre-install (if not done before, it is difficult to go back)
 * Fix network connectivity beforehand
 * Get the DNS server IP/name
 * Choose network, mask (/x CIDR), Default gateway
-* Decide on lvm and/or disk layout
+* Decide on lvm and/or disk layout (sys mode, e.g. on a hard drive, can be combined with eg LVM)
 * Less important (swing it): keyboard layout, timezone
 
 ```
