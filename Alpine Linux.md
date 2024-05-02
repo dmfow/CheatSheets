@@ -49,9 +49,9 @@ apk search -v nano
 # There is an editor, maybe you want another
 apk add -u nano
 
-# Delete
+# Delete (pruge removes config files also)
 apk del nano
-
+apk del --purge vim
 ```
 
 
