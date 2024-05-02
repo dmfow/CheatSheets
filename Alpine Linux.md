@@ -9,7 +9,7 @@ Pre-install (if not done before, it is difficult to go back)
 * Choose network, mask (/x CIDR), Default gateway
 * Decide on lvm and/or disk layout
 * Less important (swing it): keyboard layout, timezone
-reboot
+
 ```
 
 #### Update
