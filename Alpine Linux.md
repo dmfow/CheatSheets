@@ -12,11 +12,20 @@ Pre-install (if not done before, it is difficult to go back)
 
 ```
 
-#### Update
+#### Update/Upgrade
 ```
 su
 apk update
 apk upgrade
 sync
 reboot
+```
+
+#### Package info
+```
+# List all installed packages
+apk info
+
+# List packages in with info and in alphabetical order
+apk -vv info
 ```
