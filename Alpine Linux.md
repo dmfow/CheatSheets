@@ -59,8 +59,16 @@ apk stats
 
 #### Install some basic packages (or delete)
 ```
-# There is an editor, maybe you want another
+# Some basic packages
 apk add -u nano
+apk add python3
+
+# Some basic packages need the community repo. Unmark the following line in the file /etc/apk/repositories
+http://dl-cdn.alpinelinux.org/alpine/v3.19/community
+
+# Community repo
+apk add py3-pip
+
 
 # Delete (pruge removes config files also)
 apk del nano
