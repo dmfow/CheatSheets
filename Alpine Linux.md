@@ -42,6 +42,19 @@ apk -vv info
 
 # Search for a specific
 apk search -v nano
+
+# Dependencies
+apk info -R nano
+
+# Origin
+apk info -W /etc/rc.conf
+
+# Installed size
+apk info -s nano
+
+# Stats
+apk stats
+
 ```
 
 #### Install some basic packages (or delete)
@@ -52,6 +65,12 @@ apk add -u nano
 # Delete (pruge removes config files also)
 apk del nano
 apk del --purge vim
+
+# Clean the cache (to free space)
+apk cache clean
+
+# Fix broken packages
+apk fix
 ```
 
 
