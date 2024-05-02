@@ -39,4 +39,37 @@ apk info
 
 # List packages in with info and in alphabetical order
 apk -vv info
+
+# Search for a specific
+apk search -v nano
 ```
+
+#### Install some basic packages (or delete)
+```
+# There is an editor, maybe you want another
+apk add -u nano
+
+# Delete
+apk del nano
+
+```
+
+
+#### ...
+```
+```
+
+#### ...
+```
+```
+
+#### ...
+```
+```
+
+#### ...
+```
+```
+
+
+
