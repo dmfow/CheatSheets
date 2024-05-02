@@ -17,8 +17,19 @@ Pre-install (if not done before, it is difficult to go back)
 su
 apk update
 apk upgrade
+# or (both update and upgrade)
+apk -U upgrade
+
+# Force upgrade even if it is the same version number
+apk upgrade --available
+
+# If the kernel is upgraded, sync and reboot
 sync
 reboot
+
+# Upgrade the package manager (sometimes required)
+apk add --upgrade apk-tools
+
 ```
 
 #### Package info
