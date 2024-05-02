@@ -1,7 +1,7 @@
 ## Alpine linx
 Server linux with small footprint: ~250 MB size<br>
 
-#### Install
+#### Installation
 ```
 Pre-install (if not done before, it is difficult to go back)
 * Fix network connectivity beforehand
