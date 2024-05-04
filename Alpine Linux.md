@@ -14,6 +14,23 @@ Pre-install (if not done before, it is difficult to go back)
 * Choose network, mask (/x CIDR), Default gateway
 * Decide on lvm and/or disk layout (sys mode, e.g. on a hard drive, can be combined with eg LVM)
 * Less important (swing it): keyboard layout, timezone
+* openSSH is default
+Others
+* Choose a keyboard layout
+* Provide a FQDN for this machine
+* Select a NIC (check the name)
+* Provide an IP address or “dhcp”
+* Provide a new root password
+* Provide a time zone (eg US/ and the Eastern, or Europe/ and then Amsterdam)
+* Provide a proxy address if you are using a proxy
+* Select a mirror site or “f” to find the fastest mirror for you (or hit enter)
+* Set up a regular user (highly recommended)
+* Provide an SSH key if desired
+* Select an SSH server (openssh is the default)
+* Select the disk top install the OS onto. Usually “sda”
+* Select the disk layout (“sys” is good choice)
+* Erase the disk
+
 
 Install with ISO
 Boot ISO
