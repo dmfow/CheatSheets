@@ -171,8 +171,14 @@ apk fix
 ```
 
 
-#### ...
+#### Networking
 ```
+# Su or su or doas
+sudo nano /etc/network/interfaces
+
+# restart/reload network services
+sudo rc-service networking restart
+
 ```
 
 #### ...
