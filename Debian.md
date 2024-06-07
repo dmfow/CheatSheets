@@ -29,6 +29,10 @@ systemctl restart NetworkManager
 systemctl restart networking
 ```
 
+#### IPv6
+```
+```
+
 #### Info on the network
 ```
 ip link show
