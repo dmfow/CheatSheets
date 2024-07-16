@@ -265,6 +265,16 @@ sudo journalctl --vacuum-time=1years
 ```
 
 
+#### Disable "short press of power button"
+```
+sudo nano /etc/systemd/logind.conf
+
+[Login]
+# ...
+HandlePowerKey=ignore
+
+```
+
 
 
 #### SCP copy files between 2 linux boxes with scp (Secure copy over ssh)
