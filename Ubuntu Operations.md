@@ -50,6 +50,50 @@ sudo do-release-upgrade
   
 ```
 
+#### Limit the Journal filespace
+```
+sudo nano /etc/systemd/journald.conf
+SystemMaxUse=100M
+  
+```
+
+
+
+#### Diskspace handling
+```
+# Search for large files
+find / -size +50M -ls
+
+# Remove unnecessary dependencies
+sudo apt autoremove
+
+# Find manual installed packages
+## some of packages are not installed by the user but are pre-installed packages and can be ignored
+apt-mark showmanual
+# Remove
+sudo apt remove <package-name>
+
+# Check snapd usage
+du -h /var/lib/snapd/snaps
+
+# check apt cache
+sudo du -sh /var/cache/apt
+# Clean up apt cache
+sudo apt clean
+
+# Check AWS header files
+#   Linux kernel headers for Amazon Web Services (AWS) systems
+du -h -d1 /usr/src/ | sort -hr
+# Remove unnecessary
+sudo apt autoremove
+# If getting error: Reading package lists... Error!
+cd /usr/src
+ls -lt
+sudo rm -r linux-aws-headers-4.3.0-1012
+
+```
+
+
 #### Check CPU temperatures
 ```
 # See temperature
