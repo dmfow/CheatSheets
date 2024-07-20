@@ -87,6 +87,7 @@ du -h -d1 /usr/src/ | sort -hr
 # Remove unnecessary
 sudo apt autoremove
 # If getting error: Reading package lists... Error!
+# remove one or two (the oldest)  manual (be careful)
 cd /usr/src
 ls -lt
 sudo rm -r linux-aws-headers-4.3.0-1012
