@@ -91,6 +91,10 @@ sudo apt autoremove
 cd /usr/src
 ls -lt
 sudo rm -r linux-aws-headers-4.3.0-1012
+sudo apt autoremove
+# If still error
+apt --fix-broken install
+sudo apt autoremove
 
 ```
 
