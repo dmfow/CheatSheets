@@ -52,9 +52,11 @@ sudo do-release-upgrade
 
 #### Limit the Journal filespace
 ```
+# First edit the journald.conf file, add or change the SystemMaxUse entry
 sudo nano /etc/systemd/journald.conf
 SystemMaxUse=100M
-  
+# Then restart the service
+sudo service systemd-journald restart
 ```
 
 
