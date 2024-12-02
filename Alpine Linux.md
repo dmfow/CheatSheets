@@ -120,6 +120,7 @@ shutdown: halts the server
 ```
 # List all installed packages
 apk info
+apk list -I
 
 # List packages in with info and in alphabetical order
 apk -vv info
@@ -181,8 +182,16 @@ sudo rc-service networking restart
 
 ```
 
-#### ...
+#### Add to path
 ```
+# Permanently
+# Edit /etc/profile (eg with) sudo nano /etc/profile
+# add your path as YOURPATHERE to the export row:
+export PATH="/usr/local/sbin:/usr/local/bin:/YOURPATH_HERE:$PATH"
+
+# Temporary. Write at the prompt $
+export PATH=/YOURPATH_HERE:$PATH
+
 ```
 
 #### ...
