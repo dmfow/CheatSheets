@@ -9,6 +9,7 @@ mkdir djangotutorial
 cd djangotutorial
 django-admin startproject mytestsite djangotutorial
 python manage.py runserver 0.0.0.0:8000
+# Surf to http://127.0.0.1:8000 or http://YOURIP:8000
 # Read more here: https://docs.djangoproject.com/en/5.1/intro/tutorial01/
 
 ```
