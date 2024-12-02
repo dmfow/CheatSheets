@@ -192,6 +192,9 @@ export PATH="/usr/local/sbin:/usr/local/bin:/YOURPATH_HERE:$PATH"
 # Temporary. Write at the prompt $
 export PATH=/YOURPATH_HERE:$PATH
 
+# See PATH
+echo $PATH
+
 ```
 
 #### ...
