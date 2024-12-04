@@ -28,11 +28,14 @@ urlpatterns = [
     path("accounts/", include("django.contrib.auth.urls")),  # new
 ]
 
-# B. at the linux promt $ (in the projects root directory - same as where manage.py reside)
+# B. If needed (depending on the setup). Add to settings.py. Change localhost you your hostname or IP address if needed
+ALLOWED_HOSTS = ['localhost']
+
+# C. at the linux promt $ (in the projects root directory - same as where manage.py reside)
 mkdir templates
 mkdir templates/registration
 
-# C. edit/create: templates/registration/login.html
+# D. edit/create: templates/registration/login.html
 <!-- templates/registration/login.html -->
 <h2>Log In</h2>
 <form method="post">
@@ -41,7 +44,7 @@ mkdir templates/registration
   <button type="submit">Log In</button>
 </form>
 
-# D. edit: django_project/settings.py
+# E. edit: django_project/settings.py
 TEMPLATES = [
     {
         ...
@@ -51,11 +54,78 @@ TEMPLATES = [
 ]
 
 
-# E. Edit: django_project/settings.py (add to bottom of the file)
+# F. Edit: django_project/settings.py (add to bottom of the file)
 LOGIN_REDIRECT_URL = "/"  # new
 
-# F. Restart the django server
-# G. Surf to: http://127.0.0.1:8000/accounts/login/
+# G. Create a superuser account. At prompt $
+python manage.py migrate
+python manage.py createsuperuser
+# H. If needed (depending on the setup). Add to settings.py
+CSRF_TRUSTED_ORIGINS = ['http://localhost:8000'],
+CORS_ORIGIN_WHITELIST = ['http://localhost:8000']
+ALLOWED_HOSTS = ['localhost']
+
+# I. Restart the django server
+# J. Surf to: http://127.0.0.1:8000/accounts/login/ and login
+# K. Create a "homepage"
+<!-- templates/base.html -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>{% block title %}Django Auth Tutorial{% endblock %}</title>
+</head>
+
+<body>
+  <main>
+    {% block content %}
+    {% endblock %}
+  </main>
+</body>
+
+</html>
+
+<!-- templates/home.html -->
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+{% if user.is_authenticated %}
+Hi {{ user.username }}!
+{% else %}
+<p>You are not logged in</p>
+<a href="{% url 'login' %}">Log In</a>
+{% endif %}
+{% endblock %}
+
+
+<!-- templates/registration/login.html -->
+{% extends "base.html" %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<h2>Log In</h2>
+<form method="post">
+  {% csrf_token %}
+  {{ form }}
+  <button type="submit">Log In</button>
+</form>
+{% endblock %}
+
+
+# django_project/urls.py
+from django.contrib import admin
+from django.urls import path, include
+from django.views.generic.base import TemplateView  # new
+
+urlpatterns = [
+    path("admin/", admin.site.urls),
+    path("accounts/", include("django.contrib.auth.urls")),
+    path("", TemplateView.as_view(template_name="home.html"), name="home"),  # new
+]
 
 
 ```
