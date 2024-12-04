@@ -8,6 +8,7 @@ pip install Django
 mkdir djangotutorial
 cd djangotutorial
 django-admin startproject mytestsite djangotutorial
+# mytestsite = [projectname]
 python manage.py runserver 0.0.0.0:8000
 # Surf to http://127.0.0.1:8000 or http://YOURIP:8000
 # Read more here: https://docs.djangoproject.com/en/5.1/intro/tutorial01/
@@ -19,7 +20,7 @@ python manage.py runserver 0.0.0.0:8000
 ```
 # https://learndjango.com/tutorials/django-login-and-logout-tutorial
 
-# A. django_project/urls.py
+# A. [projectname]/urls.py
 from django.contrib import admin
 from django.urls import path, include  # new
 
@@ -44,7 +45,7 @@ mkdir templates/registration
   <button type="submit">Log In</button>
 </form>
 
-# E. edit: django_project/settings.py
+# E. edit: [projectname]/settings.py
 TEMPLATES = [
     {
         ...
@@ -54,7 +55,7 @@ TEMPLATES = [
 ]
 
 
-# F. Edit: django_project/settings.py (add to bottom of the file)
+# F. Edit: [projectname]/settings.py (add to bottom of the file)
 LOGIN_REDIRECT_URL = "/"  # new
 
 # G. Create a superuser account. At prompt $
@@ -128,6 +129,31 @@ urlpatterns = [
 ]
 
 # M. Test login, then go to: http://127.0.0.1:8000/admin/ and logout
+
+# N. Add logout button (edit templates/home.html and [projectname]/settings.py)
+
+<!-- templates/home.html-->
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+{% if user.is_authenticated %}
+Hi {{ user.username }}!
+<form action="{% url 'logout' %}" method="post">
+  {% csrf_token %}
+  <button type="submit">Log Out</button>
+</form>
+{% else %}
+<p>You are not logged in</p>
+<a href="{% url 'login' %}">Log In</a>
+{% endif %}
+{% endblock %}
+
+# django_project/settings.py
+LOGIN_REDIRECT_URL = "home"
+LOGOUT_REDIRECT_URL = "home"
+
 
 
 ```
