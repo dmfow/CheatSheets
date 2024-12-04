@@ -15,8 +15,7 @@ python manage.py runserver 0.0.0.0:8000
 
 ```
 
-## Authentication for users
-#### ... 
+#### Configure a website with user login, logout
 ```
 # https://learndjango.com/tutorials/django-login-and-logout-tutorial
 
