@@ -202,9 +202,16 @@ echo $PATH
 
 #### qemu agent
 ```
+# 1. Run commands on the server
 apk update
 apk add qemu-guest-agent
 rc-update add qemu-guest-agent
+# 2. poweroff server
+# 3. Proxmox, enable "QEMU guest agent" under options
+# 4. Restart the server
+# 5. Check that it has started with
+rc-status
+
 
 # Issues, suggested solutions
 # https://gitlab.alpinelinux.org/alpine/aports/-/issues/8894
@@ -220,7 +227,6 @@ rc-update add udev
 rc-update add udev-trigger
 rc-update add udev-settle
 rc-update add udev-postmount
-# E. 
 
 ```
 
