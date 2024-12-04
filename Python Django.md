@@ -13,6 +13,8 @@ python manage.py runserver 0.0.0.0:8000
 # Surf to http://127.0.0.1:8000 or http://YOURIP:8000
 # Read more here: https://docs.djangoproject.com/en/5.1/intro/tutorial01/
 
+# also install python package: tzdata
+pip install tzdata
 ```
 
 #### Configure a website with user login, logout
