@@ -14,7 +14,7 @@ python manage.py runserver 0.0.0.0:8000
 
 ```
 
-## User handling
+## Authentication for users
 #### ... 
 ```
 # https://learndjango.com/tutorials/django-login-and-logout-tutorial
@@ -54,7 +54,8 @@ TEMPLATES = [
 # E. Edit: django_project/settings.py (add to bottom of the file)
 LOGIN_REDIRECT_URL = "/"  # new
 
-
+# F. Restart the django server
+# G. Surf to: http://127.0.0.1:8000/accounts/login/
 
 
 ```
