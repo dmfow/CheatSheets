@@ -63,7 +63,7 @@ LOGIN_REDIRECT_URL = "/"  # new
 python manage.py migrate
 python manage.py createsuperuser
 # H. If needed (depending on the setup). Add to settings.py
-CSRF_TRUSTED_ORIGINS = ['http://localhost:8000'],
+CSRF_TRUSTED_ORIGINS = ['http://localhost:8000']
 CORS_ORIGIN_WHITELIST = ['http://localhost:8000']
 ALLOWED_HOSTS = ['localhost']
 
@@ -118,7 +118,7 @@ Hi {{ user.username }}!
 {% endblock %}
 
 
-# L. Update: django_project/urls.py
+# L. Update: [projectname]/urls.py
 from django.contrib import admin
 from django.urls import path, include
 from django.views.generic.base import TemplateView  # new
