@@ -14,3 +14,49 @@ python manage.py runserver 0.0.0.0:8000
 
 ```
 
+## User handling
+#### ... 
+```
+# https://learndjango.com/tutorials/django-login-and-logout-tutorial
+
+# A. django_project/urls.py
+from django.contrib import admin
+from django.urls import path, include  # new
+
+urlpatterns = [
+    path("admin/", admin.site.urls),
+    path("accounts/", include("django.contrib.auth.urls")),  # new
+]
+
+# B. at the linux promt $ (in the projects root directory - same as where manage.py reside)
+mkdir templates
+mkdir templates/registration
+
+# C. edit/create: templates/registration/login.html
+<!-- templates/registration/login.html -->
+<h2>Log In</h2>
+<form method="post">
+  {% csrf_token %}
+  {{ form }}
+  <button type="submit">Log In</button>
+</form>
+
+# D. edit: django_project/settings.py
+TEMPLATES = [
+    {
+        ...
+        "DIRS": [BASE_DIR / "templates"],  # new
+        ...
+    },
+]
+
+
+# E. Edit: django_project/settings.py (add to bottom of the file)
+LOGIN_REDIRECT_URL = "/"  # new
+
+
+
+
+```
+
+
