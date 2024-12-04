@@ -197,8 +197,28 @@ echo $PATH
 
 ```
 
-#### ...
+#### qemu agent
 ```
+apk update
+apk add qemu-guest-agent
+rc-update add qemu-guest-agent
+
+# Issues, suggested solutions
+# https://gitlab.alpinelinux.org/alpine/aports/-/issues/8894
+# A. I edited the /etc/init.d/qemu-guest-agent script and used /dev/vport1p1
+and now everything works.
+# B. I used /dev/vport2p1 to make it work
+# C. Updated: /etc/rc.conf
+rc_env_allow to rc_env_allow="GA_PATH"
+# Created: /etc/profile.env with:
+GA_PATH=/dev/vport1p1
+# D. Solved it by adding udev services to start on boot
+rc-update add udev
+rc-update add udev-trigger
+rc-update add udev-settle
+rc-update add udev-postmount
+# E. 
+
 ```
 
 #### ...
