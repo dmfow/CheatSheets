@@ -71,6 +71,9 @@ reboot
 halt
 poweroff
 
+# See running services
+rc-status
+
 # Start/Stop services
 /etc/init.d/httpd start
 /etc/init.d/httpd stop
