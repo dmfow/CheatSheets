@@ -131,7 +131,16 @@ ceph osd erasure-code-profile get {name}
 ceph osd erasure-code-profile get default
 
 
+# configure (in the config file) the crush-failure-domain to impact how the data is spread
+# Choose to survive from outage of: osd, host, rack. Example, survive 1 server/host outage:
+crush-failure-domain=host
+
+# K and M
+# K: data chunks, M: coding chunks
+# Sustain loss of 2 OSD (M = 2), Spread over 5 OSD => K = 3, as K+M=5 (the 5 OSD spread)
+
 # Overhead
+# The overhead factor (space amplification) of an erasure-coded pool is (k+m) / k
 	m=1	m=2	m=3	m=4	m=5	m=6	m=7	m=8	m=9	m=10	m=11
 k=1	2.00	3.00	4.00	5.00	6.00	7.00	8.00	9.00	10.00	11.00	12.00
 k=2	1.50	2.00	2.50	3.00	3.50	4.00	4.50	5.00	5.50	6.00	6.50
