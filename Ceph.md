@@ -120,3 +120,16 @@ ceph fs set cephfs joinable true
 ```
 
 
+#### erasure encoding
+```
+# List profiles
+ceph osd erasure-code-profile ls
+# Display profile settings (replace {name} with your profile name)
+ceph osd erasure-code-profile get {name}
+
+# Display profile settings of the default profile
+ceph osd erasure-code-profile get default
+
+```
+
+
