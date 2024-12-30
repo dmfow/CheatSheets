@@ -1,5 +1,5 @@
 ## Install on Alpine
-
+```
 # A. Elevate your rights
 su
 # B. Turn off swap in the session
@@ -34,14 +34,17 @@ net.ipv4.ip_forward                 = 1
 
 
 
+```
 
 
 
 
 
-# Different ways to Check swap
+#### Different ways to Check swap
+```
 cat /proc/meminfo | grep wap
 cat /proc/swaps
 swapon -s
 vmstat
+```
 
