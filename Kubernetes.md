@@ -37,6 +37,10 @@ sysctl -p
 
 # E. Initialise the cluster. Replace [IP network] with your network incl mask. Eg: 10.2.0.0/16
 kubeadm init --pod-network-cidr=[IP network]
+# F. Make a config file for the root user
+mkdir -p $HOME/.kube
+cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+chown $(id -u):$(id -g) $HOME/.kube/config
 
 
 
@@ -63,6 +67,14 @@ docker version
 docker ps
 # Run a test (need internet connection)
 docker run hello-world
+```
+
+
+#### Check Kubernetes
+```
+service kubelet status
+
+
 ```
 
 
