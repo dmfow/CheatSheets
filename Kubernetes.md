@@ -47,7 +47,7 @@ chown $(id -u):$(id -g) $HOME/.kube/config
 kubectl create -f https://raw.githubusercontent.com/projectcalico/calico/v3.29.1/manifests/tigera-operator.yaml
 
 
-# Alternative CNI (Flannel, more simple, less control/filters)
+# Alternative CNI (Flannel, more simple, less control/filters). Not tested!
 kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
 
 ```
