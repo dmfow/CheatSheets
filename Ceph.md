@@ -47,6 +47,32 @@ ceph pg map 128
 ceph pg stat
 ```
 
+#### Other troubleshooting commands
+```
+# Checking remapping of PGs
+ceph pg dump | grep remap
+
+# Check performance of the disks
+#   On the ssd side:
+iostat -xNmy 1 5
+
+#   On the ceph side (maybe this command does not exist):
+# https://docs.ceph.com/en/latest/dev/perf_counters/
+
+# Health
+ceph health
+ceph health detail
+
+# Get the map of Placement Groups
+ceph pg dump > /tmp/pg_dump.1
+
+# Others
+ceph osd tree
+ceph pg map
+
+
+```
+
 
 
 #### PGs per OSD
@@ -118,6 +144,47 @@ ceph fs set cephfs joinable true
 
 
 ```
+
+
+#### Install new disks
+```
+
+# 1. If a restart of the server is needed
+ceph osd set noout
+ceph osd set norecover
+ceph osd set norebalance
+ceph osd set nobackfill
+ceph osd set nodown
+ceph osd set pause
+
+# 2. Install it physically
+
+# 3. If restarted
+ceph osd unset noout
+ceph osd unset norecover
+ceph osd unset norebalance
+ceph osd unset nobackfill
+ceph osd unset nodown
+ceph osd unset pause
+
+# 4. Clear the disk (run commands in the shell)
+ceph-volume lvm zap /dev/sd[X] --destroy
+
+# 5. Create a new osd
+pveceph osd create /dev/sd[X]  
+
+# 6. Set the weight (temporarily) to 0 for the old disks ([Y] = OSD number)
+ceph osd crush reweight osd.[Y] 0
+
+# 7. When all data is moved.
+ceph osd out [Y]
+
+# 8. When it is time to remove the disk. Stop the osd service
+systemctl stop ceph-osd@[Y].service
+```
+
+
+
 
 
 #### erasure encoding
