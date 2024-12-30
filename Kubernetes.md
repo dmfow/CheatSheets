@@ -72,9 +72,14 @@ docker run hello-world
 
 #### Check Kubernetes
 ```
+rc-status
 service kubelet status
+kubectl cluster-info
+crictl ps
 
-
+kubectl get nodes
+kubectl get all
+kubectl events -A
 ```
 
 
