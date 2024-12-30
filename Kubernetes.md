@@ -26,11 +26,18 @@ apk update
 # Install (kubeadm, kubelet and kubectl)
 apk add kubeadm kubelet kubectl
 rc-update add kubelet boot
+rc-update add kubelet default
 service kubelet start
 # Create a config file for sysctl, /etc/sysctl.d/k8s.conf
 net.bridge.bridge-nf-call-iptables = 1
 net.bridge.bridge-nf-call-ip6tables = 1
 net.ipv4.ip_forward                 = 1
+# Apply the changes (sysctl --system for non Alpine)
+sysctl -p
+
+# E. Initialise the cluster. Replace [IP network] with your network incl mask. Eg: 10.2.0.0/16
+kubeadm init --pod-network-cidr=[IP network]
+
 
 
 
@@ -47,4 +54,15 @@ cat /proc/swaps
 swapon -s
 vmstat
 ```
+
+#### Check docker
+```
+# Check version
+docker version
+# Check containers
+docker ps
+# Run a test (need internet connection)
+docker run hello-world
+```
+
 
