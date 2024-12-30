@@ -43,7 +43,7 @@ Read: https://docs.alpinelinux.org/user-handbook/0.1a/Working/post-install.html
 ```
 
 
-#### Update/Upgrade
+#### Update/Upgrade minor (eg 3.19.3 to 3.19.4)
 ```
 su
 apk update
@@ -63,6 +63,16 @@ apk add --upgrade apk-tools
 
 ```
 
+#### Update/Upgrade (eg 3.19.x to 3.20.x)
+```
+su
+# Edit the /etc/apk/repositories file
+# Change the version number
+apk update
+apk upgrade --available
+sync
+reboot
+```
 
 #### Handling
 ```
