@@ -42,8 +42,13 @@ mkdir -p $HOME/.kube
 cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 chown $(id -u):$(id -g) $HOME/.kube/config
 
+# G. Install CNI (network). In this case Calicio
+# Install Calico network plugin (change version number !!, https://docs.tigera.io/calico/latest/getting-started/kubernetes/quickstart)
+kubectl create -f https://raw.githubusercontent.com/projectcalico/calico/v3.29.1/manifests/tigera-operator.yaml
 
 
+# Alternative CNI (Flannel, more simple, less control/filters)
+kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
 
 ```
 
