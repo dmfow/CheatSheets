@@ -85,6 +85,11 @@ crictl ps
 kubectl get nodes
 kubectl get all
 kubectl events -A
+
+kubectl get pods --all-namespaces
+kubectl get pods -n calico-system
+
+kubectl get storageclass
 ```
 
 
