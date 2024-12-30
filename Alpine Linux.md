@@ -43,6 +43,14 @@ Read: https://docs.alpinelinux.org/user-handbook/0.1a/Working/post-install.html
 ```
 
 
+#### Check info
+```
+cat /etc/alpine-release 
+cat /etc/os-release 
+```
+
+
+
 #### Update/Upgrade minor (eg 3.19.3 to 3.19.4)
 ```
 su
