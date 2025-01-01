@@ -41,9 +41,10 @@ sysctl -p
 
 #### Install on the masternode on Alpine
 ```
-
 # E. Initialise the cluster. Replace [IP network] with your network incl mask. Eg: 10.2.0.0/16
 kubeadm init --pod-network-cidr=[IP network]
+# copy the token for worker node joins
+
 # F. Make a config file for the root user
 mkdir -p $HOME/.kube
 cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
@@ -52,22 +53,20 @@ chown $(id -u):$(id -g) $HOME/.kube/config
 # G. Install CNI (network). In this case Calicio
 # Install Calico network plugin (change version number !!, https://docs.tigera.io/calico/latest/getting-started/kubernetes/quickstart)
 kubectl create -f https://raw.githubusercontent.com/projectcalico/calico/v3.29.1/manifests/tigera-operator.yaml
-
-
-# Alternative CNI (Flannel, more simple, less control/filters). Not tested!
-kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
-
 ```
 
 #### Install Workernodes on Alpine
 ```
-
-# E. ON the masternode, copy the output of the command
+# E. Take the copy of the output in D on the masternode and past it into the worker node/s
+# or run ON the masternode, copy the output of the command
 kubeadm token create --print-join-command
 
-# F. Take the copy of the output in D on the masternode and past it into the worker node/s
+```
 
-
+#### Alternative CNI (Flannel instead for Calicio, more simple, less control/filters). Not tested!
+```
+  # Step G Alternative
+  kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
 ```
 
 
