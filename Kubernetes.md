@@ -149,7 +149,7 @@ kubectl get nodes -v=10
 netstat -tulp | grep kubectl
 ps aux | grep kubectl
 kubectl config view
-
+kubectl get all -A
 
 # From kubectl get nodes -v=10
 # "Unhandled Error" err="couldn't get current server API group list: Get \"http://localhost:8080/api?timeout=32s\"
