@@ -226,6 +226,7 @@ watch kubectl get nodes
 kubectl describe ns
 
 kubctl describe [service/namespace] frontend
+kubectl get svc kube-dns -n kube-system
 
 ```
 
