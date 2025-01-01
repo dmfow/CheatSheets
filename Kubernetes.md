@@ -70,7 +70,26 @@ kubeadm token create --print-join-command
 ```
 
 
+#### Token
+```
+# See the token list and expiration times
+kubeadm token list
+# Create a token
+kubeadm token create
+# Create a token and the join command
+kubeadm token create --print-join-command
+# Discovery Token CA cert Hash
+openssl x509 -pubkey -in /etc/kubernetes/pki/ca.crt | openssl rsa -pubin -outform der 2>/dev/null | openssl dgst -sha256 -hex | sed 's/^.* //'
+```
 
+#### Join
+```
+# Command
+kubeadm join <control-plane-host>:<control-plane-port> --token <token> --discovery-token-ca-cert-hash sha256:<hash>
+# Example
+sudo kubeadm join 192.168.122.195:6443 --token nx1jjq.u42y27ip3bhmj8vj --discovery-token-ca-cert-hash sha256:c6de85f6c862c0d58cc3d10fd199064ff25c4021b6e88475822d6163a25b4a6c
+```
+  
 
 #### Different ways to Check swap
 ```
