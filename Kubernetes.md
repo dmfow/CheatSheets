@@ -1,6 +1,6 @@
 ## K8s (Kubernetes)
 
-#### Install Masternode on Alpine
+#### Install on all nodes on Alpine
 ```
 # A. Elevate your rights
 su
@@ -37,6 +37,11 @@ net.ipv4.ip_forward                 = 1
 # Apply the changes (sysctl --system for non Alpine)
 sysctl -p
 
+```
+
+#### Install on the masternode on Alpine
+```
+
 # E. Initialise the cluster. Replace [IP network] with your network incl mask. Eg: 10.2.0.0/16
 kubeadm init --pod-network-cidr=[IP network]
 # F. Make a config file for the root user
@@ -56,29 +61,11 @@ kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documen
 
 #### Install Workernodes on Alpine
 ```
-# A. Elevate your rights
-su
-# B. Turn off swap in the session
-swapoff -a
-# Turn off swap on upstart
-  # Remark all rows with swap in /etc/fstab
-  sed -i '/ swap / s/^/#/' /etc/fstab
-  # check with
-  cat /etc/fstab
-  # If it didn't work, do it manually
 
-# C. Install docker
-# Add the community repo (change the version number!!) to the apk repo file /etc/apk/repositories
-http://dl-cdn.alpinelinux.org/alpine/v3.21/community
-# Install
-apk add docker
-rc-update add docker boot
-service docker start
-
-# D. ON the masternode, copy the output of the command
+# E. ON the masternode, copy the output of the command
 kubeadm token create --print-join-command
 
-# E. Take the copy of the output in D on the masternode and past it into the worker node/s
+# F. Take the copy of the output in D on the masternode and past it into the worker node/s
 
 
 ```
