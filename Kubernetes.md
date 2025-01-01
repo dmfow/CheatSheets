@@ -1,6 +1,6 @@
 ## K8s (Kubernetes)
 
-#### Install on all nodes on Alpine
+#### 1. Install on all nodes on Alpine
 ```
 # A. Elevate your rights
 su
@@ -39,7 +39,7 @@ sysctl -p
 
 ```
 
-#### Install on the masternode on Alpine
+#### 2. Install on the masternode on Alpine
 ```
 # E. Initialise the cluster. Replace [IP network] with your network incl mask. Eg: 10.2.0.0/16
 kubeadm init --pod-network-cidr=[IP network]
@@ -55,13 +55,18 @@ chown $(id -u):$(id -g) $HOME/.kube/config
 kubectl create -f https://raw.githubusercontent.com/projectcalico/calico/v3.29.1/manifests/tigera-operator.yaml
 ```
 
-#### Install Workernodes on Alpine
+#### 3. Install Workernodes on Alpine
 ```
 # E. Take the copy of the output in D on the masternode and past it into the worker node/s
 # or run ON the masternode, copy the output of the command
 kubeadm token create --print-join-command
-
 ```
+
+#### 4. When there are two nodes
+```
+As the cluster nodes are usually initialized sequentially, the CoreDNS Pods are likely to all run on the first control plane node. To provide higher availability, please rebalance the CoreDNS Pods with kubectl -n kube-system rollout restart deployment coredns after at least one new node is joined.
+```
+
 
 #### Alternative CNI (Flannel instead for Calicio, more simple, less control/filters). Not tested!
 ```
@@ -78,8 +83,13 @@ kubeadm token list
 kubeadm token create
 # Create a token and the join command
 kubeadm token create --print-join-command
-# Discovery Token CA cert Hash
+# If you don't have the value of --discovery-token-ca-cert-hash, you can get it by running the following commands on the control plane node
+cat /etc/kubernetes/pki/ca.crt | openssl x509 -pubkey  | openssl rsa -pubin -outform der 2>/dev/null | openssl dgst -sha256 -hex | sed 's/^.* //'
+
+
+# Manually create a discovery Token CA cert Hash
 openssl x509 -pubkey -in /etc/kubernetes/pki/ca.crt | openssl rsa -pubin -outform der 2>/dev/null | openssl dgst -sha256 -hex | sed 's/^.* //'
+
 ```
 
 #### Join
@@ -126,5 +136,22 @@ kubectl get pods -n calico-system
 
 kubectl get storageclass
 ```
+
+#### Remove nodes
+```
+# A. On the master - Migrate pods from the node
+kubectl drain  <node-name> --delete-local-data --ignore-daemonsets
+# B. On the master - Prevent a node from scheduling new pods use – Mark node as unschedulable
+kubectl cordon <node-name>
+# C. On the worker node - beforejoining a new master
+kubeadm reset
+```
+
+#### Others
+```
+watch kubectl get nodes
+```
+
+
 
 
