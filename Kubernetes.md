@@ -68,6 +68,7 @@ As the cluster nodes are usually initialized sequentially, the CoreDNS Pods are 
 ```
 
 #### 5. Install Helm
+https://helm.sh/docs/intro/install/
 ```
 # Install Helm. Download file from https://github.com/helm/helm/releases (CHANGE VERSION)
 wget https://get.helm.sh/helm-v3.16.4-linux-386.tar.gz
@@ -187,6 +188,7 @@ kubeadm reset
 #### Others
 ```
 watch kubectl get nodes
+kubectl describe ns
 ```
 
 
