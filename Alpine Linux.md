@@ -247,9 +247,14 @@ rc-update add udev-settle
 rc-update add udev-postmount
 
 ```
+#### /tmp is not so temp
+```
+# in /etc/conf.d/bootmisc
+# setting "wipe_tmp" to "YES"
+```
+
 
 #### ...
-```
 ```
 
 
