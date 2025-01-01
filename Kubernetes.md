@@ -67,7 +67,7 @@ kubeadm token create --print-join-command
 As the cluster nodes are usually initialized sequentially, the CoreDNS Pods are likely to all run on the first control plane node. To provide higher availability, please rebalance the CoreDNS Pods with kubectl -n kube-system rollout restart deployment coredns after at least one new node is joined.
 ```
 
-#### 5. Add-on on the master node
+#### 5. Install Helm
 ```
 # Install Helm. Download file from https://github.com/helm/helm/releases (CHANGE VERSION)
 wget https://get.helm.sh/helm-v3.16.4-linux-386.tar.gz
@@ -79,20 +79,12 @@ cd /usr/bin
 cp /home/[yourUser]/linux-386/helm ./
 # Test
 helm help
+```
 
-
-Optional Add-ons:
-# Dashboard Installation:
-kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.0.0/aio/deploy/recommended.yaml
-# Metrics Server Installation:
-kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
-
+#### 6. Add-on on the master node
+```
 # Add kubernetes-dashboard repository
 helm repo add kubernetes-dashboard https://kubernetes.github.io/dashboard/
-# Deploy a Helm Release named "kubernetes-dashboard" using the kubernetes-dashboard chart
-helm upgrade --install kubernetes-dashboard kubernetes-dashboard/kubernetes-dashboard --create-namespace --namespace kubernetes-dashboard
-
-
 ```
 
 
