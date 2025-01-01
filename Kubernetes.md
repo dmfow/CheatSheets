@@ -143,6 +143,10 @@ docker ps
 docker run hello-world
 ```
 
+#### Troubleshooting (verbose)
+```
+kubectl get nodes -v=10
+```
 
 #### Check Kubernetes
 ```
