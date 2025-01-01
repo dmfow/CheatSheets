@@ -185,10 +185,31 @@ kubectl cordon <node-name>
 kubeadm reset
 ```
 
+
+#### Network IPs
+```
+# Node IPs
+kubectl get nodes -o wide
+# Pod IPs
+kubectl get ns
+kubectl get pods -n <namespace> -o wide
+# Cluster IP
+kubectl get svc <service-name> -n <namespace>
+# Node port
+kubectl get svc <service-name> -n <namespace>
+# Exernal IPs
+kubectl get svc -n <namespace>
+# LoadBalancer IP
+kubectl get svc <service-name> -n <namespace>
+```
+
 #### Others
 ```
 watch kubectl get nodes
 kubectl describe ns
+
+kubctl describe [service/namespace] frontend
+
 ```
 
 
