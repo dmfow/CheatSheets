@@ -189,17 +189,34 @@ kubeadm reset
 #### Network IPs
 ```
 # Node IPs
+#   These are the IP addresses assigned to the nodes, physical or virtual machines, used for admin access
 kubectl get nodes -o wide
+
 # Pod IPs
+#   These IPs are used for inter-Pod communication within the cluster
 kubectl get ns
 kubectl get pods -n <namespace> -o wide
+
 # Cluster IP
+#   If a service is created in the cluster to group these Pods, it will be assigned a ClusterIP
+#   This is an internal IP address used by the service to balance incoming requests to its Pods.
+#   ClusterIP allows in-cluster services and Pods to communicate with the service without knowing the individual Pod IPs
 kubectl get svc <service-name> -n <namespace>
+
 # Node port
+#   To expose one of the services externally, a NodePort service can be used.
+#   This opens a specific port on all nodes’ IPs, and any traffic sent to this port is forwarded to the service.
+#   External clients can access the service by sending requests to any of the node’s IPs at the designated NodePort
 kubectl get svc <service-name> -n <namespace>
-# Exernal IPs
+
+# Exernal IPs (Not common)
+#   If a service needs to be exposed with an external IP without using a LoadBalancer, it can be assigned an External IP.
+#   This is less common and typically requires additional routing or NAT configuration on the network.
 kubectl get svc -n <namespace>
+
 # LoadBalancer IP
+#   Using a LoadBalancer type service will provision an external IP from the external load balancer
+#   Handles incoming traffic, distributing it across the Pods of the service, with a single IP
 kubectl get svc <service-name> -n <namespace>
 ```
 
