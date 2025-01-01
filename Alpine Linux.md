@@ -177,7 +177,7 @@ apk add py3-pip
 
 # Community repo - If you didn't do "doas" in the installation, you might want sudo
 apk add sudo
-# In , after the line root ALL=(ALL:ALL) ALL, add your user [user ALL=(ALL:ALL) ALL]
+# In /etc/sudoers , after the line root ALL=(ALL:ALL) ALL, add your user [user ALL=(ALL:ALL) ALL]
 # But read more about the impact of this.
 # Alternative, eg here: https://ostechnix.com/add-delete-and-grant-sudo-privileges-to-users-in-alpine-linux/
 
