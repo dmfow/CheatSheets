@@ -282,6 +282,31 @@ HandlePowerKey=ignore
 scp -r *.* user@host:/directory
 ```
 
+#### Run the last command
+```
+!!
+# OR
+sudo !!
+
+# See the last 9 commands
+history 8
+# Run command number 149
+!149
+# Run the last command, but replace a misspell (eg run the last and replace spt with apt)
+^spt^apt
+
+# Clear the history list (current session until now) from getting into the history file
+history -c
+
+# Check where the history file is
+echo $HISTFILE
+
+# Run a command but don't put it in the history list/file.
+#   Put a space before the command. Eg
+ history 8
+
+
+```
 
 
 
