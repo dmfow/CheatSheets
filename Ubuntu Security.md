@@ -1,4 +1,4 @@
-#### Clear current commands from geting into the history file (.bash_history)
+#### Clear current command line commands from geting into the history file (.bash_history)
 ```
 history -c
 
