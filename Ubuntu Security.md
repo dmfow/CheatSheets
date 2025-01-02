@@ -1,3 +1,14 @@
+#### Clear current commands from geting into the history file (.bash_history)
+```
+history -c
+
+# Check where the history file reside
+echo $HISTFILE
+
+```
+
+
+
 https://assets.ubuntu.com/v1/66fcd858-ubuntu-core-security-whitepaper.pdf
 <br>
 or
