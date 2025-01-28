@@ -28,9 +28,10 @@ netstat -nr
 
 # Add persistant routes
 # https://docs.freebsd.org/en/books/handbook/advanced-networking/#network-routing
-# in /etc/rc.conf (sdd Internal Net 2 as a persistent static route)
-static_routes="internalnet2"
-route_internalnet2="-net 192.168.2.0/24 192.168.1.2"
+# in /etc/rc.conf (add net1 and net2 as a persistent static route)
+static_routes="net1 net2"
+route_net1="-net 192.168.0.0/24 192.168.0.1"
+route_net2="-net 192.168.1.0/24 192.168.1.1"
 
 # Add routes (Non persistant)
 route add default 10.20.30.1
