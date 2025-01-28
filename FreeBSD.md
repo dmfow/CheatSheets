@@ -10,6 +10,8 @@ freebsd-version -u
 # Disk
 df -hi
 
+# vi editor cheat sheet
+# https://ryanstutorials.net/linuxtutorial/cheatsheetvi.php
 ```
 
 #### Restart the filesystem
