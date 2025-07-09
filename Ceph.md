@@ -73,6 +73,23 @@ ceph pg map
 
 ```
 
+#### More troubleshooting - debugging
+```
+# Debug chepx authentication
+  ceph -s --debug_ms=1 --debug_monc=25 --debug_auth=25
+
+# Adding lost keyring
+In /etc/pve/ceph/ceph.conf (or /etc/ceph/ceph.conf). Under [Global]
+       auth_client_required = none
+       auth_cluster_required = none
+       auth_service_required = none
+Reboot
+Then at the prompt type
+  ceph auth import -i /etc/pve/priv/ceph.client.admin.keyring
+Remove the three lines of conf above
+Reboot
+
+```
 
 
 #### PGs per OSD
