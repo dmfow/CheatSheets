@@ -1,4 +1,4 @@
-
+## Delete
 
 #### Delete a column
 ```python
@@ -20,6 +20,8 @@ df = df.dropna()
 df = df.reset_index(drop=True)
 ```
 
+## Merge
+
 ## Merge identical column Dataframes
 ```python
 import pandas as pd
@@ -28,6 +30,7 @@ myNewDF = pd.concat[(myDF, mySecondDF], axis=0)
 # Horisontal merge
 myNewDF = pd.concat[(myDF, mySecondDF], axis=1)
 ```
+## Copy
 
 ## Copy dataframe columns columns
 ```python
