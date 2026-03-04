@@ -57,9 +57,15 @@ ax3.set_xlabel("Time")
 ax3.set_ylabel("Return")
 ax3.set_ylim([0, 20000])
 
+ax1.tick_params(axis='x', labelrotation=90)
+ax2.tick_params(axis='x', labelrotation=90)
+ax3.tick_params(axis='x', labelrotation=90)
+
 ax1.plot(df["dowJones"], color='red') # Line color
 ax2.plot(df["sp500"], color='blue')
 ax3.plot(df["nasdaq"], color='green')
+
+plt.tight_layout()
 
 plt.show()
 ```
