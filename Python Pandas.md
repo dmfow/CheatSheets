@@ -1,7 +1,12 @@
 #### New empty dataframe
 ```python
 df = pd.DataFrame()
+
+# With column names
+df = pd.DataFrame(columns = ['stock', 'beta_capm', 'beta_fama', 'beta_smb', 'beta_hml', 'avg_return'])
+
 ```
+
 
 ## Rows
 #### Info about the dataframe
@@ -31,6 +36,16 @@ print(df.to_string(index=False))
 
 ```
 
+#### Print with more characters in Jupyter notebook before breaking to new rows
+```python
+with pd.option_context('display.max_rows', None,
+                       'display.max_columns', None,
+                       'display.precision', 8,
+                       'display.width', 1000
+                       ):    
+print(df)
+```
+    
 
 
 #### Count rows in different ways
@@ -80,6 +95,15 @@ display(myDF)
 # From test to TEST
 myNewDF = myDF.rename(columns = {'test':'TEST', 'adi':'ADI', 'w23':'W24'}, inplace = True)
 ```
+
+## Loops
+
+#### For
+```python
+for i, row in df.iterrows():
+    theCar = row["cars"]
+```
+
 
 ## Files
 #### csv
