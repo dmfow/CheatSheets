@@ -6,7 +6,7 @@ plt.figure()
 plt.plot(df["dowJones"], color='pink') # The line color (and many other properties) can be customized
 plt.xlabel("Time index")
 plt.ylabel("Return")
-plt.show(
+plt.show()
 ```
 
 #### Simple scatterplot with legends
@@ -15,9 +15,12 @@ plt.figure()
 plt.xlabel("Volatility")
 plt.ylabel("Return")
 
-plt.scatter(df_nasdaq_std.values, df_nasdaq_returns.values, color='black', label='Nasdaq')
+# Plot stock values as scatter (eg std and return in this example)
+plt.scatter(df_stocks_std.values, df_stocks_returns.values, color='black', label='Nasdaq')
+
 # Plot a line, as dots
 plt.plot(myLine_std, myLine_return, color='green', linestyle='--', label='Some line')
+
 # Highlight a point '*' marker
 plt.scatter(pointStdValue, pointReturnValue, color='red', marker='*', s=100, label='My special point')
 
