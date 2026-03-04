@@ -9,6 +9,7 @@ pp("Whatever Array or Json or other")
 ```python
 print(f"The median: {myVar_median}")
 print(f"The standard deviation of maximum temperature is {round(temp_max_std, 1)}")
+print("Average: ", round(df_avg,decimal_precision))
 
 ```
 
@@ -28,7 +29,7 @@ print(isExist)
 ```
 
 
-#### Create a direcotry
+#### Create a directory
 ```python
 import os
 os.mkdir(theDirPath)
