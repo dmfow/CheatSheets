@@ -116,11 +116,22 @@ with open('filename', "r") as f_in:
 myDF = pd.DataFrame(data)
 
 ```
+#### Excel
+```python
+df = pd.read_excel(myExcelfile, sheet_name="return")
+```
+
                               
 #### Calculate
 ```python
+# Example
+avg_smb = df_factors_12["smb_vw"].mean()
+
 .median()
 .round(0)
+.cov()
+.std()
+.var()
 
 # Standard deviation
 .std()
