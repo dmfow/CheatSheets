@@ -1,14 +1,14 @@
 ## Make a new DF
 ```python
 # Make a new standalone DF
-df = df2.copy(deep=True)
+newDf = df_first.copy(deep=True)
 ```
 
 
 ## Insert
 ```python
 # Insert last (append)
-df.loc[len(df)] = [stock, variable1, variable2]
+df.loc[len(df)] = [name, address, variable2]
 
 # Inser a new column
 df["myCol"] = df_1["cars"]+df_1["bikes"]
