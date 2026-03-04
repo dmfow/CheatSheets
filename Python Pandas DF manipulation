@@ -2,6 +2,21 @@
 ```python
 # Make a new standalone DF
 newDf = df_first.copy(deep=True)
+
+# Matching specific value
+newDf = df.loc[df["Year"] == 2024]
+
+# Transpose a Row to a list
+stocks = ['sp500','nasdaq']
+row = df.iloc[0]
+df_temp = row[stocks].transpose().to_frame(name="value").sort_values(by=["value"], ascending=False)
+
+# If the names are in the index. Take the 10 first stocks and convert it to a list
+stocklist = df.head(10).index.to_list()
+
+# Make a new DF where a row with the stockname in the col stocknames match a list of stocks (stocklist)
+df_selected = df_stocks[df_stocks['stocknames'].isin(stocklist)]
+
 ```
 
 
@@ -15,7 +30,34 @@ df["myCol"] = df_1["cars"]+df_1["bikes"]
 
 ```
 
+## Insert to a list
+#### Take a DF with one column and choose rows by index and insert into a list
+```python
+myList.append(df.iloc[last:last+nr+add])
+
+# Append a list as a row in a list (as Pandas series, per list row)
+myList.append(pd.Series(anotherList))
+```
+
+
 ## Delete
+
+#### Delete a row
+```python
+# Remove the first row
+df.drop(index=df.index[0], axis=0, inplace=True)
+
+# Remove the last row
+df.drop(df.tail(1).index, inplace = True)
+
+# Delete rows from the beginning to first non-NAN value
+idx = df.first_valid_index()
+df = df.iloc[idx-1:]
+
+# Delete NA values
+df = df.dropna()
+```
+
 
 #### Delete a column
 ```python
