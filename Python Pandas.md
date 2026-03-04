@@ -100,6 +100,25 @@ myNewDF = myDF.rename(columns = {'test':'TEST', 'adi':'ADI', 'w23':'W24'}, inpla
 
 ## Loops
 
+#### IF
+```python
+if 'A' in df.columns: print("is in")
+if 'A' not in df: print("not in")
+
+# One or more columns exist (Not all below are tested!!!)
+if set(['A','C']).issubset(df.columns): print("they exist")
+if {'A', 'C'}.issubset(df.columns): print("they exist")
+if set(('A','B')) <= set(df.columns): print("they exist")
+if all(item in df.columns for item in ['A','C']): print("they exist")
+if all(item in df.columns for item in ['A','C']): print("they exist")
+if df.columns.isin(['A', 'C']).any(): print("they exist")
+if not df.columns.isin(['A', 'C']).any(): print("not in")
+
+```
+
+
+## Loops
+
 #### For
 ```python
 for i, row in df.iterrows():
