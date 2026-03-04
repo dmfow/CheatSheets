@@ -1,3 +1,20 @@
+## Make a new DF
+```python
+# Make a new standalone DF
+df = df2.copy(deep=True)
+```
+
+
+## Insert
+```python
+# Insert last (append)
+df_expReturn.loc[len(df_expReturn)] = [stock, exp_ret_capm, beta_capm, exp_ret_fama, beta_fama, beta_smb, beta_hml]
+
+# Inser a new column
+df_factors_12["market"] = df_factors_12["rm_rf"]+df_factors_12["rf"]
+
+```
+
 ## Delete
 
 #### Delete a column
@@ -15,7 +32,10 @@ df.drop(df.columns[0], axis=1, inplace=True)
 
 # Delete na values
 df = df.dropna()
+```
 
+## Recalculate
+```python
 # Recalculate the index
 df = df.reset_index(drop=True)
 ```
@@ -35,6 +55,15 @@ myNewDF = pd.concat[(myDF, mySecondDF], axis=1)
 ## Copy dataframe columns columns
 ```python
 myDF['mycol'] = otherDF[['colname']].copy()
+```
+
+## Numeric
+#### 
+```python
+# Multiply all col values with a formula in a function
+def multiply_by_12(number):
+        return 12 * number
+df.iloc[:, 3:cols] = df.iloc[:, 3:cols].apply(multiply_by_12)
 ```
 
 
