@@ -98,7 +98,7 @@ with pd.option_context('display.max_rows', None, 'display.max_columns', None, 'd
 myNewDF = myDF.rename(columns = {'test':'TEST', 'adi':'ADI', 'w23':'W24'}, inplace = True)
 ```
 
-## Loops
+## Conditions
 
 #### IF
 ```python
