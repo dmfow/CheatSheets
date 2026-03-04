@@ -36,18 +36,6 @@ print(df.to_string(index=False))
 
 ```
 
-#### Print with more characters in Jupyter notebook before breaking to new rows
-```python
-with pd.option_context('display.max_rows', None,
-                       'display.max_columns', None,
-                       'display.precision', 8,
-                       'display.width', 1000
-                       ):    
-print(df)
-```
-    
-
-
 #### Count rows in different ways
 ```python
 # Show nr of rows containing a specific value
@@ -87,6 +75,20 @@ pd.set_option('display.width', 1000)
 pd.set_option('display.colheader_justify', 'center')
 pd.set_option('display.precision', 3)
 display(myDF)
+
+
+#### Print with more characters in Jupyter notebook before breaking to new rows
+with pd.option_context('display.max_rows', None,
+                       'display.max_columns', None,
+                       'display.precision', 8,
+                       'display.width', 1000
+                       ):    
+  print(df)
+
+# OR
+with pd.option_context('display.max_rows', None, 'display.max_columns', None, 'display.width', 1000):    
+    print(df)
+
 ```
 
 
