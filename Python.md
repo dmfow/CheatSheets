@@ -65,6 +65,18 @@ print(now.strftime('%Y-%m-%d %H:%M:%S'))
 print(now.strftime('%H:%M:%S on %A, %B the %dth, %Y'))
 ```
 
+#### IF
+```python
+# In a list
+a = [10, 20, 30, 40, 50]
+if 30 in a: print("in the list")
+
+# OR
+if any(x == 30 for x in a): print("in the list")
+
+# OR
+if a.count(30) > 0: print("in the list")
+```
 
 #### For loop
 ```python
