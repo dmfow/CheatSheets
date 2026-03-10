@@ -24,6 +24,7 @@ caffeinate
   caffeinate -t 3600 : Prevent a specific time (this is 1 hour)
   caffeinate -i : Will enable control-command-Q to sleep (or apple-menu/sleep)
   caffeinate -s : Prevent sleep, but only if it is plugged-in
+
 # GUI
 Go to: System settings/Lock screen/Turn display off when inactive (+choose "never" in the drop down)
 
