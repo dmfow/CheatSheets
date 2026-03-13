@@ -31,7 +31,7 @@ df = pd.DataFrame.from_dict(pd.json_normalize(data_dict), orient='columns', max_
 
 #### Normalize json object into a Pandas Dataframe
 ```
-# Normalize some fields and on certain order
+# Normalize some fields and in certain order
 data = [{
         "company":"nike",
         "tagline": "just do it",
