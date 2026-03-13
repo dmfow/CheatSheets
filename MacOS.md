@@ -35,7 +35,7 @@ Go to: System settings/Lock screen/Turn display off when inactive (+choose "neve
 # These three alternative installs different Python libraries
 # Default and connected to xcode. Don't remove this. Might be older then the last release. This will "listen" to python3 command
 # Install from python.org. This will "listen" to python3.X command
-# Install with brew. This will "listen" to python3.X command
+# Install with brew (https://brew.sh). This will "listen" to python3.X command
 
 # Possibility to make an alias in the .zprofile to use the python command (and pip command) to run the python/pip of your choice
 alias python="[path to the python execution file of your choice]"
