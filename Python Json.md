@@ -12,13 +12,13 @@ df = pd.read_json(filename)
 ```
 
 
-#### Dict into a Pandas Dataframe
+#### Dict into a Pandas Dataframe (not tested)
 ```
 data = [{'name':'Karen', 'year':'1750'},{'name':'Bob', 'year':'1751'}]
 df = pd.DataFrame.from_dict(data, orient='columns')
 ```
 
-#### Normalize dict into a Pandas Dataframe
+#### Normalize dict into a Pandas Dataframe (not tested)
 ```
 data_dict = [{'Name':{'firstname':'Karen','lastname':'consert'}, 'year':'1750'},{'name':{'firstname':'Bob','lastname':'bigtree'}, 'year':'1751'}]
 
@@ -29,7 +29,7 @@ df = pd.DataFrame.from_dict(pd.json_normalize(data_dict), orient='columns')
 df = pd.DataFrame.from_dict(pd.json_normalize(data_dict), orient='columns', max_level=0)
 ```
 
-#### Normalize json object into a Pandas Dataframe
+#### Normalize json object into a Pandas Dataframe (not tested)
 ```
 # Normalize some fields and in certain order
 data = [{
@@ -45,14 +45,14 @@ data = [{
 df = pd.DataFrame.from_dict(pd.json_normalize(data), "department", ["company", "tagline", ["sells", "shoes"]])
 ```
 
-#### String to Pandas Dataframe via converting to json object
+#### String to Pandas Dataframe via converting to json object (not tested)
 ```
 jstring = '{"001":{'firstname':'Karen','lastname':'consert'}, "002":{'firstname':'Bob','lastname':'bigtree'}}'
 jdata = json.loads(jstring)
 df = pd.DataFrame(jdata).T
 ```
 
-#### Clear/fix json strings
+#### Clear/fix json strings (not tested)
 ```
 # Replace ' with "
 jstring = jstring.replace("'", '"')
@@ -70,7 +70,7 @@ with open(filename, 'r') as f:
         s = s.replace('\t', '').replace('\n','').replace(',}', '}'). replace(',]', ']')
         jobj = json.loads(s)
 ```
-#### Clear/fix json strings, and convert it into a dict
+#### Clear/fix json strings, and convert it into a dict (not tested)
 ```
 import ast
 json_dict = ast.literal_eval(json_string)
