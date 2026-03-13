@@ -52,6 +52,32 @@ jdata = json.loads(jstring)
 df = pd.DataFrame(jdata).T
 ```
 
+#### Clear/fix json strings
+```
+# Replace ' with "
+jstring = jstring.replace("'", '"')
+
+# Replace ' with " when escaped single qoutes exist (not tested). Replace only non escaped qoutes
+import re
+def replaceSingleQoutes(s):
+        p = re.compile(r"(?<!\\)'")
+        return p.sub('"', s)
+jstring_corrected = replaceSingleQoutes(jstring)
+
+# Remove trailing commas from json file (and remove tabs and new lines to make it a single string)
+with open(filename, 'r') as f:
+        s = f.read()
+        s = s.replace('\t', '').replace('\n','').replace(',}', '}'). replace(',]', ']')
+        jobj = json.loads(s)
+```
+#### Clear/fix json strings, and convert it into a dict
+```
+import ast
+json_dict = ast.literal_eval(json_string)
+```
+
+
+
 #### json object to string
 ```
 s = json.dumps(jdata)
