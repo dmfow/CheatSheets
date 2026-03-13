@@ -149,6 +149,7 @@ data = pd.read_csv(filename, sep = "\t", usecols = ["Date", "Items", "Name", "So
 Station1.to_csv(file1, sep=",", index=False, float_format="%.2f")
 
 ```
+
 #### plain text (everything to 1 column)
 ```python
 data = []
