@@ -9,6 +9,10 @@ int("10", base=3)      # Gives 3
 type(int("10"))
 ```
 
+#### Replace
+```python
+theword = theword.replace("'", '"')
+```
 
 #### Strip
 ```python
