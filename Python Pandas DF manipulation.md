@@ -157,7 +157,7 @@ myNewDF = pd.concat[(myDF, mySecondDF], axis=0)
 # Horisontal merge
 myNewDF = pd.concat[(myDF, mySecondDF], axis=1)
 ```
-#### Copy
+## Copy
 
 #### Copy dataframe columns columns
 ```python
