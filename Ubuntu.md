@@ -116,6 +116,24 @@ ls -lSh /bin | head -5
 ls -lah --sort=size
 ```
 
+#### compress / zip, gzip etc
+```
+# gzip
+gzip filename
+
+# Keep the original file
+gzip -k filename
+
+# Keep the original, byt writing to std out
+gzip -c filename > filename.gz
+
+
+# bz2 compress
+bzip2 thenewbz2file
+# OR
+bzip2 -z thenewbz2file
+```
+
 #### unzipp
 ```
 # .zip
@@ -136,10 +154,6 @@ untar thefile.tar
 bzip2 -d thefile.bz2
 
 
-# bz2 compress
-bzip2 thenewbz2file
-# OR
-bzip2 -z thenewbz2file
 
 
 ```
