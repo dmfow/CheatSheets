@@ -149,7 +149,7 @@ df = df.reset_index(drop=True)
 
 ## Merge
 
-## Merge identical column Dataframes
+#### Merge identical column Dataframes
 ```python
 import pandas as pd
 myNewDF = pd.concat[(myDF, mySecondDF], axis=0)
@@ -157,9 +157,9 @@ myNewDF = pd.concat[(myDF, mySecondDF], axis=0)
 # Horisontal merge
 myNewDF = pd.concat[(myDF, mySecondDF], axis=1)
 ```
-## Copy
+#### Copy
 
-## Copy dataframe columns columns
+#### Copy dataframe columns columns
 ```python
 myDF['mycol'] = otherDF[['colname']].copy()
 ```
