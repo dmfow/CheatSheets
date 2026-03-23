@@ -253,6 +253,19 @@ rc-update add udev-settle
 rc-update add udev-postmount
 
 ```
+#### Change password
+```
+# First su:
+su
+
+# Change root password (first su)
+passwd root
+
+# Change user password (first su)
+passwd username
+
+```
+
 #### /tmp is not so temp
 ```
 # in /etc/conf.d/bootmisc
