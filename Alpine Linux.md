@@ -51,7 +51,7 @@ cat /etc/os-release
 
 
 
-#### Update/Upgrade minor (eg 3.19.3 to 3.19.4)
+#### Update/Upgrade within main release (eg 3.19.3 to 3.19.4)
 ```
 su
 apk update
@@ -71,10 +71,16 @@ apk add --upgrade apk-tools
 
 ```
 
-#### Update/Upgrade (eg 3.19.x to 3.20.x)
+#### Update/Upgrade new main release(eg 3.19.x to 3.20.x)
 ```
 su
 # Edit the /etc/apk/repositories file
+nano /etc/apk/repositories
+# Change the version (replace X with the version) in the file
+http://dl-cdn.alpinelinux.org/alpine/v3.X/main
+#http://dl-cdn.alpinelinux.org/alpine/v3.X/community
+
+
 # Change the version number
 apk update
 apk upgrade --available
