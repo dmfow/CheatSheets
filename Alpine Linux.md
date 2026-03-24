@@ -196,6 +196,10 @@ apk cache clean
 
 # Fix broken packages
 apk fix
+
+# Needed packeages for VS Code remote SSH
+apk add bash curl git libstdc++ procps-ng
+
 ```
 
 
