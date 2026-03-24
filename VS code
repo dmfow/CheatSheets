@@ -1,1 +1,12 @@
-#### Install remote ssh
+#### Install Remote - SSH extension
+```
+# ctrl+shift+X (or in the left menu, choose Extension, image is 3+1 blocks)
+# Type in: Remote - SSH extension
+# Check that it is a Microsoft extension
+# Click install
+```
+
+#### Remote to Alpine OS
+```
+# See Alpine Linux cheat sheet
+```
