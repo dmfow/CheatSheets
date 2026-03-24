@@ -279,7 +279,9 @@ passwd username
 
 #### Extend sys disk (that is LVM)
 ```
+# Install physically or create logically (VM) a new disk. Will be called sdX, below sdb
 
+# su
 $ su
 
 # lsblk
