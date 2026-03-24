@@ -316,7 +316,7 @@ sr0              11:0    1 1024M  0 rom
    
 # lvs
   LV      VG  Attr       LSize   Pool Origin Data%  Meta%  Move Log Cpy%Sync Convert
-  lv_root vg0</b> -wi-ao----   1.20g                                                    
+  lv_root vg0 -wi-ao----   1.20g                                                    
   lv_swap vg0 -wi-ao---- 512.00m                                                    
 
 # lvextend -l +100%FREE /dev/vg0/lv_root
