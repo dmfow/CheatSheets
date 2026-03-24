@@ -328,7 +328,10 @@ sr0              11:0    1 1024M  0 rom
 # lvs
   LV      VG  Attr       LSize   Pool Origin Data%  Meta%  Move Log Cpy%Sync Convert
   lv_root vg0 -wi-ao----  <9.20g                                                    
-  lv_swap vg0 -wi-ao---- 512.00m                                                    
+  lv_swap vg0 -wi-ao---- 512.00m
+
+# resize2fs /dev/vg0/lv_root
+
 ```
 
 
