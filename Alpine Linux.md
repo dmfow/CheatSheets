@@ -289,19 +289,19 @@ sda               8:0    0    8G  0 disk
 └─sda2            8:2    0  7.7G  0 part 
   ├─vg0-lv_swap 253:0    0  512M  0 lvm  [SWAP]
   └─vg0-lv_root 253:1    0  1.2G  0 lvm  /   
-<b>sdb               8:16   0    8G  0 disk     </b>
+sdb               8:16   0    8G  0 disk     
 sr0              11:0    1 1024M  0 rom  
 
 # vgs
   VG  #PV #LV #SN Attr   VSize VFree
-  <b>vg0</b>   1   2   0 wz--n- 1.70g    0 
+  vg0   1   2   0 wz--n- 1.70g    0 
 
 # vgextend vg0 /dev/sdb
   Volume group "vg0" successfully extended
 
 # vgs
   VG  #PV #LV #SN Attr   VSize  VFree 
-  vg0   2   2   0 wz--n- <b><9.70g <8.00g</b>
+  vg0   2   2   0 wz--n- <9.70g <8.00g
 
 # vgdisplay
   --- Volume group ---
@@ -316,7 +316,7 @@ sr0              11:0    1 1024M  0 rom
    
 # lvs
   LV      VG  Attr       LSize   Pool Origin Data%  Meta%  Move Log Cpy%Sync Convert
-  <b>lv_root vg0</b> -wi-ao----   1.20g                                                    
+  lv_root vg0</b> -wi-ao----   1.20g                                                    
   lv_swap vg0 -wi-ao---- 512.00m                                                    
 
 # lvextend -l +100%FREE /dev/vg0/lv_root
@@ -325,7 +325,7 @@ sr0              11:0    1 1024M  0 rom
 
 # lvs
   LV      VG  Attr       LSize   Pool Origin Data%  Meta%  Move Log Cpy%Sync Convert
-  lv_root vg0 -wi-ao----  <b><9.20g                                                    </b>
+  lv_root vg0 -wi-ao----  <9.20g                                                    
   lv_swap vg0 -wi-ao---- 512.00m                                                    
 ```
 
