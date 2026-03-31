@@ -28,13 +28,21 @@ git clone /path/to/repository
 
 ## Use git
 
+#### Connect local repos to remote repos (One Time)
+```
+git config --global user.email "email"
+git config --global user.name "name"
+git remote add origin <host-or-remoteURL, incl port and path>
+# If you got it wrong
+git remote rm <name-of-the-repository, ex origin>
+```
+
 #### Make a .gitignore file
 ```
 # In your application root where you did "git init".
 # Edit a file (or create) .gitignore (first example line is to skip sqlite3 databases, second is to skip a library)
 *.sqlite3
 src/__pycache__/
-
 ```
 
 #### Check status of files in the project
@@ -49,15 +57,6 @@ git add <File name> command
 
 # undo what you have added
 git reset
-```
-
-#### Connect local repos to remote repos (One Time)
-```
-git config --global user.email "email"
-git config --global user.name "name"
-git remote add origin <host-or-remoteURL, incl port and path>
-# If you got it wrong
-git remote rm <name-of-the-repository, ex origin>
 ```
 
 #### Commit your changes (add, delete, reset etc)
