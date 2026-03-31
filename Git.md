@@ -53,6 +53,8 @@ git reset
 
 #### Connect local repos to remote repos (One Time)
 ```
+git config --global user.email "email"
+git config --global user.name "name"
 git remote add origin <host-or-remoteURL>
 ```
 
