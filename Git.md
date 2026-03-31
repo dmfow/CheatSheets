@@ -28,6 +28,15 @@ git clone /path/to/repository
 
 ## Use git
 
+#### Make a .gitignore file
+```
+# In your application root where you did "git init".
+# Edit a file (or create) .gitignore (first example line is to skip sqlite3 databases, second is to skip a library)
+*.sqlite3
+src/__pycache__/
+
+```
+
 #### Check status of files in the project
 ```
 # Display the list of changed files together with the files that are yet to be staged or committed
@@ -37,7 +46,18 @@ git status
 git add <temp.txt>
 # OR
 git add <File name> command
-  
+
+# undo what you have added
+git reset
+```
+
+#### Connect local repos to remote repos (One Time)
+```
+git remote add origin <host-or-remoteURL>
+```
+
+#### Commit your changes (add, delete, reset etc)
+```
 # Commit (Save) files to your project - (Don't forget to save the file to the disk first)
 git commit -m “Message for the commit here”
 # OR
@@ -85,10 +105,7 @@ git merge <branch-name>
 ```
   
   
-## Connect local repos to remote repos
-```
-it remote add origin <host-or-remoteURL>
-```
+
 
 ## Delete a connection between local repo and a remote repo
 ```
