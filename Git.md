@@ -55,7 +55,9 @@ git reset
 ```
 git config --global user.email "email"
 git config --global user.name "name"
-git remote add origin <host-or-remoteURL>
+git remote add origin <host-or-remoteURL, incl port and path>
+# If you got it wrong
+git remote rm <name-of-the-repository, ex origin>
 ```
 
 #### Commit your changes (add, delete, reset etc)
