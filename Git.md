@@ -16,7 +16,7 @@ git init [project name]
 ```
 
 
-#### Get a "repo" from a servre
+#### Get a "repo" from a server
 ```
 cd ./where_you_want_it
 git clone https://....the webaddress_and_dir
