@@ -1,6 +1,4 @@
-# UV Cheat Sheet for macOS
-
-### Source
+## Forked from
 ```
 https://gist.github.com/rollingmountains
 ```
