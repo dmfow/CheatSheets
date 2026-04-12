@@ -1,11 +1,16 @@
 ## UV
 UV is Python package and project manager (virtual environment), written in Rust.
 <br>
+<br>
+Self claimed: A single tool to replace pip, pip-tools, pipx, poetry, pyenv, twine, virtualenv, and more.
+10-100x faster than pip
+<br> Read more at:
+<br>
 https://docs.astral.sh/uv/
 
 #### From
 ```
-This page is close to
+This page cheat sheet is close to
 https://gist.github.com/rollingmountains
 ```
 
