@@ -1,8 +1,7 @@
 ## UV
-```
 UV is Python package and project manager (virtual environment), written in Rust.
+<br>
 https://docs.astral.sh/uv/
-```
 
 #### From
 ```
