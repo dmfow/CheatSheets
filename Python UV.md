@@ -10,7 +10,7 @@ https://docs.astral.sh/uv/
 
 #### From
 ```
-This page cheat sheet is close to
+This CheatSheet is close to
 https://gist.github.com/rollingmountains
 ```
 
