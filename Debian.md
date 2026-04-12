@@ -239,15 +239,20 @@ kvm64 (x86–64-v1):
 Compatible with Intel CPU >= Pentium 4, AMD CPU >= Phenom.
 
 x86–64-v2:
-Compatible with Intel CPU >= Nehalem, AMD CPU >= Opteron_G3. Added CPU flags compared to x86–64-v1: +cx16, +lahf-lm, +popcnt, +pni, +sse4.1, +sse4.2, +ssse3.
+Added CPU flags: +cx16, +lahf-lm, +popcnt, +pni, +sse4.1, +sse4.2, +ssse3 
+Compatible with Intel CPU >= Nehalem, AMD CPU >= Opteron_G3.
+
 x86–64-v2-AES:
-Compatible with Intel CPU >= Westmere, AMD CPU >= Opteron_G4. Added CPU flags compared to x86–64-v2: +aes.
+Added CPU flags: +aes
+Compatible with Intel CPU >= Westmere, AMD CPU >= Opteron_G4.
 
 x86–64-v3:
-Compatible with Intel CPU >= Broadwell, AMD CPU >= EPYC. Added CPU flags compared to x86–64-v2-AES: +avx, +avx2, +bmi1, +bmi2, +f16c, +fma, +movbe, +xsave.
+Added CPU flags: +avx, +avx2, +bmi1, +bmi2, +f16c, +fma, +movbe, +xsave
+Compatible with Intel CPU >= Broadwell, AMD CPU >= EPYC.
 
 x86–64-v4:
-Compatible with Intel CPU >= Skylake, AMD CPU >= EPYC v4 Genoa. Added CPU flags compared to x86–64-v3: +avx512f, +avx512bw, +avx512cd, +avx512dq, +avx512vl.
+Added CPU flags: +avx512f, +avx512bw, +avx512cd, +avx512dq, +avx512vl.
+Compatible with Intel CPU >= Skylake, AMD CPU >= EPYC v4 Genoa.
 
 
 ```
