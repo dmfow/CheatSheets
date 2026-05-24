@@ -149,6 +149,11 @@ sudo systemctl reload ssh
 sudo journalctl -u ssh
 sudo journalctl -u sshd
 
+sudo tail -n 50 /var/log/auth.log
+sudo journalctl -u ssh -n 50 --no-pager
+sudo journalctl -u sshd -n 50 --no-pager
+
+
 5. Incorrect Username or Host
 
 6. SSH Agent Not Loaded with the Private Key
