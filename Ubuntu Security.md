@@ -38,6 +38,15 @@ apt-get autoremove
 
 #### Use ssh certificates instead of password
 ```
+# Summary of the 4 steps. More info below
+ssh-keygen
+ssh-copy-id username@remote_host
+ssh username@remote_host
+sudo nano /etc/ssh/sshd_config
+  PasswordAuthentication no
+sudo systemctl restart ssh
+
+
 # Step 1 of 4 — Creating SSH Keys. Do it on your client/PC.
 #   The private key will be called id_rsa and the associated public key will be called id_rsa.pub
 #   run:
@@ -55,6 +64,9 @@ ssh-keygen
 # Step 2 of 4 - Copying an SSH Public Key to Your Server
 # ssh-copy-id, it will login to the remote host and ask for the remote host username's password.
 ssh-copy-id username@remote_host
+
+# OR
+ssh-copy-id -i ~/.ssh/id_ed25519.pub username@remote_host
 
 # OR
 cat ~/.ssh/id_rsa.pub | ssh username@remote_host "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys"
@@ -82,6 +94,61 @@ ssh username@remote_host
 sudo nano /etc/ssh/sshd_config
   PasswordAuthentication no
 sudo systemctl restart ssh
+
+# Not wokring. Troubleshooting as below
+```
+
+#### Troubleshooting ssh certificates
+```
+1. Incorrect File or Directory Permissions
+# Check permissions on the server
+ls -ld ~/.ssh
+ls -l ~/.ssh/authorized_keys
+# Recommended
+chmod 700 ~/.ssh
+chmod 600 ~/.ssh/authorized_keys
+
+# On your client
+# Ensure that your private key has restrictive permissions. If the key is readable by other users, the SSH client may refuse to use it
+chmod 600 ~/.ssh/id_rsa
+# You should also ensure the directory and file are owned by the user account you are logging in as
+sudo chown -R username:username ~/.ssh
+# Also ensure your home directory is not writable by group or other users
+cd ~
+chmod 755 ~
+
+# 2. Public Key Not Properly Added to authorized_keys
+# To verify the key
+# example output "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQ... user@hostname"
+#   or "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAI... user@hostname"
+cat ~/.ssh/authorized_keys
+# If issues, redo copy
+ssh-copy-id username@remote_host
+ssh-copy-id -i ~/.ssh/id_ed25519.pub username@remote_host
+
+3. Wrong Private Key Being Used
+ssh -i ~/.ssh/id_rsa username@remote_host
+ssh -i ~/.ssh/id_rsa -o IdentitiesOnly=yes username@remote_host
+ssh -v username@remote_host
+# Configure different keys to different hosts in ~/.ssh/config
+nano ~/.ssh/config
+  Host myserver
+      HostName remote_host
+      User username
+      IdentityFile ~/.ssh/id_rsa
+
+4. SSH Service Not Restarted After Configuration Changes, on the server
+# Validate config issues
+sudo sshd -t
+sudo systemctl restart ssh
+sudo systemctl restart sshd
+# Without dropping connections
+sudo systemctl reload ssh
+
+# Check logs
+sudo journalctl -u ssh
+sudo journalctl -u sshd
+
 
 ```
 
