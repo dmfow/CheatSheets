@@ -149,6 +149,35 @@ sudo systemctl reload ssh
 sudo journalctl -u ssh
 sudo journalctl -u sshd
 
+5. Incorrect Username or Host
+
+6. SSH Agent Not Loaded with the Private Key
+# If you use a passphrase-protected key, you may need to add the key to the SSH agent. Start the agent:
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_rsa
+ssh-add -l
+
+7. Server Still Allowing Password Authentication
+sudo cat /etc/ssh/sshd_config | grep PasswordAuthentication
+sudo cat /etc/ssh/sshd_config | grep PubkeyAuthentication
+# pas auth should be no, pub key should be yes
+
+# If you want to fully disable password-like interactive prompts, you can also ensure that keyboard-interactive authentication is disabled:
+KbdInteractiveAuthentication no
+
+# reload if changed
+sudo systemctl restart ssh
+
+8. Firewall or Network Restrictions
+sudo ss -tlnp | grep ssh
+sudo ufw status
+# if needed
+sudo ufw allow ssh
+sudo ufw reload
+
+9. Debugging Tip: Use SSH Verbose Mode
+ssh -vvv username@remote_host
+
 
 ```
 
