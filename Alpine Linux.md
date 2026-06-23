@@ -270,6 +270,19 @@ passwd username
 
 ```
 
+#### Add a user to use sudo
+```
+# First - Read about pros and cons installing sudo on Alpine
+
+# update apk
+apk update
+# install package
+apk add sudo
+
+# After the following row, add the user and the same priv
+#  root ALL=(ALL:ALL) ALL
+```
+
 #### /tmp is not so temp
 ```
 # in /etc/conf.d/bootmisc
