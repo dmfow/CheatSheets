@@ -284,6 +284,10 @@ passwd username
 # su
 $ su
 
+# Install packages (e2fsprogs-extra include resize2fs)
+apk add lsblk
+apk add e2fsprogs-extra
+
 # lsblk
 NAME            MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
 sda               8:0    0    8G  0 disk 
