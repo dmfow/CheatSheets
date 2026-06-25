@@ -30,6 +30,15 @@ grep "X Driver" /var/log/Xorg.0.log
 find /usr/lib/modules -name nvidia.ko
 find /usr/lib/modules -name nvidia.ko -exec modinfo {} \;
 
+# CPU utilization (graphics = % utilization)
+nvidia-settings -q GPUUtilization
+# Continously
+watch -n 1 nvidia-settings -q GPUUtilization
+watch -n 1 nvidia-smi
+
+# Which process is using the GPU
+ps f -o user,pgrp,pid,pcpu,pmem,start,time,command -p `lsof -n -w -t /dev/nvidia*`
+
 ```
 
 #### Graphic cards in the system
