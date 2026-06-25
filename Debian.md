@@ -71,7 +71,17 @@ hostnamectl
 #### Hardware info
 ```
 # Motherboard
+dmidecode -t baseboard | grep -i 'Product'
 dmidecode --type baseboard
+inxi -M
+
+# VGA
+lspci -vnn | grep VGA
+lspci -vnn | grep VGA -A 12
+sudo lshw -numeric -C display
+inxi -G
+inxi -G -xx -a
+inxi --edid
 
 # Memory
 dmidecode --type memory | less
