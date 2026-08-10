@@ -1,3 +1,16 @@
+#### Install git
+```
+# if needed
+# Ubuntu/Debian
+sudo apt install git
+
+# alpine (either su or if installed sudo)
+sudo apk add git
+
+# Fedora, Redhat, etc
+sudo dnf install git
+```
+
 ## Start a repo/project (start using git in a directory structure)
 #### Make git in you current directory
 ```
@@ -116,5 +129,9 @@ git remote rm <name-of-the-repository>
 ```
 
 
-
+#### Disable ssl check on https connections
+```
+# Don't do is without thinking it through
+git config http.sslVerify false
+```
   
