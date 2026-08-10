@@ -1,14 +1,5 @@
-#### Install git
 ```
-# if needed
-# Ubuntu/Debian
-sudo apt install git
-
-# alpine (either su or if installed sudo)
-sudo apk add git
-
-# Fedora, Redhat, etc
-sudo dnf install git
+# Install git -> See in the bottom
 ```
 
 ## Start a repo/project (start using git in a directory structure)
@@ -135,3 +126,16 @@ git remote rm <name-of-the-repository>
 git config http.sslVerify false
 ```
   
+## Install
+```
+# if needed
+# Ubuntu/Debian
+sudo apt install git
+
+# alpine (either su or if installed sudo)
+sudo apk add git
+
+# Fedora, Redhat, etc
+sudo dnf install git
+```
+
