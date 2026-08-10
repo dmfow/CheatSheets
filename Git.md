@@ -1,5 +1,5 @@
 ```
-# Install git -> See in the bottom
+# Install git -> Go to/see the bottom
 ```
 
 ## Start a repo/project (start using git in a directory structure)
