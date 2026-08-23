@@ -211,6 +211,19 @@ sudo nano /etc/network/interfaces
 # restart/reload network services
 sudo rc-service networking restart
 
+
+# Example of config /etc/network/interfaces, including persistent static routes
+auto eth0
+iface eth0 inet static
+    address 10.0.0.100
+    netmask 255.255.255.0
+    gateway 10.0.0.1
+    # Add persistent static routes
+    post-up ip route add 192.168.2.0/24 via 10.0.0.1
+    post-up ip route add 172.16.0.0/16 via 10.0.0.1
+    pre-down ip route del 192.168.2.0/24 via 10.0.0.1
+    pre-down ip route del 172.16.0.0/16 via 10.0.0.1
+
 ```
 
 #### Add to path
