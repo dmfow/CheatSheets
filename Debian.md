@@ -267,6 +267,16 @@ Compatible with Intel CPU >= Skylake, AMD CPU >= EPYC v4 Genoa.
 
 ```
 
+#### Change the terminal font color
+```
+# always, never, auto
+alias ls='ls --color=never'
+alias ip='ip --color=never'
+# exempel på andra
+alias grep='grep --color=auto'
+
+```
+
 ## Proxmox Backup (PBS)
 
 #### Extend ZFS disk
