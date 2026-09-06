@@ -81,10 +81,13 @@ git log
 git push command
 # OR
 git push origin <master>
+```
 
+#### Merge everything on the local computer/server from the git repo
+```
 # Merge everything on the remote repo to your local repo
+# !!This will overwrite the local code!!
 git pull
-
 ```
 
 
