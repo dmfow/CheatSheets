@@ -72,6 +72,11 @@ git commit –m “Message for the commit here”
 # OR
 git commit -am “Message for the commit here” command
 
+# If you did a commit, but put the wrong message in there and want to change it.
+git commit --amend -m "New commit message"
+# Then Check it
+git log
+
 # Upload to your git/gitlab/github server (<master> is the name of the master)
 git push command
 # OR
