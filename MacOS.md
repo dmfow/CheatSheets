@@ -42,6 +42,21 @@ alias python="[path to the python execution file of your choice]"
 alias pip="[path to the python execution file of your choice]"
 ```
 
+#### Network
+```
+# Add persistant routes
+#   networksetup -setadditionalroutes [name] [destination], [subnet mask], [gateway]
+networksetup -setadditionalroutes Wi-Fi 192.168.50.0 255.255.255.0 192.168.1.1
 
+# See used ports
+sudo lsof -iTCP -sTCP:LISTEN -P -n
+
+#  See routes
+netstat -rn
+
+# More on networksetup
+#  https://support.apple.com/en-euro/guide/remote-desktop/apdd0c5a2d5/mac
+#  https://www.unix.com/man_page/osx/8/networksetup/
+```
 
 
