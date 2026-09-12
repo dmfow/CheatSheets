@@ -47,6 +47,13 @@ git remote rm <name-of-the-repository, ex origin>
 # Edit a file (or create) .gitignore (first example line is to skip sqlite3 databases, second is to skip a library)
 *.sqlite3
 src/__pycache__/
+
+
+# If you have done commit, but forgot the .gitignore and now it is fixed. Get files removed from the cache
+git rm -r --cached .
+git add .
+git commit -m ".gitignore is now working"
+
 ```
 
 #### Check status of files in the project
@@ -107,20 +114,23 @@ command git checkout -b <branch-name>
 ```
 git checkout <branch-name>
 ```
-#### List branches
+#### Branches
 ```
+# List branch
 git branch
+
+# Merge a branch into the active one
+git merge <branch-name>
+
 # Delete branch
 git branch –d <branch-name>
-```
 
-#### Merge a branch into the active one
-```
-git merge <branch-name>
-```
-  
-  
+# Rename branch
+$ git branch -m <new-name>
 
+# Rename a branch you are NOT currently on:
+$ git branch -m <old-name> <new-name>
+```
 
 ## Delete a connection between local repo and a remote repo
 ```
@@ -133,7 +143,22 @@ git remote rm <name-of-the-repository>
 # Don't do is without thinking it through
 git config http.sslVerify false
 ```
-  
+
+#### Others - various
+```
+# Your repo is large
+git config --global http.postBuffer 100M
+
+# You want to start over.
+#   Remove local .git directory. Then start over (with git init and so forth)
+cd .git
+rm -rf *.*
+rm -rf *.
+rm -rf *
+
+```
+
+
 ## Install
 ```
 # if needed
