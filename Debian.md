@@ -277,6 +277,20 @@ alias grep='grep --color=auto'
 
 ```
 
+#### Troubleshooting 3-4% usage as the vm show almost 0% CPU usage
+```
+# Mark the VM in the GUI, goto options. Then Disable "Use tablet for pointer"
+```
+
+#### Troubleshooting CPU
+```
+# NOT TESTED OR CHECKED WEBSITE: https://proxmoxr.com/blog/proxmox-high-cpu-usage
+```
+
+
+
+
+
 ## Proxmox Backup (PBS)
 
 #### Extend ZFS disk
