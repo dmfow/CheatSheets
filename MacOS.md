@@ -18,13 +18,31 @@ Maybe - Click the lock
 #   %# means that the prompt will show # if the shell is running with root (administrator) privileges and % if it doesn't. 
 nano ~/.zshrc 
  PS1="%n@%m %1~ %#"
- PS1='\u@\H:\w$'
 source ~/.zshrc
 
-# Show where you are
- PS1='%~% $'
+# Show only where you are
+ PS1='%~ $ '
+# 
+ PS1='\u@\H:\w$'
+# Just username 
+PS1='%n:~$'
+# Date or time
+PS1='%n:%D:~$'
+PS1=='%n@%T>~$'
 
-# other suggestion (not tested, does not work for people)
+
+# More acrynoms: https://zsh.sourceforge.io/Doc/Release/Prompt-Expansion.html
+
+# Other suggestions (not tested)
+#Display date and time right aligned in the window on the prompt row
+RPROMPT='%D @ %T'
+# Prompt color (the number is from 256 different 8-bit colors table)
+PROMPT='%F{cyan}%n%f:~$'
+PROMPT='%F{51}%n%f:~$'
+# Set default
+PROMPT="%n@%m %1~ %#"
+
+# With export
 export PS1='\u@\H:\w$'
 ```
 
