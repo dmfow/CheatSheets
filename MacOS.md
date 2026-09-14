@@ -9,6 +9,24 @@ Maybe - Click the lock
  + Enter your Administrators Username and Password
 ```
 
+#### Better prompt in the terminal
+```
+# ~/.zshrc or (/etc/zshrc , not tested)
+#   %n is your account username.
+#   %m is your Mac's model name.
+#   %1~ means the current working directory path, where the ~ strips the $HOME directory location.
+#   %# means that the prompt will show # if the shell is running with root (administrator) privileges and % if it doesn't. 
+nano ~/.zshrc 
+ PS1="%n@%m %1~ %#"
+ PS1='\u@\H:\w$'
+source ~/.zshrc
+
+# Show where you are
+ PS1='%~% $'
+
+# other suggestion (not tested, does not work for people)
+export PS1='\u@\H:\w$'
+```
 
 #### Unauthorized app - Catalina
 ```
